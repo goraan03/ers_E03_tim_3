@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{CE3CA7FD-09E0-4BE0-AEDC-A0216049BFBC}|ERS_proj_03\\ERS_proj_03.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\ers_proj_03\\ers_proj_03.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{CE3CA7FD-09E0-4BE0-AEDC-A0216049BFBC}|ERS_proj_03\\ERS_proj_03.csproj|solutionrelative:ers_proj_03\\ers_proj_03.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE3CA7FD-09E0-4BE0-AEDC-A0216049BFBC}|ERS_proj_03\\ERS_proj_03.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\ers_proj_03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE3CA7FD-09E0-4BE0-AEDC-A0216049BFBC}|ERS_proj_03\\ERS_proj_03.csproj|solutionrelative:ers_proj_03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,37 +9,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ERS_proj_03",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\ERS_proj_03\\ERS_proj_03.csproj",
-              "RelativeDocumentMoniker": "ERS_proj_03\\ERS_proj_03.csproj",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\ERS_proj_03\\ERS_proj_03.csproj",
-              "RelativeToolTip": "ERS_proj_03\\ERS_proj_03.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-29T17:10:49.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\ERS_proj_03\\Program.cs",
-              "RelativeDocumentMoniker": "ERS_proj_03\\Program.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\ERS_proj_03\\Program.cs",
-              "RelativeToolTip": "ERS_proj_03\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T17:10:31.242Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }
