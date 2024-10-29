@@ -9,6 +9,7 @@ namespace Common.Klase
     public class Mapa
     {
         public string NazivMape { get; set; }
+
         public string TipMape { get; set; }
 
         public int MaxIgraca { get; set; }
