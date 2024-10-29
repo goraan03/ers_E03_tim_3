@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\domain\\domain.csproj": {}
+    "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Common\\Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\domain\\domain.csproj": {
+    "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\domain\\domain.csproj",
-        "projectName": "domain",
-        "projectPath": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\domain\\domain.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Common\\Common.csproj",
+        "projectName": "Common",
+        "projectPath": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\domain\\obj\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

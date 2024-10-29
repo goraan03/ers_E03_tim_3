@@ -1,2 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Common.Klase;
+
+namespace ERS_proj_03
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            
+        }
+    }
+}
