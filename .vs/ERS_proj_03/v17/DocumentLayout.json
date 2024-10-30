@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\servisi\\unosprodavnice\\unosprodavnice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|solutionrelative:servisi\\unosprodavnice\\unosprodavnice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CE3CA7FD-09E0-4BE0-AEDC-A0216049BFBC}|ERS_proj_03\\ERS_proj_03.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\ers_proj_03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE3CA7FD-09E0-4BE0-AEDC-A0216049BFBC}|ERS_proj_03\\ERS_proj_03.csproj|solutionrelative:ers_proj_03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\servisi\\autentifikacija\\autentifikacija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|solutionrelative:servisi\\autentifikacija\\autentifikacija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +26,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UnosProdavnice.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\servisi\\UnosProdavnice\\UnosProdavnice.cs",
-              "RelativeDocumentMoniker": "servisi\\UnosProdavnice\\UnosProdavnice.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\servisi\\UnosProdavnice\\UnosProdavnice.cs",
-              "RelativeToolTip": "servisi\\UnosProdavnice\\UnosProdavnice.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwA0AAABBAAAA",
+              "DocumentIndex": 1,
+              "Title": "Autentifikacija.cs",
+              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\servisi\\Autentifikacija\\Autentifikacija.cs",
+              "RelativeDocumentMoniker": "servisi\\Autentifikacija\\Autentifikacija.cs",
+              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\servisi\\Autentifikacija\\Autentifikacija.cs",
+              "RelativeToolTip": "servisi\\Autentifikacija\\Autentifikacija.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwB0AAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T13:19:00.949Z",
+              "WhenOpened": "2024-10-30T15:48:06.134Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\ERS_proj_03\\Program.cs",
               "RelativeDocumentMoniker": "ERS_proj_03\\Program.cs",
               "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\ERS_proj_03\\Program.cs",
               "RelativeToolTip": "ERS_proj_03\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAdAAAA",
+              "ViewState": "AQIAABwAAAAAAAAAAAAQwC0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T13:18:26.878Z"
+              "WhenOpened": "2024-10-30T13:18:26.878Z",
+              "EditorCaption": ""
             }
           ]
         }

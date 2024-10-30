@@ -38,6 +38,7 @@ namespace Servisi.Autentifikacija
 
             if (!korisnik.Lozinka.Equals(lozinka))
             {
+                Console.WriteLine("Lozinka je netacna!\n");
                 prijavljen = null;
                 return false;
             }
