@@ -6,9 +6,9 @@ namespace Servisi.ZlatniNovcic
     public class ZlatniNovcic : IZlatniNovcic
     {
 
-        private Heroji Moj_heroj;
+        private Heroj Moj_heroj;
 
-        public ZlatniNovcic(Heroji heroj) 
+        public ZlatniNovcic(Heroj heroj) 
         {
             Moj_heroj = heroj;
         }
@@ -20,7 +20,7 @@ namespace Servisi.ZlatniNovcic
             Moj_heroj.StanjeNovcica += dodati_novcici;
         }
 
-        public void EliminacijaHeroja(Heroji protivnik)
+        public void EliminacijaHeroja(Heroj protivnik)
         {
             Moj_heroj.StanjeNovcica += 300;
         }

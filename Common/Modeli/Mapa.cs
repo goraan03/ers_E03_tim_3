@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.Enumeracije;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace Common.Modeli
     {
         public string NazivMape { get; set; }
 
-        public string TipMape { get; set; }
+        public Tip_Mape TipMape { get; set; }
 
         public int MaxIgraca { get; set; }
 
@@ -20,7 +21,9 @@ namespace Common.Modeli
 
         public int PomocniEntiteti { get; set; }
 
-        public Mapa(string nazivMape, string tipMape, int maxIgraca, string plaviTim, string crveniTim, int pomocniEntiteti)
+        public Mapa() { }
+
+        public Mapa(string nazivMape, Tip_Mape tipMape, int maxIgraca, string plaviTim, string crveniTim, int pomocniEntiteti)
         {
             NazivMape = nazivMape;
             TipMape = tipMape;

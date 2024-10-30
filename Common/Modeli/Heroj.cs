@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 
 namespace Common.Modeli
 {
-    public class Heroji
+    public class Heroj
     {
-        public string NazivHeroja { get; set; }
+        public string NazivHeroja { get; set; } = string.Empty;
+
         public int ZivotniPoeni { get; set; } 
 
         public int JacinaNapada { get; set; }
 
         public int StanjeNovcica { get; set; }
 
-        public Heroji(string nazivHeroja, int zivotniPoeni, int jacinaNapada, int stanjeNovcica)
+        public Heroj() { }
+
+        public Heroj(string nazivHeroja, int zivotniPoeni, int jacinaNapada, int stanjeNovcica)
         {
             NazivHeroja = nazivHeroja;
             ZivotniPoeni = zivotniPoeni;

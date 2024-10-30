@@ -22,5 +22,7 @@ namespace Common.Modeli
             Napicis = napici;
             Vrednost = vrednost;
         }
+
+        // mozda dodati funkciju private int izracunajUkupnuVrednost() za racunanje ukupne cene (jer u zagradama pise kao napici + vrednost tamo u pdf-u)
     }
 }
