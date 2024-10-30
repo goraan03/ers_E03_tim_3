@@ -61,7 +61,12 @@ namespace ERS_proj_03
                     }
                     else
                     {
-                        Console.WriteLine("Netacna lozinka! Pokusajte ponovo.\n");
+                        if(string.IsNullOrEmpty(lozinka))
+                        {
+                            Console.WriteLine("Lozinka ne moze biti prazna. Pokusajte ponovo!\n");
+                        }
+                        else
+                            Console.WriteLine("Netacna lozinka! Pokusajte ponovo.\n");
                     }
                 }
 

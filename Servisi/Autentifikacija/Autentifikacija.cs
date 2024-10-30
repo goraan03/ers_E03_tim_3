@@ -23,7 +23,7 @@ namespace Servisi.Autentifikacija
         public bool Prijava(string korisnickoIme, string lozinka, out Korisnik? prijavljen)
         {
             Korisnik? korisnik = ListaKorisnika.FirstOrDefault(k => k.KorisnickoIme.Equals(korisnickoIme));
-            if(korisnik == null)
+            if (korisnik == null)
             {
                 Console.WriteLine("Nepostojece korisnicko ime!\n");
                 prijavljen = null;
@@ -32,9 +32,10 @@ namespace Servisi.Autentifikacija
 
             if (string.IsNullOrEmpty(lozinka))
             {
+                Console.WriteLine("Lozinka ne moze biti prazna! Pokusajte ponovo!\n");
                 prijavljen = null;
-                return true;
-            }
+                return false;
+            }78--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------0
 
             if (!korisnik.Lozinka.Equals(lozinka))
             {
