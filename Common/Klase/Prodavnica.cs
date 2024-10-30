@@ -15,11 +15,11 @@ namespace Common.Klase
 
         public Prodavnica() { }
 
-        public Prodavnica(int iD, List<Oruzje> oruzje, List<Napici> napicis, int vrednost)
+        public Prodavnica(int iD, List<Oruzje> oruzje, List<Napici> napici, int vrednost)
         {
             ID = iD;
             Oruzje = oruzje;
-            Napicis = napicis;
+            Napicis = napici;
             Vrednost = vrednost;
         }
     }

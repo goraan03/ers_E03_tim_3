@@ -6,20 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "ERS_proj_03/1.0.0": {
-        "dependencies": {
-          "Common": "1.0.0",
-          "Servisi": "1.0.0"
-        },
-        "runtime": {
-          "ERS_proj_03.dll": {}
-        }
-      },
-      "Common/1.0.0": {
-        "runtime": {
-          "Common.dll": {}
-        }
-      },
       "Servisi/1.0.0": {
         "dependencies": {
           "Common": "1.0.0"
@@ -27,21 +13,21 @@
         "runtime": {
           "Servisi.dll": {}
         }
+      },
+      "Common/1.0.0": {
+        "runtime": {
+          "Common.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "ERS_proj_03/1.0.0": {
+    "Servisi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "Common/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Servisi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
