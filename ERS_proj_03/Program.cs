@@ -3,6 +3,8 @@ using Common.Servisi;
 using Servisi.ZlatniNovcic;
 using Servisi.Autentifikacija;
 using Servisi.UnosMape;
+using Servisi.UnosProdavnice;
+using Servisi.UnosProdavnice;
 
 namespace ERS_proj_03
 {
@@ -22,9 +24,14 @@ namespace ERS_proj_03
                 string plaviTim = "";
                 string crveniTim = "";
 
+                //promenljive za unos prodavnice
+                int idProdavnice;
+                Prodavnica? izabranaProdavnica;
+
                 //servisi
                 IAutentifikacija autentifikacija = new Autentifikacija();
                 IUnosMape unosMape = new UnosMape();
+                IUnosProdavnice unosProdavnice = new UnosProdavnice();
 
                 //autentifikacija
                 Console.WriteLine("================ PRIJAVA NALOGA ================");
@@ -59,7 +66,7 @@ namespace ERS_proj_03
                 }
 
                 //unos entiteta
-                Console.WriteLine("\n================ Unos entiteta ================\n");
+                Console.WriteLine("\n================ Unos entiteta ==================\n");
 
                 
                 while(true)
@@ -74,9 +81,29 @@ namespace ERS_proj_03
                     }
 
                     //unos prodavnice
+                    Console.Write("Unesite ID prodavnice: ");
+                    while(!int.TryParse(Console.ReadLine(), out idProdavnice) || !unosProdavnice.unosProdavnice(idProdavnice, out izabranaProdavnica))
+                    {
+                        Console.WriteLine("Nepostojeca prodavnica! Pokusajte ponovo!\n");
+                    }
+                    Console.WriteLine("\nIzabrali ste prodavnicu:");
+                    Console.WriteLine("ID: " + izabranaProdavnica.ID);
+                    Console.WriteLine("Vrednost: " + unosProdavnice.IzracunajUkupnuVrednost(izabranaProdavnica)); // Ukupna vrednost
+                    Console.WriteLine("Oružja:");
+                    foreach (var oruzje in izabranaProdavnica.Oruzje)
+                    {
+                        Console.WriteLine($"- {oruzje.Naziv}, Cena: {oruzje.Cena}, Napad: {oruzje.Napad}, Količina: {oruzje.Kolicina}");
+                    }
+
+                    Console.WriteLine("Napici:");
+                    foreach (var napitak in izabranaProdavnica.Napicis)
+                    {
+                        Console.WriteLine($"- {napitak.Naziv}, Cena: {napitak.Cena}, Napad: {napitak.Napad}, Količina: {napitak.Kolicina}");
+                    }
+
 
                     //unos naziva plavog i crvenog tima
-                    Console.Write("Unesite naziv plavog tima: ");
+                    Console.Write("\nUnesite naziv plavog tima: ");
                     plaviTim = Console.ReadLine() ?? "";
 
                     Console.Write("Unesite naziv crvenog tima: ");
