@@ -32,10 +32,9 @@ namespace Servisi.Autentifikacija
 
             if (string.IsNullOrEmpty(lozinka))
             {
-                Console.WriteLine("Lozinka ne moze biti prazna! Pokusajte ponovo!\n");
                 prijavljen = null;
                 return false;
-            }78--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------0
+            }
 
             if (!korisnik.Lozinka.Equals(lozinka))
             {

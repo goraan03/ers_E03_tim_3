@@ -4,7 +4,6 @@ using Servisi.ZlatniNovcic;
 using Servisi.Autentifikacija;
 using Servisi.UnosMape;
 using Servisi.UnosProdavnice;
-using Servisi.UnosProdavnice;
 
 namespace ERS_proj_03
 {
@@ -41,11 +40,13 @@ namespace ERS_proj_03
                     Console.Write("\nKorisnicko Ime: ");
                     korisnickoIme = Console.ReadLine() ?? "";
 
+                    Console.Write("Lozinka: ");
+                    lozinka = Console.ReadLine() ?? "";
+
                     if (!autentifikacija.Prijava(korisnickoIme.Trim(), "", out prijavljen))
                     {
                         continue;
                     }
-
                     break;
                 }
 
