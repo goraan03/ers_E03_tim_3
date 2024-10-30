@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{CE3CA7FD-09E0-4BE0-AEDC-A0216049BFBC}|ERS_proj_03\\ERS_proj_03.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\ers_proj_03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE3CA7FD-09E0-4BE0-AEDC-A0216049BFBC}|ERS_proj_03\\ERS_proj_03.csproj|solutionrelative:ers_proj_03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\servisi\\autentifikacija\\autentifikacija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|solutionrelative:servisi\\autentifikacija\\autentifikacija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\servisi\\unosmape\\unosmape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|solutionrelative:servisi\\unosmape\\unosmape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{362A091A-FB25-44FB-820C-1D636EAFD434}|Common\\Common.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\common\\servisi\\iunosmape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{362A091A-FB25-44FB-820C-1D636EAFD434}|Common\\Common.csproj|solutionrelative:common\\servisi\\iunosmape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,63 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Autentifikacija.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\servisi\\Autentifikacija\\Autentifikacija.cs",
-              "RelativeDocumentMoniker": "servisi\\Autentifikacija\\Autentifikacija.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\servisi\\Autentifikacija\\Autentifikacija.cs",
-              "RelativeToolTip": "servisi\\Autentifikacija\\Autentifikacija.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwCMAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T12:26:36.714Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\ERS_proj_03\\Program.cs",
-              "RelativeDocumentMoniker": "ERS_proj_03\\Program.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\ERS_proj_03\\Program.cs",
-              "RelativeToolTip": "ERS_proj_03\\Program.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAQwGEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T12:24:30.129Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IUnosMape.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Common\\Servisi\\IUnosMape.cs",
-              "RelativeDocumentMoniker": "Common\\Servisi\\IUnosMape.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Common\\Servisi\\IUnosMape.cs",
-              "RelativeToolTip": "Common\\Servisi\\IUnosMape.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T12:20:21.742Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UnosMape.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\servisi\\UnosMape\\UnosMape.cs",
-              "RelativeDocumentMoniker": "servisi\\UnosMape\\UnosMape.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\servisi\\UnosMape\\UnosMape.cs",
-              "RelativeToolTip": "servisi\\UnosMape\\UnosMape.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAxwB0AAABLAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T12:20:12.727Z",
-              "EditorCaption": ""
             }
           ]
         }
