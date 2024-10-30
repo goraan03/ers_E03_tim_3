@@ -20,7 +20,7 @@ namespace Servisi.UnosCrvenih
                 new Heroj("Malphite", 1250, 120, 0),
                 new Heroj("Zac", 1100, 95, 0),
                 new Heroj("Ahri", 900, 135, 0),
-                new Heroj("Ezrael", 870, 175, 0),
+                new Heroj("Ezreal", 870, 175, 0),
                 new Heroj("Nami", 780, 120, 0),
                 new Heroj("Orn", 1350, 110, 0),
                 new Heroj("Elise", 950, 120, 0),
@@ -38,7 +38,7 @@ namespace Servisi.UnosCrvenih
                 IzabranIgrac = null;
                 return false;
             }
-            IzabranIgrac = new Igrac(naziv, heroj);
+            IzabranIgrac = new Igrac(nik, heroj);
             return true;
         }
     }

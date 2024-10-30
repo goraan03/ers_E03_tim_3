@@ -37,7 +37,7 @@ namespace Servisi.UnosPlavih
                 IzabranIgrac = null;
                 return false;
             }
-            IzabranIgrac = new Igrac(naziv, heroj);
+            IzabranIgrac = new Igrac(nik, heroj);
             return true;
         }
     }

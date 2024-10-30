@@ -5,6 +5,6 @@ namespace Common.Servisi
     public interface IZlatniNovcic
     {
         void EliminacijaHeroja(Heroj protivnik);
-        void EliminacijaEntiteta(int entitet);
+        void EliminacijaEntiteta(Entitet entitet);
     }
 }

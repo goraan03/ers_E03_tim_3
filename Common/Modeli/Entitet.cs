@@ -10,11 +10,16 @@ namespace Common.Modeli
     public class Entitet
     {
         public int Poeni { get; set; }
-        public Entitet() { }
-
-        public Entitet(int poeni)
+        public Entitet() 
         {
-            Poeni = poeni;
+            Poeni = generisiPoene();
+        }
+
+        private int generisiPoene()
+        {
+            Random random = new Random();
+            int novcici = random.Next(20, 91);
+            return novcici;
         }
     }
 }
