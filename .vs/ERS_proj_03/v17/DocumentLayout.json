@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{362A091A-FB25-44FB-820C-1D636EAFD434}|Common\\Common.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\common\\modeli\\prodavnica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{362A091A-FB25-44FB-820C-1D636EAFD434}|Common\\Common.csproj|solutionrelative:common\\modeli\\prodavnica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{362A091A-FB25-44FB-820C-1D636EAFD434}|Common\\Common.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\common\\modeli\\napici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{362A091A-FB25-44FB-820C-1D636EAFD434}|Common\\Common.csproj|solutionrelative:common\\modeli\\napici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{362A091A-FB25-44FB-820C-1D636EAFD434}|Common\\Common.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\common\\modeli\\oruzje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{362A091A-FB25-44FB-820C-1D636EAFD434}|Common\\Common.csproj|solutionrelative:common\\modeli\\oruzje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{362A091A-FB25-44FB-820C-1D636EAFD434}|Common\\Common.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\common\\modeli\\mapa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{362A091A-FB25-44FB-820C-1D636EAFD434}|Common\\Common.csproj|solutionrelative:common\\modeli\\mapa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{362A091A-FB25-44FB-820C-1D636EAFD434}|Common\\Common.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\common\\modeli\\heroj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{362A091A-FB25-44FB-820C-1D636EAFD434}|Common\\Common.csproj|solutionrelative:common\\modeli\\heroj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,73 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Oruzje.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Common\\Modeli\\Oruzje.cs",
-              "RelativeDocumentMoniker": "Common\\Modeli\\Oruzje.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Common\\Modeli\\Oruzje.cs",
-              "RelativeToolTip": "Common\\Modeli\\Oruzje.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T11:16:23.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Napici.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Common\\Modeli\\Napici.cs",
-              "RelativeDocumentMoniker": "Common\\Modeli\\Napici.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Common\\Modeli\\Napici.cs",
-              "RelativeToolTip": "Common\\Modeli\\Napici.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T11:12:38.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Prodavnica.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Common\\Modeli\\Prodavnica.cs",
-              "RelativeDocumentMoniker": "Common\\Modeli\\Prodavnica.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Common\\Modeli\\Prodavnica.cs",
-              "RelativeToolTip": "Common\\Modeli\\Prodavnica.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwA8AAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T11:06:59.683Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Mapa.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Common\\Modeli\\Mapa.cs",
-              "RelativeDocumentMoniker": "Common\\Modeli\\Mapa.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Common\\Modeli\\Mapa.cs",
-              "RelativeToolTip": "Common\\Modeli\\Mapa.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T11:05:56.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Heroj.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Common\\Modeli\\Heroj.cs",
-              "RelativeDocumentMoniker": "Common\\Modeli\\Heroj.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Common\\Modeli\\Heroj.cs",
-              "RelativeToolTip": "Common\\Modeli\\Heroj.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T11:05:46.708Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
