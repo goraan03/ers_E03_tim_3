@@ -41,7 +41,7 @@ namespace ERS_proj_03
                     Console.Write("\nKorisnicko Ime: ");
                     korisnickoIme = Console.ReadLine() ?? "";
 
-                    if (!autentifikacija.prijava(korisnickoIme.Trim(), "", out prijavljen))
+                    if (!autentifikacija.Prijava(korisnickoIme.Trim(), "", out prijavljen))
                     {
                         continue;
                     }
@@ -54,7 +54,7 @@ namespace ERS_proj_03
                     Console.Write("Lozinka: ");
                     lozinka = Console.ReadLine() ?? "";
 
-                    if (autentifikacija.prijava(korisnickoIme.Trim(), lozinka.Trim(), out prijavljen))
+                    if (autentifikacija.Prijava(korisnickoIme.Trim(), lozinka.Trim(), out prijavljen))
                     {
                         Console.WriteLine("Uspesna prijava! Dobrodosli, " + prijavljen?.ImePrezime);
                         break;
