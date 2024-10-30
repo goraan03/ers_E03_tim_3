@@ -10,3 +10,15 @@ C:\Users\pc\Desktop\OOT\Projekat\ers_E03_tim_3\Common\obj\Debug\net7.0\Common.dl
 C:\Users\pc\Desktop\OOT\Projekat\ers_E03_tim_3\Common\obj\Debug\net7.0\refint\Common.dll
 C:\Users\pc\Desktop\OOT\Projekat\ers_E03_tim_3\Common\obj\Debug\net7.0\Common.pdb
 C:\Users\pc\Desktop\OOT\Projekat\ers_E03_tim_3\Common\obj\Debug\net7.0\ref\Common.dll
+C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Common\bin\Debug\net7.0\Common.deps.json
+C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Common\bin\Debug\net7.0\Common.dll
+C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Common\bin\Debug\net7.0\Common.pdb
+C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Common\obj\Debug\net7.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Common\obj\Debug\net7.0\Common.AssemblyInfoInputs.cache
+C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Common\obj\Debug\net7.0\Common.AssemblyInfo.cs
+C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Common\obj\Debug\net7.0\Common.csproj.CoreCompileInputs.cache
+C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Common\obj\Debug\net7.0\Common.sourcelink.json
+C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Common\obj\Debug\net7.0\Common.dll
+C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Common\obj\Debug\net7.0\refint\Common.dll
+C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Common\obj\Debug\net7.0\Common.pdb
+C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Common\obj\Debug\net7.0\ref\Common.dll

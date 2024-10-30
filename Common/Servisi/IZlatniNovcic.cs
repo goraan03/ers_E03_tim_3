@@ -1,4 +1,4 @@
-﻿using Common.Klase;
+﻿using Common.Modeli;
 
 namespace Common.Servisi
 {

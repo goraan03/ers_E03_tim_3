@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Klase
+namespace Common.Modeli
 {
     public class Mapa
     {
