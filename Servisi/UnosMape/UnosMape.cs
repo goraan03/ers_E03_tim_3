@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Common.Klase;
+using Common.Modeli;
 using Common.Servisi;
+using Common.Enumeracije;
 
 namespace Servisi.UnosMape
 {
@@ -16,8 +17,8 @@ namespace Servisi.UnosMape
         {
             ListaMapa = new List<Mapa>
             {
-                new Mapa("Cosmic Ruins", "letnja", 10, "", "", 14),
-                new Mapa("Crash Site", "zimska", 8, "", "", 10)
+                new Mapa("Cosmic Ruins", Tip_Mape.LETNJA, 10, "", "", 14),
+                new Mapa("Crash Site", Tip_Mape.ZIMSKA, 8, "", "", 10)
             };
 
         }

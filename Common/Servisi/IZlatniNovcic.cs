@@ -1,10 +1,10 @@
-﻿using Common.Klase;
+﻿using Common.Modeli;
 
 namespace Common.Servisi
 {
     public interface IZlatniNovcic
     {
-        void EliminacijaHeroja(Heroji protivnik);
+        void EliminacijaHeroja(Heroj protivnik);
         void EliminacijaEntiteta(int entitet);
     }
 }

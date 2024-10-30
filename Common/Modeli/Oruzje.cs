@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Klase
+namespace Common.Modeli
 {
     public class Oruzje
     {
         public string Naziv { get; set; } = string.Empty;
         public int Cena { get; set; }
-        public int Napad { get; set; }
+        public int Napad { get; set; } 
         public int Kolicina { get; set; }
 
         public Oruzje() { }

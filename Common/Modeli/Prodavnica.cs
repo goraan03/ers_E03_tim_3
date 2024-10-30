@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Klase
+namespace Common.Modeli
 {
     public class Prodavnica
     {
@@ -22,5 +22,7 @@ namespace Common.Klase
             Napicis = napici;
             Vrednost = vrednost;
         }
+
+        // mozda dodati funkciju private int izracunajUkupnuVrednost() za racunanje ukupne cene (jer u zagradama pise kao napici + vrednost tamo u pdf-u)
     }
 }

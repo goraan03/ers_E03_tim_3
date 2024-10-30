@@ -1,4 +1,4 @@
-﻿using Common.Klase;
+﻿using Common.Modeli;
 using Common.Servisi;
 using Servisi.ZlatniNovcic;
 using Servisi.Autentifikacija;

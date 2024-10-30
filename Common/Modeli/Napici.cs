@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Klase
+namespace Common.Modeli
 {
     public class Napici
     {
         private int napad;
+
         public string Naziv { get; set; } = string.Empty;
         public int Cena { get; set; }
         public int Napad
