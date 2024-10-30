@@ -9,6 +9,6 @@ namespace Common.Servisi
 {
     public interface IAutentifikacija
     {
-        public bool prijava(string korisnickoIme, string lozinka, out Korisnik? prijavljen);
+        public bool Prijava(string korisnickoIme, string lozinka, out Korisnik? prijavljen);
     }
 }

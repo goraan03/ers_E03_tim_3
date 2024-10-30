@@ -15,7 +15,7 @@ namespace Servisi.ZlatniNovcic
 
         public void EliminacijaEntiteta(int entitet)
         {
-            Random random = new Random();
+            Random random = new Random(); // mozda bi bilo bolje da napravimo random kao privatnu promenljivu gore
             int dodati_novcici = random.Next(20, 91);
             Moj_heroj.StanjeNovcica += dodati_novcici;
         }

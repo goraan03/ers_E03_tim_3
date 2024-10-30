@@ -20,7 +20,7 @@ namespace Servisi.Autentifikacija
                 new Korisnik("miroslav03", "LozinkaMiroslav", "Miroslav Dispiter")
             };
         }
-        public bool prijava(string korisnickoIme, string lozinka, out Korisnik? prijavljen)
+        public bool Prijava(string korisnickoIme, string lozinka, out Korisnik? prijavljen)
         {
             Korisnik? korisnik = ListaKorisnika.FirstOrDefault(k => k.KorisnickoIme.Equals(korisnickoIme));
             if(korisnik == null)
