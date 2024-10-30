@@ -4,6 +4,8 @@ using Servisi.ZlatniNovcic;
 using Servisi.Autentifikacija;
 using Servisi.UnosMape;
 using Servisi.UnosProdavnice;
+using Servisi.UnosCrvenih;
+using Servisi.UnosPlavih;
 
 namespace ERS_proj_03
 {
@@ -27,10 +29,22 @@ namespace ERS_proj_03
                 int idProdavnice;
                 Prodavnica? izabranaProdavnica;
 
+                //promenljive za unos timova
+                int brPlaviTim;
+                int brCrveniTim;
+                int brPlavi = 0;
+                int brCrveni = 0;
+                List<Igrac> ListaPlavih = new List<Igrac> ();
+                List<Igrac> ListaCrvenih = new List<Igrac>();
+                Igrac? izabraniIgrac;
+
                 //servisi
                 IAutentifikacija autentifikacija = new Autentifikacija();
                 IUnosMape unosMape = new UnosMape();
                 IUnosProdavnice unosProdavnice = new UnosProdavnice();
+                IUnosCrvenih unosCrvenih = new UnosCrvenih();
+                IUnosPlavih unosPlavih = new UnosPlavih();
+
 
                 //autentifikacija
                 Console.WriteLine("================ PRIJAVA NALOGA ================");
@@ -114,6 +128,81 @@ namespace ERS_proj_03
 
                     IzabranaMapa.PlaviTim = plaviTim;
                     IzabranaMapa.CrveniTim = crveniTim;
+
+                    //unos igraca u crveni i plavi tim
+                    while(true)
+                    {
+                        Console.Write("Unesite broj igraca za plavi tim: ");
+                        brPlaviTim = int.Parse(Console.ReadLine());
+                        Console.Write("Unesite broj igraca za crveni tim: ");
+                        brCrveniTim = int.Parse(Console.ReadLine());
+                        if(brPlaviTim + brCrveniTim > IzabranaMapa.MaxIgraca)
+                        {
+                            Console.WriteLine("\nPrevise igraca. Odaberite drugi broj.\n");
+                            continue;
+                        }
+                        break;
+                    }
+                    
+                    //unos plavog tima
+                    Console.WriteLine("\nUnesite nazive igraca plavog tima:\n");
+                    for(int i=0;i<brPlaviTim;i++)
+                    {
+                        Console.Write("Unesite naziv igraca: ");
+                        string naziv;
+                        naziv = Console.ReadLine() ?? "";
+                        string nazivHeroja;
+                        while(true)
+                        {
+                            Console.Write("Unesite naziv heroja: ");
+                            nazivHeroja = Console.ReadLine() ?? "";
+                            if (!unosPlavih.unosPlavih(naziv, nazivHeroja, out izabraniIgrac))
+                            {
+                                ListaPlavih.Add(izabraniIgrac);
+                                continue;
+                            }
+                        break;
+                        }
+                    }
+
+
+                    //unos crvenog tima
+                    Console.WriteLine("\nUnesite nazive igraca crvenog tima:\n");
+                    for (int i = 0; i < brCrveniTim; i++)
+                    {
+                        Console.Write("Unesite naziv igraca: ");
+                        string naziv;
+                        naziv = Console.ReadLine() ?? "";
+                        string nazivHeroja;
+                        while (true)
+                        {
+                            Console.Write("Unesite naziv heroja: ");
+                            nazivHeroja = Console.ReadLine() ?? "";
+                            if (!unosCrvenih.unosCrvenih(naziv, nazivHeroja, out izabraniIgrac))
+                            {
+                                ListaCrvenih.Add(izabraniIgrac);
+                                continue;
+                            }
+                            break;
+                        }
+                    }
+
+                    Console.WriteLine("\nPlavi tim:\n");
+
+                    foreach (Igrac i in ListaPlavih)
+                    {
+                        Console.WriteLine("Igrac: " +  i.Naziv);
+                        Console.WriteLine("Heroj: " + i.heroj.NazivHeroja);
+                    }
+
+                    Console.WriteLine("\nCrveni tim:\n");
+
+                    foreach (Igrac i in ListaCrvenih)
+                    {
+                        Console.WriteLine("Igrac: " + i.Naziv);
+                        Console.WriteLine("Heroj: " + i.heroj.NazivHeroja);
+                    }
+
 
                     //ispis unetih podataka
                     Console.WriteLine("\nUnos uspešan! Mapa: " + IzabranaMapa.NazivMape);

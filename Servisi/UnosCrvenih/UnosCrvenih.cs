@@ -9,7 +9,7 @@ using Common.Servisi;
 
 namespace Servisi.UnosCrvenih
 {
-    internal class UnosCrvenih : IUnosCrvenih
+    public class UnosCrvenih : IUnosCrvenih
     {
         private static readonly List<Heroj> ListaHeroja;
 
