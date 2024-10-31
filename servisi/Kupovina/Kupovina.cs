@@ -10,15 +10,24 @@ namespace Servisi.Kupovina
 {
     public class Kupovina : IKupovina
     {
-        public Kupovina() { }
 
-        public void KupovinaProvera(List<Igrac> PlaviTim, List<Igrac> CrveniTim, Prodavnica prod)
+        private int totalPotroseno;
+
+        public Kupovina()
         {
+            totalPotroseno = 0;
+        }
+
+        public void KupovinaProvera(List<Igrac> PlaviTim, List<Igrac> CrveniTim, Prodavnica prod, out int ukPotroseno)
+        {
+            ukPotroseno = 0;
             foreach (Igrac i in PlaviTim)
             {
                 if (i.heroj.StanjeNovcica >= 500)
                 {
-                    Kupi(i, prod);
+                    Kupi(i, prod, out int ukupnaCena);
+                    ukPotroseno += ukupnaCena;
+                    Console.WriteLine("UK POTROSENO: " + ukPotroseno);
                 }
             }
 
@@ -26,13 +35,18 @@ namespace Servisi.Kupovina
             {
                 if (i.heroj.StanjeNovcica >= 500)
                 {
-                    Kupi(i, prod);
+                    Kupi(i, prod, out int ukupnaCena);
+                    ukPotroseno += ukupnaCena;
+                    Console.WriteLine("UK POTROSENO: " + ukPotroseno);
                 }
             }
+            totalPotroseno += ukPotroseno;
         }
 
-        public void Kupi(Igrac igr, Prodavnica prod)
+        public void Kupi(Igrac igr, Prodavnica prod, out int ukupnaCena)
         {
+            ukupnaCena = 0;
+
             foreach (Oruzje o in prod.Oruzje)
             {
                 if (o.Kolicina > 0)
@@ -40,6 +54,8 @@ namespace Servisi.Kupovina
                     igr.heroj.JacinaNapada += o.Napad;
                     igr.heroj.StanjeNovcica -= o.Cena;
                     o.Kolicina--;
+                    ukupnaCena += o.Cena;
+                    Console.WriteLine("Kupljeno oruzje: " + o.Naziv + " za " + o.Cena);
                 }
                 else
                 {
@@ -54,12 +70,17 @@ namespace Servisi.Kupovina
                     igr.heroj.JacinaNapada += n.Napad;
                     igr.heroj.StanjeNovcica -= n.Cena;
                     n.Kolicina--;
+                    ukupnaCena += n.Cena;
+                    Console.WriteLine("Kupljen napitak: " + n.Naziv + " za " + n.Cena);
                 }
                 else
                 {
                     Console.WriteLine("Napitak " + n.Naziv + " vise nije dostupan.");
                 }
             }
+
+            Console.WriteLine("Igrac je potrosio: " + ukupnaCena);
         }
+
     }
 }
