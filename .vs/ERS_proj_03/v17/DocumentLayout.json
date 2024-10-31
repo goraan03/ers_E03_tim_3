@@ -3,40 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\servisi\\unoscrvenih\\unoscrvenih.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|solutionrelative:servisi\\unoscrvenih\\unoscrvenih.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{362A091A-FB25-44FB-820C-1D636EAFD434}|Common\\Common.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\common\\servisi\\inapadnaentitet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{362A091A-FB25-44FB-820C-1D636EAFD434}|Common\\Common.csproj|solutionrelative:common\\servisi\\inapadnaentitet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\servisi\\zlatninovcic\\napadnaigraca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|solutionrelative:servisi\\zlatninovcic\\napadnaigraca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CE3CA7FD-09E0-4BE0-AEDC-A0216049BFBC}|ERS_proj_03\\ERS_proj_03.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\ers_proj_03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE3CA7FD-09E0-4BE0-AEDC-A0216049BFBC}|ERS_proj_03\\ERS_proj_03.csproj|solutionrelative:ers_proj_03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\servisi\\unosmape\\unosmape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|solutionrelative:servisi\\unosmape\\unosmape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\servisi\\napadnaentitet\\napadnaentitet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|solutionrelative:servisi\\napadnaentitet\\napadnaentitet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{362A091A-FB25-44FB-820C-1D636EAFD434}|Common\\Common.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\common\\servisi\\inapadnaigraca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{362A091A-FB25-44FB-820C-1D636EAFD434}|Common\\Common.csproj|solutionrelative:common\\servisi\\inapadnaigraca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\servisi\\autentifikacija\\autentifikacija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|solutionrelative:servisi\\autentifikacija\\autentifikacija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\servisi\\unosplavih\\unosplavih.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}|Servisi\\Servisi.csproj|solutionrelative:servisi\\unosplavih\\unosplavih.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{362A091A-FB25-44FB-820C-1D636EAFD434}|Common\\Common.csproj|c:\\users\\miros\\documents\\github\\ers_e03_tim_3\\common\\modeli\\heroj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{362A091A-FB25-44FB-820C-1D636EAFD434}|Common\\Common.csproj|solutionrelative:common\\modeli\\heroj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,119 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UnosCrvenih.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\servisi\\UnosCrvenih\\UnosCrvenih.cs",
-              "RelativeDocumentMoniker": "servisi\\UnosCrvenih\\UnosCrvenih.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\servisi\\UnosCrvenih\\UnosCrvenih.cs",
-              "RelativeToolTip": "servisi\\UnosCrvenih\\UnosCrvenih.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T16:03:04.591Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Autentifikacija.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\servisi\\Autentifikacija\\Autentifikacija.cs",
-              "RelativeDocumentMoniker": "servisi\\Autentifikacija\\Autentifikacija.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\servisi\\Autentifikacija\\Autentifikacija.cs",
-              "RelativeToolTip": "servisi\\Autentifikacija\\Autentifikacija.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T15:07:33.778Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "INapadNaEntitet.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Common\\Servisi\\INapadNaEntitet.cs",
-              "RelativeDocumentMoniker": "Common\\Servisi\\INapadNaEntitet.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Common\\Servisi\\INapadNaEntitet.cs",
-              "RelativeToolTip": "Common\\Servisi\\INapadNaEntitet.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAA2AAAA",
+              "Title": "Heroj.cs",
+              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Common\\Modeli\\Heroj.cs",
+              "RelativeDocumentMoniker": "Common\\Modeli\\Heroj.cs",
+              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Common\\Modeli\\Heroj.cs",
+              "RelativeToolTip": "Common\\Modeli\\Heroj.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T14:31:58.634Z",
+              "WhenOpened": "2024-10-31T17:19:06.906Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NapadNaEntitet.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\servisi\\NapadNaEntitet\\NapadNaEntitet.cs",
-              "RelativeDocumentMoniker": "servisi\\NapadNaEntitet\\NapadNaEntitet.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\servisi\\NapadNaEntitet\\NapadNaEntitet.cs",
-              "RelativeToolTip": "servisi\\NapadNaEntitet\\NapadNaEntitet.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAUwC4AAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T14:32:38.678Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "INapadNaIgraca.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Common\\Servisi\\INapadNaIgraca.cs",
-              "RelativeDocumentMoniker": "Common\\Servisi\\INapadNaIgraca.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Common\\Servisi\\INapadNaIgraca.cs",
-              "RelativeToolTip": "Common\\Servisi\\INapadNaIgraca.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T14:05:25.466Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NapadNaIgraca.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Servisi\\ZlatniNovcic\\NapadNaIgraca.cs",
-              "RelativeDocumentMoniker": "Servisi\\ZlatniNovcic\\NapadNaIgraca.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\Servisi\\ZlatniNovcic\\NapadNaIgraca.cs",
-              "RelativeToolTip": "Servisi\\ZlatniNovcic\\NapadNaIgraca.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAIwBIAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T14:03:47.757Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\ERS_proj_03\\Program.cs",
               "RelativeDocumentMoniker": "ERS_proj_03\\Program.cs",
               "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\ERS_proj_03\\Program.cs",
               "RelativeToolTip": "ERS_proj_03\\Program.cs",
-              "ViewState": "AQIAADMBAAAAAAAAAAAAACcBAAAoAAAA",
+              "ViewState": "AQIAAEABAAAAAAAAAAAtwFgBAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T17:58:50.452Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UnosMape.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\servisi\\UnosMape\\UnosMape.cs",
-              "RelativeDocumentMoniker": "servisi\\UnosMape\\UnosMape.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\servisi\\UnosMape\\UnosMape.cs",
-              "RelativeToolTip": "servisi\\UnosMape\\UnosMape.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAxwBQAAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T15:48:48.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UnosPlavih.cs",
-              "DocumentMoniker": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\servisi\\UnosPlavih\\UnosPlavih.cs",
-              "RelativeDocumentMoniker": "servisi\\UnosPlavih\\UnosPlavih.cs",
-              "ToolTip": "C:\\Users\\miros\\Documents\\GitHub\\ers_E03_tim_3\\servisi\\UnosPlavih\\UnosPlavih.cs",
-              "RelativeToolTip": "servisi\\UnosPlavih\\UnosPlavih.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBIAAABNAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T14:02:03.065Z",
               "EditorCaption": ""
             }
           ]
