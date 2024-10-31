@@ -8,6 +8,7 @@ using Servisi.UnosCrvenih;
 using Servisi.UnosPlavih;
 using Servisi.GenEntitet;
 using Servisi.NapadNaEntitet;
+using Servisi.Kupovina;
 
 namespace ERS_proj_03
 {
@@ -58,6 +59,7 @@ namespace ERS_proj_03
                 IGenEntitet genEntiteta = new GenEntitet();
                 INapadNaIgraca napadniIgraca = new NapadNaIgraca();
                 INapadNaEntitet napadniEntitet = new NapadNaEntitet();
+                IKupovina kupovinaArtikala = new Kupovina();
 
 
                 //autentifikacija
@@ -281,17 +283,17 @@ namespace ERS_proj_03
 
                 //trajanje bitke
                 Console.WriteLine("\n=============== Zapocinjanje bitke ================\n");
-                /*Random rand = new Random();
+                Random rand = new Random();
                 int trajanjeBitke = rand.Next(10, 46);
 
                 Console.WriteLine($"Bitka izmedju plavog i crvenog tima zapocinje na mapi {nazivMape} i traje {trajanjeBitke} sekundi.\n");
-                Thread.Sleep(trajanjeBitke * 1000);*/
+                Thread.Sleep(trajanjeBitke * 1000);
 
                 //simulacija napada na Entitet
-
                 do
                 {
                     napadniEntitet.NapadniEntitet(ListaPlavih, ListaCrvenih, listaEntiteta);
+                    kupovinaArtikala.KupovinaProvera(ListaPlavih, ListaCrvenih, izabranaProdavnica);
                     l++;
                 } while (l < brEntitet);
 
@@ -299,7 +301,7 @@ namespace ERS_proj_03
                 do
                 {
                     napadniIgraca.NapadniIgraca(ListaPlavih, ListaCrvenih);
-
+                    kupovinaArtikala.KupovinaProvera(ListaPlavih, ListaCrvenih, izabranaProdavnica);
                     k++;
                 } while (k < 75);
 
@@ -327,7 +329,7 @@ namespace ERS_proj_03
                 foreach (Igrac i in ListaPlavih)
                 {
                     Console.Write(brP1 + ". Igrac: Naziv: " + i.Naziv);
-                    Console.WriteLine(", Heroj: " + i.heroj.NazivHeroja + " " + i.heroj.ZivotniPoeni + " " + i.heroj.StanjeNovcica);
+                    Console.WriteLine(", Heroj: " + i.heroj.NazivHeroja + " HP: " + i.heroj.ZivotniPoeni + " ATT: " + i.heroj.JacinaNapada + " COINS: " + i.heroj.StanjeNovcica);
                     brP1++;
                 }
 
@@ -337,7 +339,7 @@ namespace ERS_proj_03
                 foreach (Igrac i in ListaCrvenih)
                 {
                     Console.Write(brC1 + ". Igrac: Naziv: " + i.Naziv);
-                    Console.WriteLine(", Heroj: " + i.heroj.NazivHeroja + " " + i.heroj.ZivotniPoeni + " " + i.heroj.StanjeNovcica);
+                    Console.WriteLine(", Heroj: " + i.heroj.NazivHeroja + " HP: " + i.heroj.ZivotniPoeni + " ATT: " + i.heroj.JacinaNapada + " COINS: " + i.heroj.StanjeNovcica);
                     brC1++;
                 }
 
