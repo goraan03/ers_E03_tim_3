@@ -9,6 +9,7 @@ using Servisi.UnosPlavih;
 using Servisi.GenEntitet;
 using Servisi.NapadNaEntitet;
 using Servisi.Kupovina;
+using Servisi.TabelarniPrikaz;
 
 namespace ERS_proj_03
 {
@@ -37,6 +38,11 @@ namespace ERS_proj_03
                 int idProdavnice;
                 Prodavnica? izabranaProdavnica;
 
+                //promenljiva za sabiranje ukupnih potrosenih novcica
+                int potroseno1 = 0;
+                int potroseno2 = 0;
+                int ukupnoPotroseno = 0;
+
                 //promenljive za unos timova
                 int brPlaviTim;
                 int brCrveniTim;
@@ -60,6 +66,7 @@ namespace ERS_proj_03
                 INapadNaIgraca napadniIgraca = new NapadNaIgraca();
                 INapadNaEntitet napadniEntitet = new NapadNaEntitet();
                 IKupovina kupovinaArtikala = new Kupovina();
+                ITabelarniPrikaz tabelaStatistika = new TabelarniPrikaz();
 
 
                 //autentifikacija
@@ -283,17 +290,17 @@ namespace ERS_proj_03
 
                 //trajanje bitke
                 Console.WriteLine("\n=============== Zapocinjanje bitke ================\n");
-                Random rand = new Random();
+                /*Random rand = new Random();
                 int trajanjeBitke = rand.Next(10, 46);
 
                 Console.WriteLine($"Bitka izmedju plavog i crvenog tima zapocinje na mapi {nazivMape} i traje {trajanjeBitke} sekundi.\n");
-                Thread.Sleep(trajanjeBitke * 1000);
+                Thread.Sleep(trajanjeBitke * 1000);*/
 
                 //simulacija napada na Entitet
                 do
                 {
                     napadniEntitet.NapadniEntitet(ListaPlavih, ListaCrvenih, listaEntiteta);
-                    kupovinaArtikala.KupovinaProvera(ListaPlavih, ListaCrvenih, izabranaProdavnica);
+                    kupovinaArtikala.KupovinaProvera(ListaPlavih, ListaCrvenih, izabranaProdavnica, out potroseno1);
                     l++;
                 } while (l < brEntitet);
 
@@ -301,9 +308,11 @@ namespace ERS_proj_03
                 do
                 {
                     napadniIgraca.NapadniIgraca(ListaPlavih, ListaCrvenih);
-                    kupovinaArtikala.KupovinaProvera(ListaPlavih, ListaCrvenih, izabranaProdavnica);
+                    kupovinaArtikala.KupovinaProvera(ListaPlavih, ListaCrvenih, izabranaProdavnica, out potroseno2);
                     k++;
                 } while (k < 75);
+
+                ukupnoPotroseno = potroseno1 + potroseno2;
 
                 foreach (Igrac igr1 in ListaPlavih)
                 {
@@ -341,6 +350,46 @@ namespace ERS_proj_03
                     Console.Write(brC1 + ". Igrac: Naziv: " + i.Naziv);
                     Console.WriteLine(", Heroj: " + i.heroj.NazivHeroja + " HP: " + i.heroj.ZivotniPoeni + " ATT: " + i.heroj.JacinaNapada + " COINS: " + i.heroj.StanjeNovcica);
                     brC1++;
+                }
+
+                // izbor za prikaz statistike
+
+                /*Console.WriteLine("\n================ Izbor prikaza statistike =================\n");
+                Console.Write("Dostupne opcije za ispis: \n1. Tabelarni ispis u konzoli\n2. Ispis u tekstualnoj datoteci\n");
+                Console.Write("Vas izbor: ");*/
+
+                int izbor = 0;
+
+                while (true)
+                {
+                    Console.WriteLine("\n================ Izbor prikaza statistike =================\n");
+                    Console.Write("Dostupne opcije za ispis: \n1. Tabelarni ispis u konzoli\n2. Ispis u tekstualnoj datoteci\n");
+                    Console.Write("Vas izbor: ");
+
+                    string unos = Console.ReadLine();
+
+                    Console.WriteLine();
+
+                    if (int.TryParse(unos, out izbor) && (izbor == 1 || izbor == 2))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nevalidan unos. Molimo unesite 1 ili 2.");
+                    }
+                }
+
+                if (izbor == 1)
+                {
+                    Console.WriteLine("Ukupan potrosen novac: " + ukupnoPotroseno);
+                    Console.WriteLine("Mapa: " + IzabranaMapa.NazivMape);
+                    tabelaStatistika.ispisTabele(ListaPlavih, ListaCrvenih, IzabranaMapa);
+                }
+                else if (izbor == 2)
+                {
+                    // Logika za ispis u tekstualnoj datoteci
+                    break;
                 }
 
                 break;
