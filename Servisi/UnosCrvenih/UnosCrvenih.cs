@@ -41,5 +41,15 @@ namespace Servisi.UnosCrvenih
             IzabranIgrac = new Igrac(nik, heroj);
             return true;
         }
+
+        public void ispisHeroja()
+        {
+            int i = 1;
+            foreach(Heroj h in ListaHeroja)
+            {
+                Console.WriteLine("Heroj broj " + i + ": Naziv: " + h.NazivHeroja + ", Zivotni Poeni: " + h.ZivotniPoeni + ", Jacina Napada: " + h.JacinaNapada);
+                i++;
+            }
+        }
     }
 }

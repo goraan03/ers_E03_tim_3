@@ -14,7 +14,7 @@ namespace ERS_proj_03
     {
         public static void Main()
         {
-            while(true)
+            while (true)
             {
                 //promenljive za autentifikaciju
                 string? korisnickoIme = "", lozinka = "";
@@ -40,7 +40,7 @@ namespace ERS_proj_03
                 int brCrveniTim;
                 int brPlavi = 0;
                 int brCrveni = 0;
-                List<Igrac> ListaPlavih = new List<Igrac> ();
+                List<Igrac> ListaPlavih = new List<Igrac>();
                 List<Igrac> ListaCrvenih = new List<Igrac>();
                 Igrac? izabraniIgrac;
 
@@ -62,7 +62,7 @@ namespace ERS_proj_03
                     korisnickoIme = Console.ReadLine() ?? "";
 
                     Console.Write("Lozinka: ");
-                    lozinka = Console.ReadLine() ?? "";
+                    lozinka = UnosLozinke();
 
                     if (!autentifikacija.Prijava(korisnickoIme.Trim(), lozinka, out prijavljen))
                     {
@@ -71,7 +71,7 @@ namespace ERS_proj_03
                     break;
                 }
 
-                while(true)
+                while (true)
                 {
                     if (autentifikacija.Prijava(korisnickoIme.Trim(), lozinka.Trim(), out prijavljen))
                     {
@@ -80,13 +80,37 @@ namespace ERS_proj_03
                     }
                     else
                     {
-                        if(string.IsNullOrEmpty(lozinka))
+                        if (string.IsNullOrEmpty(lozinka))
                         {
                             Console.WriteLine("Lozinka ne moze biti prazna. Pokusajte ponovo!\n");
                         }
                         else
                             Console.WriteLine("Netacna lozinka! Pokusajte ponovo.\n");
                     }
+                }
+
+                static string UnosLozinke()
+                {
+                    var sb = new System.Text.StringBuilder();
+                    ConsoleKeyInfo keyInfo;
+
+                    do
+                    {
+                        keyInfo = Console.ReadKey(true); // true sakriva unos sa ekrana
+                        if (keyInfo.Key != ConsoleKey.Backspace && keyInfo.Key != ConsoleKey.Enter)
+                        {
+                            sb.Append(keyInfo.KeyChar);
+                            Console.Write("*");
+                        }
+                        else if (keyInfo.Key == ConsoleKey.Backspace && sb.Length > 0)
+                        {
+                            sb.Remove(sb.Length - 1, 1);
+                            Console.Write("\b \b"); // Brise poslednji karakter sa ekrana
+                        }
+                    } while (keyInfo.Key != ConsoleKey.Enter);
+
+                    Console.WriteLine();
+                    return sb.ToString();
                 }
 
                 //unos entiteta
@@ -110,15 +134,15 @@ namespace ERS_proj_03
                 }
 
                 //provera broja entiteta na mapi
-                if(brEntitet > IzabranaMapa.PomocniEntiteti)
+                if (brEntitet > IzabranaMapa.PomocniEntiteti)
                 {
                     brEntitet = IzabranaMapa.PomocniEntiteti;
                 }
 
                 //generisanje broja poena za entitete
-                while(true)
+                while (true)
                 {
-                    for(int i=0;i<brEntitet;i++)
+                    for (int i = 0; i < brEntitet; i++)
                     {
                         genEntiteta.dodajEntitete(out GenerisaniEnt);
                         listaEntiteta.Add(GenerisaniEnt);
@@ -137,7 +161,7 @@ namespace ERS_proj_03
                 //unos prodavnice
                 Console.WriteLine("\n================ Unos prodavnice =================\n");
                 Console.Write("Unesite ID prodavnice: ");
-                while(!int.TryParse(Console.ReadLine(), out idProdavnice) || !unosProdavnice.unosProdavnice(idProdavnice, out izabranaProdavnica))
+                while (!int.TryParse(Console.ReadLine(), out idProdavnice) || !unosProdavnice.unosProdavnice(idProdavnice, out izabranaProdavnica))
                 {
                     Console.WriteLine("Nepostojeca prodavnica! Pokusajte ponovo!\n");
                 }
@@ -167,32 +191,36 @@ namespace ERS_proj_03
                 IzabranaMapa.PlaviTim = plaviTim;
                 IzabranaMapa.CrveniTim = crveniTim;
 
+                //ispis svih dostupnih heroja
+                Console.WriteLine("\nDostupni heroji:\n");
+                unosCrvenih.ispisHeroja();
+
                 //unos igraca u crveni i plavi tim
-                while(true)
+                while (true)
                 {
                     Console.Write("\nUnesite broj igraca za plavi tim: ");
                     brPlaviTim = int.Parse(Console.ReadLine());
                     Console.Write("Unesite broj igraca za crveni tim: ");
                     brCrveniTim = int.Parse(Console.ReadLine());
-                    if(brPlaviTim + brCrveniTim > IzabranaMapa.MaxIgraca)
+                    if (brPlaviTim + brCrveniTim > IzabranaMapa.MaxIgraca)
                     {
                         Console.WriteLine("\nPrevise igraca. Odaberite drugi broj.\n");
                         continue;
                     }
                     break;
                 }
-                    
+
                 //unos plavog tima
-                Console.WriteLine("\nUnesite nazive igraca plavog tima:\n");
-                for(int i=0;i<brPlaviTim;i++)
+                Console.WriteLine("\nUnesite nazive igraca i heroje plavog tima:\n");
+                for (int i = 0; i < brPlaviTim; i++)
                 {
                     Console.Write("Unesite naziv " + (i + 1) + ". igraca: ");
                     string naziv;
                     naziv = Console.ReadLine() ?? "";
                     string nazivHeroja;
-                    while(true)
+                    while (true)
                     {
-                        Console.Write("Unesite naziv " + (i + 1) + ". heroja: ");
+                        Console.Write("Izaberite heroja: ");
                         nazivHeroja = Console.ReadLine() ?? "";
                         if (!unosPlavih.unosPlavih(naziv, nazivHeroja, out izabraniIgrac))
                         {
@@ -204,7 +232,7 @@ namespace ERS_proj_03
                 }
 
                 //unos crvenog tima
-                Console.WriteLine("\nUnesite nazive igraca crvenog tima:\n");
+                Console.WriteLine("\nUnesite nazive igraca i heroje crvenog tima:\n");
                 for (int i = 0; i < brCrveniTim; i++)
                 {
                     Console.Write("Unesite naziv " + (i + 1) + ". igraca: ");
@@ -213,7 +241,7 @@ namespace ERS_proj_03
                     string nazivHeroja;
                     while (true)
                     {
-                        Console.Write("Unesite naziv " + (i + 1) + ". heroja: ");
+                        Console.Write("Izaberite heroja: ");
                         nazivHeroja = Console.ReadLine() ?? "";
                         if (!unosCrvenih.unosCrvenih(naziv, nazivHeroja, out izabraniIgrac))
                         {
@@ -229,8 +257,8 @@ namespace ERS_proj_03
                 int brP = 1;
                 foreach (Igrac i in ListaPlavih)
                 {
-                    Console.WriteLine(brP + ". Igrac: " +  i.Naziv);
-                    Console.WriteLine(brP + ". Heroj: " + i.heroj.NazivHeroja);
+                    Console.Write(brP + ". Igrac: Naziv: " + i.Naziv);
+                    Console.WriteLine(", Heroj: " + i.heroj.NazivHeroja);
                     brP++;
                 }
 
@@ -239,20 +267,21 @@ namespace ERS_proj_03
                 int brC = 1;
                 foreach (Igrac i in ListaCrvenih)
                 {
-                    Console.WriteLine(brC + ". Igrac: " + i.Naziv);
-                    Console.WriteLine(brC + ". Heroj: " + i.heroj.NazivHeroja);
+                    Console.Write(brC + ". Igrac: Naziv: " + i.Naziv);
+                    Console.WriteLine(", Heroj: " + i.heroj.NazivHeroja);
                     brC++;
                 }
 
                 //tranje bitke
+                Console.WriteLine("\n=============== Zapocinjanje bitke ================\n");
                 Random rand = new Random();
                 int trajanjeBitke = rand.Next(10, 46);
 
-                Console.WriteLine($"Bitka između plavog i crvenog tima započinje na mapi {nazivMape} i traje {trajanjeBitke} sekundi.");
+                Console.WriteLine($"Bitka izmedju plavog i crvenog tima zapocinje na mapi {nazivMape} i traje {trajanjeBitke} sekundi.\n");
                 Thread.Sleep(trajanjeBitke * 1000);
 
                 break;
             }
-        }
+        }    
     }
 }
