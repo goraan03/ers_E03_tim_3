@@ -7,6 +7,7 @@ using Servisi.UnosProdavnice;
 using Servisi.UnosCrvenih;
 using Servisi.UnosPlavih;
 using Servisi.GenEntitet;
+using Servisi.NapadNaEntitet;
 
 namespace ERS_proj_03
 {
@@ -44,6 +45,10 @@ namespace ERS_proj_03
                 List<Igrac> ListaCrvenih = new List<Igrac>();
                 Igrac? izabraniIgrac;
 
+                //promenljive za simulaciju bitke
+                int k = 0;
+                int l = 0;
+
                 //servisi
                 IAutentifikacija autentifikacija = new Autentifikacija();
                 IUnosMape unosMape = new UnosMape();
@@ -51,6 +56,8 @@ namespace ERS_proj_03
                 IUnosCrvenih unosCrvenih = new UnosCrvenih();
                 IUnosPlavih unosPlavih = new UnosPlavih();
                 IGenEntitet genEntiteta = new GenEntitet();
+                INapadNaIgraca napadniIgraca = new NapadNaIgraca();
+                INapadNaEntitet napadniEntitet = new NapadNaEntitet();
 
 
                 //autentifikacija
@@ -272,13 +279,66 @@ namespace ERS_proj_03
                     brC++;
                 }
 
-                //tranje bitke
+                //trajanje bitke
                 Console.WriteLine("\n=============== Zapocinjanje bitke ================\n");
-                Random rand = new Random();
+                /*Random rand = new Random();
                 int trajanjeBitke = rand.Next(10, 46);
 
                 Console.WriteLine($"Bitka izmedju plavog i crvenog tima zapocinje na mapi {nazivMape} i traje {trajanjeBitke} sekundi.\n");
-                Thread.Sleep(trajanjeBitke * 1000);
+                Thread.Sleep(trajanjeBitke * 1000);*/
+
+                //simulacija napada na Entitet
+
+                do
+                {
+                    napadniEntitet.NapadniEntitet(ListaPlavih, ListaCrvenih, listaEntiteta);
+                    l++;
+                } while (l < brEntitet);
+
+                //simulacija napada na igraca
+                do
+                {
+                    napadniIgraca.NapadniIgraca(ListaPlavih, ListaCrvenih);
+                    k++;
+                } while (k < 75);
+
+                foreach (Igrac igr1 in ListaPlavih)
+                {
+                    if (igr1.heroj.ZivotniPoeni <= 0)
+                    {
+                        igr1.heroj.ZivotniPoeni = 0;
+                        Console.WriteLine(igr1.heroj.NazivHeroja + " je eliminisan.");
+                    }
+                }
+
+                foreach (Igrac igr2 in ListaCrvenih)
+                {
+                    if (igr2.heroj.ZivotniPoeni <= 0)
+                    {
+                        igr2.heroj.ZivotniPoeni = 0;
+                        Console.WriteLine(igr2.heroj.NazivHeroja + " je eliminisan.");
+                    }
+                }
+
+                Console.WriteLine("\nPlavi tim:\n");
+
+                int brP1 = 1;
+                foreach (Igrac i in ListaPlavih)
+                {
+                    Console.Write(brP1 + ". Igrac: Naziv: " + i.Naziv);
+                    Console.WriteLine(", Heroj: " + i.heroj.NazivHeroja + " " + i.heroj.ZivotniPoeni + " " + i.heroj.StanjeNovcica);
+                    brP1++;
+                }
+
+                Console.WriteLine("\nCrveni tim:\n");
+
+                int brC1 = 1;
+                foreach (Igrac i in ListaCrvenih)
+                {
+                    Console.Write(brC1 + ". Igrac: Naziv: " + i.Naziv);
+                    Console.WriteLine(", Heroj: " + i.heroj.NazivHeroja + " " + i.heroj.ZivotniPoeni + " " + i.heroj.StanjeNovcica);
+                    brC1++;
+                }
 
                 break;
             }

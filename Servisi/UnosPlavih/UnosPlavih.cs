@@ -16,7 +16,7 @@ namespace Servisi.UnosPlavih
         {
             ListaHeroja = new List<Heroj>
             {
-                new Heroj("Malphite", 1250, 120, 0),
+                new Heroj("Malphite", 1250, 120, 0), // naziv, hp, att, coins
                 new Heroj("Zac", 1100, 95, 0),
                 new Heroj("Ahri", 900, 135, 0),
                 new Heroj("Ezreal", 870, 175, 0),

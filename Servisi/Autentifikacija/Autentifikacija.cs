@@ -17,7 +17,7 @@ namespace Servisi.Autentifikacija
             ListaKorisnika = new List<Korisnik>
             {
                 new Korisnik("goran03", "LozinkaGoran", "Goran Grcic"),
-                new Korisnik("miroslav03", "LozinkaMiroslav", "Miroslav Dispiter")
+                new Korisnik("u", "u", "Miroslav Dispiter")
             };
         }
         public bool Prijava(string korisnickoIme, string lozinka, out Korisnik? prijavljen)

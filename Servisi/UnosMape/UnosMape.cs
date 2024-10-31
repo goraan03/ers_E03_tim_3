@@ -17,8 +17,8 @@ namespace Servisi.UnosMape
         {
             ListaMapa = new List<Mapa>
             {
-                new Mapa("Cosmic Ruins", Tip_Mape.LETNJA, 10, "", "", 14),
-                new Mapa("Crash Site", Tip_Mape.ZIMSKA, 8, "", "", 10)
+                new Mapa("Cosmic Ruins", Tip_Mape.LETNJA, 10, "", "", 35),
+                new Mapa("Crash Site", Tip_Mape.ZIMSKA, 8, "", "", 45)
             };
 
         }
