@@ -299,6 +299,7 @@ namespace ERS_proj_03
                 do
                 {
                     napadniIgraca.NapadniIgraca(ListaPlavih, ListaCrvenih);
+
                     k++;
                 } while (k < 75);
 
