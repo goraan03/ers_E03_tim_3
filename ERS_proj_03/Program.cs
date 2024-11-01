@@ -10,6 +10,7 @@ using Servisi.GenEntitet;
 using Servisi.NapadNaEntitet;
 using Servisi.Kupovina;
 using Servisi.TabelarniPrikaz;
+using Servisi.DatotekaPrikaz;
 
 namespace ERS_proj_03
 {
@@ -69,6 +70,7 @@ namespace ERS_proj_03
                 INapadNaEntitet napadniEntitet = new NapadNaEntitet();
                 IKupovina kupovinaArtikala = new Kupovina();
                 ITabelarniPrikaz tabelaStatistika = new TabelarniPrikaz();
+                IDatotekaPrikaz datotekaPrikaz = new DatotekaPrikaz();
 
                 //promenljive za ispis
                 int nesto = kupovinaArtikala.getTotal();
@@ -136,8 +138,17 @@ namespace ERS_proj_03
                 //unos entiteta
                 Console.WriteLine("\n================= Unos entiteta ===================\n");
 
-                Console.Write("Unesite broj entiteta: ");
-                brEntitet = int.Parse(Console.ReadLine());
+                while(true)
+                    try
+                    {
+                        Console.Write("Unesite broj entiteta: ");
+                        brEntitet = int.Parse(Console.ReadLine());
+                        break;
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Doslo je do greske: " + e.Message);
+                    }
 
                 //unos mape
                 Console.WriteLine("\n=================== Unos mape =====================\n");
@@ -184,6 +195,7 @@ namespace ERS_proj_03
                 while (!int.TryParse(Console.ReadLine(), out idProdavnice) || !unosProdavnice.unosProdavnice(idProdavnice, out izabranaProdavnica))
                 {
                     Console.WriteLine("Nepostojeca prodavnica! Pokusajte ponovo!\n");
+                    Console.Write("Unesite ID prodavnice: ");
                 }
                 Console.WriteLine("\nIzabrali ste prodavnicu:");
                 Console.WriteLine("ID: " + izabranaProdavnica.ID);
@@ -211,24 +223,32 @@ namespace ERS_proj_03
                 IzabranaMapa.PlaviTim = plaviTim;
                 IzabranaMapa.CrveniTim = crveniTim;
 
-                //ispis svih dostupnih heroja
-                Console.WriteLine("\nDostupni heroji:\n");
-                unosCrvenih.ispisHeroja();
-
                 //unos igraca u crveni i plavi tim
                 while (true)
                 {
-                    Console.Write("\nUnesite broj igraca za plavi tim: ");
-                    brPlaviTim = int.Parse(Console.ReadLine());
-                    Console.Write("Unesite broj igraca za crveni tim: ");
-                    brCrveniTim = int.Parse(Console.ReadLine());
-                    if (brPlaviTim + brCrveniTim > IzabranaMapa.MaxIgraca)
+                    try
                     {
-                        Console.WriteLine("\nPrevise igraca. Odaberite drugi broj.\n");
-                        continue;
+                        Console.Write("\nUnesite broj igraca za plavi tim: ");
+                        brPlaviTim = int.Parse(Console.ReadLine());
+                        
+                        Console.Write("Unesite broj igraca za crveni tim: ");
+                        brCrveniTim = int.Parse(Console.ReadLine());
+                        if (brPlaviTim + brCrveniTim > IzabranaMapa.MaxIgraca)
+                        {
+                            Console.WriteLine("\nPrevise igraca. Odaberite drugi broj.\n");
+                            continue;
+                        }
+                        break;
                     }
-                    break;
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Doslo je do greske: " + e.Message);
+                    }
                 }
+
+                //ispis svih dostupnih heroja
+                Console.WriteLine("\nDostupni heroji:\n");
+                unosCrvenih.ispisHeroja();
 
                 //unos plavog tima
                 Console.WriteLine("\nUnesite nazive igraca i heroje plavog tima:\n");
@@ -298,7 +318,7 @@ namespace ERS_proj_03
                 int trajanjeBitke = rand.Next(10, 46);
 
                 Console.WriteLine($"Bitka izmedju plavog i crvenog tima zapocinje na mapi {nazivMape} i traje {trajanjeBitke} sekundi.\n");
-                Thread.Sleep(trajanjeBitke * 1000);
+                Thread.Sleep(trajanjeBitke * 1000); 
 
                 //simulacija napada na Entitet
                 do
@@ -358,10 +378,6 @@ namespace ERS_proj_03
 
                 // izbor za prikaz statistike
 
-                /*Console.WriteLine("\n================ Izbor prikaza statistike =================\n");
-                Console.Write("Dostupne opcije za ispis: \n1. Tabelarni ispis u konzoli\n2. Ispis u tekstualnoj datoteci\n");
-                Console.Write("Vas izbor: ");*/
-
                 int izbor = 0;
 
                 while (true)
@@ -386,6 +402,7 @@ namespace ERS_proj_03
 
                 if (izbor == 1)
                 {
+                    // Logika za ispis u tabelarnoj formi u konzoli
                     Console.WriteLine("Ukupan potrosen novac: " + kupovinaArtikala.getTotal());
                     Console.WriteLine("Mapa: " + IzabranaMapa.NazivMape);
                     tabelaStatistika.ispisTabele(ListaPlavih, ListaCrvenih, IzabranaMapa);
@@ -393,7 +410,8 @@ namespace ERS_proj_03
                 else if (izbor == 2)
                 {
                     // Logika za ispis u tekstualnoj datoteci
-                    break;
+                    datotekaPrikaz.ispisFajl(ListaPlavih, ListaCrvenih, IzabranaMapa);
+                    Console.WriteLine("Statistika je upisana u datoteku 'statistika.txt'.");
                 }
 
                 break;
