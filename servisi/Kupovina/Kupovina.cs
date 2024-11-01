@@ -11,12 +11,9 @@ namespace Servisi.Kupovina
     public class Kupovina : IKupovina
     {
 
-        private int totalPotroseno;
+        private static int totalPotroseno = 0;
 
-        public Kupovina()
-        {
-            totalPotroseno = 0;
-        }
+        public Kupovina() {}
 
         public void KupovinaProvera(List<Igrac> PlaviTim, List<Igrac> CrveniTim, Prodavnica prod, out int ukPotroseno)
         {
@@ -41,6 +38,10 @@ namespace Servisi.Kupovina
                 }
             }
             totalPotroseno += ukPotroseno;
+        }
+        public int getTotal()
+        {
+            return totalPotroseno;
         }
 
         public void Kupi(Igrac igr, Prodavnica prod, out int ukupnaCena)

@@ -56,6 +56,8 @@ namespace ERS_proj_03
                 int k = 0;
                 int l = 0;
 
+                
+
                 //servisi
                 IAutentifikacija autentifikacija = new Autentifikacija();
                 IUnosMape unosMape = new UnosMape();
@@ -68,6 +70,8 @@ namespace ERS_proj_03
                 IKupovina kupovinaArtikala = new Kupovina();
                 ITabelarniPrikaz tabelaStatistika = new TabelarniPrikaz();
 
+                //promenljive za ispis
+                int nesto = kupovinaArtikala.getTotal();
 
                 //autentifikacija
                 Console.WriteLine("================= PRIJAVA NALOGA ==================");
@@ -290,11 +294,11 @@ namespace ERS_proj_03
 
                 //trajanje bitke
                 Console.WriteLine("\n=============== Zapocinjanje bitke ================\n");
-                /*Random rand = new Random();
+                Random rand = new Random();
                 int trajanjeBitke = rand.Next(10, 46);
 
                 Console.WriteLine($"Bitka izmedju plavog i crvenog tima zapocinje na mapi {nazivMape} i traje {trajanjeBitke} sekundi.\n");
-                Thread.Sleep(trajanjeBitke * 1000);*/
+                Thread.Sleep(trajanjeBitke * 1000);
 
                 //simulacija napada na Entitet
                 do
@@ -382,7 +386,7 @@ namespace ERS_proj_03
 
                 if (izbor == 1)
                 {
-                    Console.WriteLine("Ukupan potrosen novac: " + ukupnoPotroseno);
+                    Console.WriteLine("Ukupan potrosen novac: " + kupovinaArtikala.getTotal());
                     Console.WriteLine("Mapa: " + IzabranaMapa.NazivMape);
                     tabelaStatistika.ispisTabele(ListaPlavih, ListaCrvenih, IzabranaMapa);
                 }
