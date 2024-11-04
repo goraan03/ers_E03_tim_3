@@ -10,10 +10,13 @@ namespace Servisi.TabelarniPrikaz
 {
     public class TabelarniPrikaz : ITabelarniPrikaz
     {
-        public void ispisTabele(List<Igrac> TimPlavi, List<Igrac> TimCrveni, Mapa m)
+        public void ispisTabele(List<Igrac> TimPlavi, List<Igrac> TimCrveni, Mapa m, int ukPotroseno)
         {
             Console.WriteLine();
-
+            // Ispis potrosenog novca
+            Console.WriteLine("Ukupan potrosen novac: " + ukPotroseno);
+            //Ispis naziva mape
+            Console.WriteLine("Mapa: " + m.NazivMape);
             // Ispis Plavog tima
             Console.WriteLine("\t\t\t" + m.PlaviTim);
             Console.WriteLine("========================================================================");

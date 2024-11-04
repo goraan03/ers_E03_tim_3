@@ -8,10 +8,14 @@ namespace Servisi.DatotekaPrikaz
 {
     public class DatotekaPrikaz : IDatotekaPrikaz
     {
-        public void ispisFajl(List<Igrac> TimPlavi, List<Igrac> TimCrveni, Mapa m)
+        public void ispisFajl(List<Igrac> TimPlavi, List<Igrac> TimCrveni, Mapa m, int ukPotroseno)
         {
             using StreamWriter sw = new StreamWriter("statistika.txt", append: false);
 
+            // Ispis potrosenih novcica
+            sw.WriteLine("Ukupan potrosen novac: " + ukPotroseno);
+            // Ispis naziva mape
+            sw.WriteLine("Mapa: " + m.NazivMape);
             // Ispis Plavog tima u fajl
             sw.WriteLine("\t\t\t" + m.PlaviTim);
             sw.WriteLine("========================================================================");

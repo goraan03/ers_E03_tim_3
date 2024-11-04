@@ -11,7 +11,7 @@ namespace Servisi.UnosPlavih
     public class UnosPlavih : IUnosPlavih
     {
         private static readonly List<Heroj> ListaHeroja;
-
+        private readonly HashSet<string> ListaIzabranihHeroja = new HashSet<string>();
         static UnosPlavih()
         {
             ListaHeroja = new List<Heroj>
@@ -30,6 +30,12 @@ namespace Servisi.UnosPlavih
         }
         public bool unosPlavih(string nik, string naziv, out Igrac? IzabranIgrac)
         {
+            if (ListaIzabranihHeroja.Contains(naziv))
+            {
+                Console.WriteLine("Ovaj heroj je vec izabran. Pokusajte ponovo.\n");
+                IzabranIgrac = null;
+                return false;
+            }
             Heroj? heroj = ListaHeroja.FirstOrDefault(h => h.NazivHeroja.Equals(naziv));
             if (heroj == null)
             {
@@ -37,6 +43,7 @@ namespace Servisi.UnosPlavih
                 IzabranIgrac = null;
                 return false;
             }
+            ListaIzabranihHeroja.Add(naziv);
             IzabranIgrac = new Igrac(nik, heroj);
             return true;
         }

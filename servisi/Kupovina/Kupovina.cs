@@ -24,7 +24,6 @@ namespace Servisi.Kupovina
                 {
                     Kupi(i, prod, out int ukupnaCena);
                     ukPotroseno += ukupnaCena;
-                    Console.WriteLine("UK POTROSENO: " + ukPotroseno);
                 }
             }
 
@@ -34,7 +33,6 @@ namespace Servisi.Kupovina
                 {
                     Kupi(i, prod, out int ukupnaCena);
                     ukPotroseno += ukupnaCena;
-                    Console.WriteLine("UK POTROSENO: " + ukPotroseno);
                 }
             }
             totalPotroseno += ukPotroseno;
@@ -56,11 +54,7 @@ namespace Servisi.Kupovina
                     igr.heroj.StanjeNovcica -= o.Cena;
                     o.Kolicina--;
                     ukupnaCena += o.Cena;
-                    Console.WriteLine("Kupljeno oruzje: " + o.Naziv + " za " + o.Cena);
-                }
-                else
-                {
-                    Console.WriteLine("Oruzje " + o.Naziv + " vise nije dostupno.");
+                    Console.WriteLine("Igrac " + igr.Naziv + " je kupio oruzje: " + o.Naziv + " za " + o.Cena);
                 }
             }
 
@@ -68,19 +62,15 @@ namespace Servisi.Kupovina
             {
                 if (n.Kolicina > 0)
                 {
-                    igr.heroj.JacinaNapada += n.Napad;
+                    igr.heroj.ZivotniPoeni += n.Napad;
                     igr.heroj.StanjeNovcica -= n.Cena;
                     n.Kolicina--;
                     ukupnaCena += n.Cena;
-                    Console.WriteLine("Kupljen napitak: " + n.Naziv + " za " + n.Cena);
-                }
-                else
-                {
-                    Console.WriteLine("Napitak " + n.Naziv + " vise nije dostupan.");
+                    Console.WriteLine("Igrac " + igr.Naziv + " je kupio napitak: " + n.Naziv + " za " + n.Cena);
                 }
             }
 
-            Console.WriteLine("Igrac je potrosio: " + ukupnaCena);
+            Console.WriteLine(igr.Naziv + " je potrosio: " + ukupnaCena);
         }
 
     }

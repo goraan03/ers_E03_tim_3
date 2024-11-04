@@ -23,8 +23,8 @@ namespace Servisi.UnosProdavnice
             },
             new List<Napici>
             {
-                new Napici("Health Potion", 50, 20, 10),
-                new Napici("Mana Potion", 40, 15, 8)
+                new Napici("Health Potion", 50, 40, 10),
+                new Napici("Mana Potion", 40, 25, 8)
             }),
 
         new Prodavnica(2, new List<Oruzje>
@@ -34,8 +34,8 @@ namespace Servisi.UnosProdavnice
             },
             new List<Napici>
             {
-                new Napici("Energy Drink", 30, 18, 5),
-                new Napici("Shield Potion", 60, 25, 4)
+                new Napici("Energy Drink", 30, 23, 5),
+                new Napici("Shield Potion", 60, 35, 4)
             })
     };
 
