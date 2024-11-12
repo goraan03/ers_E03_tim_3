@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Common.Modeli
+﻿namespace Common.Modeli
 {
     public class Prodavnica
     {
         public int ID { get; set; }
-        public List<Oruzje> Oruzje { get; set; }
-        public List<Napici> Napicis { get; set; }
+        public IEnumerable<Oruzje> Oruzje { get; set; }
+        public IEnumerable<Napici> Napicis { get; set; }
         public int Vrednost => IzracunajUkupnuVrednost();
 
         public Prodavnica() { }
 
-        public Prodavnica(int iD, List<Oruzje> oruzje, List<Napici> napici)
+        public Prodavnica(int iD, IEnumerable<Oruzje> oruzje, IEnumerable<Napici> napici)
         {
             ID = iD;
             Oruzje = oruzje;

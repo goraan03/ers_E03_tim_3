@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Common.Modeli
+﻿namespace Common.Modeli
 {
     public class Heroj
     {
         public string NazivHeroja { get; set; } = string.Empty;
 
-        public int ZivotniPoeni { get; set; } 
+        public int ZivotniPoeni { get; set; }
 
         public int JacinaNapada { get; set; }
 

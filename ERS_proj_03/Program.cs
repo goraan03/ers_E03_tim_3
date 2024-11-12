@@ -1,16 +1,16 @@
 ﻿using Common.Modeli;
 using Common.Servisi;
-using Servisi.ZlatniNovcic;
 using Servisi.Autentifikacija;
-using Servisi.UnosMape;
-using Servisi.UnosProdavnice;
-using Servisi.UnosCrvenih;
-using Servisi.UnosPlavih;
-using Servisi.GenEntitet;
-using Servisi.NapadNaEntitet;
-using Servisi.Kupovina;
-using Servisi.TabelarniPrikaz;
 using Servisi.DatotekaPrikaz;
+using Servisi.GenEntitet;
+using Servisi.Kupovina;
+using Servisi.NapadNaEntitet;
+using Servisi.TabelarniPrikaz;
+using Servisi.UnosCrvenih;
+using Servisi.UnosMape;
+using Servisi.UnosPlavih;
+using Servisi.UnosProdavnice;
+using Servisi.ZlatniNovcic;
 
 namespace ERS_proj_03
 {
@@ -140,7 +140,7 @@ namespace ERS_proj_03
                 //unos entiteta
                 Console.WriteLine("\n================= Unos entiteta ===================\n");
 
-                while(true)
+                while (true)
                     try
                     {
                         Console.Write("Unesite broj entiteta: ");
@@ -194,13 +194,13 @@ namespace ERS_proj_03
                 //unos prodavnice
                 Console.WriteLine("\n================ Unos prodavnice ==================\n");
                 Console.Write("Unesite ID prodavnice: ");
-                
+
                 while (!int.TryParse(Console.ReadLine(), out idProdavnice) || !unosProdavnice.unosProdavnice(idProdavnice, out izabranaProdavnica))
                 {
                     Console.WriteLine("Nepostojeca prodavnica! Pokusajte ponovo!\n");
                     Console.Write("Unesite ID prodavnice: ");
                 }
-                
+
                 Console.WriteLine("\nIzabrali ste prodavnicu:");
                 Console.WriteLine("ID: " + izabranaProdavnica.ID);
                 Console.WriteLine("Vrednost: " + unosProdavnice.IzracunajUkupnuVrednost(izabranaProdavnica)); // Ukupna vrednost
@@ -213,7 +213,7 @@ namespace ERS_proj_03
                 Console.WriteLine("Napici:");
                 foreach (var napitak in izabranaProdavnica.Napicis)
                 {
-                    Console.WriteLine($"- {napitak.Naziv}, Cena: {napitak.Cena}, Napad: {napitak.Napad}, Količina: {napitak.Kolicina}");
+                    //Console.WriteLine($"- {napitak.Naziv}, Cena: {napitak.Cena}, Napad: {napitak.Napad}, Količina: {napitak.Kolicina}");
                 }
 
                 //unos naziva plavog i crvenog tima
@@ -241,7 +241,7 @@ namespace ERS_proj_03
                     {
                         Console.Write("\nUnesite broj igraca za plavi tim: ");
                         brPlaviTim = int.Parse(Console.ReadLine());
-                        
+
                         Console.Write("Unesite broj igraca za crveni tim: ");
                         brCrveniTim = int.Parse(Console.ReadLine());
                         if (brPlaviTim + brCrveniTim > IzabranaMapa.MaxIgraca)
@@ -451,11 +451,11 @@ namespace ERS_proj_03
                 else if (izbor == 2)
                 {
                     // Logika za ispis u tekstualnoj datoteci
-                    datotekaPrikaz.ispisFajl(ListaPlavih, ListaCrvenih, IzabranaMapa, kupovinaArtikala.getTotal());
+                    datotekaPrikaz.IspisFajl(ListaPlavih, ListaCrvenih, IzabranaMapa, kupovinaArtikala.getTotal());
                     Console.WriteLine("Statistika je upisana u datoteku 'statistika.txt'.");
                 }
                 break;
             }
-        }    
+        }
     }
 }

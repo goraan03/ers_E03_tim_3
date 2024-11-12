@@ -1,19 +1,14 @@
 ﻿using Common.Modeli;
 using Common.Servisi;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Servisi.Kupovina
 {
     public class Kupovina : IKupovina
     {
 
-        private static int totalPotroseno = 0;
+        private int totalPotroseno = 0;
 
-        public Kupovina() {}
+        public Kupovina() { }
 
         public void KupovinaProvera(List<Igrac> PlaviTim, List<Igrac> CrveniTim, Prodavnica prod, out int ukPotroseno)
         {

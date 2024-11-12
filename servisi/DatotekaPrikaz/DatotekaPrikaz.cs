@@ -1,14 +1,11 @@
 ﻿using Common.Modeli;
 using Common.Servisi;
-using System;
-using System.Collections.Generic;
-using System.IO;
 
 namespace Servisi.DatotekaPrikaz
 {
     public class DatotekaPrikaz : IDatotekaPrikaz
     {
-        public void ispisFajl(List<Igrac> TimPlavi, List<Igrac> TimCrveni, Mapa m, int ukPotroseno)
+        public void IspisFajl(List<Igrac> TimPlavi, List<Igrac> TimCrveni, Mapa m, int ukPotroseno)
         {
             using StreamWriter sw = new StreamWriter("statistika.txt", append: false);
 

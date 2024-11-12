@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
-using Common.Modeli;
+﻿using Common.Modeli;
 using Common.Servisi;
 
 namespace Servisi.UnosCrvenih
@@ -32,7 +26,7 @@ namespace Servisi.UnosCrvenih
         }
         public bool unosCrvenih(string nik, string naziv, out Igrac? IzabranIgrac)
         {
-            if(ListaIzabranihHeroja.Contains(naziv))
+            if (ListaIzabranihHeroja.Contains(naziv))
             {
                 Console.WriteLine("Ovaj heroj je vec izabran. Pokusajte ponovo.\n");
                 IzabranIgrac = null;
@@ -53,7 +47,7 @@ namespace Servisi.UnosCrvenih
         public void ispisHeroja()
         {
             int i = 1;
-            foreach(Heroj h in ListaHeroja)
+            foreach (Heroj h in ListaHeroja)
             {
                 Console.WriteLine("Heroj broj " + i + ": Naziv: " + h.NazivHeroja + ", Zivotni Poeni: " + h.ZivotniPoeni + ", Jacina Napada: " + h.JacinaNapada);
                 i++;

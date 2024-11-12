@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Common.Modeli
+﻿namespace Common.Modeli
 {
     public class Napici
     {
@@ -12,16 +6,7 @@ namespace Common.Modeli
 
         public string Naziv { get; set; } = string.Empty;
         public int Cena { get; set; }
-        public int Napad
-        {
-            get { return napad; }
-            set
-            {
-                if (value < 15 || value > 40)
-                    throw new ArgumentOutOfRangeException("Napad mora biti između 15 i 40.");
-                napad = value;
-            }
-        }
+        public int Napad { get; set; }
 
         public int Kolicina { get; set; }
 

@@ -1,8 +1,6 @@
 C:\Users\pc\Desktop\OOT\Projekat\ers_E03_tim_3\Servisi\bin\Debug\net7.0\Servisi.deps.json
 C:\Users\pc\Desktop\OOT\Projekat\ers_E03_tim_3\Servisi\bin\Debug\net7.0\Servisi.dll
 C:\Users\pc\Desktop\OOT\Projekat\ers_E03_tim_3\Servisi\bin\Debug\net7.0\Servisi.pdb
-C:\Users\pc\Desktop\OOT\Projekat\ers_E03_tim_3\Servisi\bin\Debug\net7.0\Common.dll
-C:\Users\pc\Desktop\OOT\Projekat\ers_E03_tim_3\Servisi\bin\Debug\net7.0\Common.pdb
 C:\Users\pc\Desktop\OOT\Projekat\ers_E03_tim_3\Servisi\obj\Debug\net7.0\Servisi.csproj.AssemblyReference.cache
 C:\Users\pc\Desktop\OOT\Projekat\ers_E03_tim_3\Servisi\obj\Debug\net7.0\Servisi.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\pc\Desktop\OOT\Projekat\ers_E03_tim_3\Servisi\obj\Debug\net7.0\Servisi.AssemblyInfoInputs.cache
@@ -29,3 +27,5 @@ C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Servisi\obj\Debug\net7.0\Servisi.d
 C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Servisi\obj\Debug\net7.0\refint\Servisi.dll
 C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Servisi\obj\Debug\net7.0\Servisi.pdb
 C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Servisi\obj\Debug\net7.0\ref\Servisi.dll
+C:\Users\pc\Desktop\OOT\Projekat\ers_E03_tim_3\Servisi\bin\Debug\net7.0\Domain.dll
+C:\Users\pc\Desktop\OOT\Projekat\ers_E03_tim_3\Servisi\bin\Debug\net7.0\Domain.pdb

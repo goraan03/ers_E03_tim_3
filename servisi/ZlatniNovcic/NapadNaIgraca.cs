@@ -1,5 +1,5 @@
-﻿using Common.Servisi;
-using Common.Modeli;
+﻿using Common.Modeli;
+using Common.Servisi;
 
 namespace Servisi.ZlatniNovcic
 {

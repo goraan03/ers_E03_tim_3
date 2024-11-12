@@ -5,9 +5,9 @@ VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERS_proj_03", "ERS_proj_03\ERS_proj_03.csproj", "{CE3CA7FD-09E0-4BE0-AEDC-A0216049BFBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servisi", "Servisi\Servisi.csproj", "{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servisi", "Servisi\Servisi.csproj", "{8338AFCF-5B47-4126-8527-C6EA8B2B5E7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{362A091A-FB25-44FB-820C-1D636EAFD434}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Common\Domain.csproj", "{362A091A-FB25-44FB-820C-1D636EAFD434}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
