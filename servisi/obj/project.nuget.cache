@@ -4,5 +4,12 @@
   "success": true,
   "projectFilePath": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Servisi\\Servisi.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Servisi\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
