@@ -1,0 +1,63 @@
+﻿using Common.Modeli;
+using Servisi.Autentifikacija;
+
+namespace Presentation
+{
+    public class AutentifikacijaPresentation
+    {
+        private readonly Autentifikacija _autentifikacija;
+
+        public AutentifikacijaPresentation(Autentifikacija autentifikacija)
+        {
+            _autentifikacija = autentifikacija;
+        }
+
+        public Korisnik? Prijava()
+        {
+            string korisnickoIme, lozinka;
+            Korisnik? prijavljen = null;
+
+
+            while (true)
+            {
+                Console.Write("\nKorisnicko Ime: ");
+                korisnickoIme = Console.ReadLine()?.Trim() ?? "";
+
+                Console.Write("Lozinka: ");
+                lozinka = UnosLozinke();
+
+                if (_autentifikacija.Prijava(korisnickoIme, lozinka, out prijavljen))
+                {
+                    Console.WriteLine("\nUspesna prijava!");
+                    break;
+                }
+            }
+
+            return prijavljen;
+        }
+
+        private static string UnosLozinke()
+        {
+            var sb = new System.Text.StringBuilder();
+            ConsoleKeyInfo keyInfo;
+
+            do
+            {
+                keyInfo = Console.ReadKey(true); // true sakriva unos sa ekrana
+                if (keyInfo.Key != ConsoleKey.Backspace && keyInfo.Key != ConsoleKey.Enter)
+                {
+                    sb.Append(keyInfo.KeyChar);
+                    Console.Write("*");
+                }
+                else if (keyInfo.Key == ConsoleKey.Backspace && sb.Length > 0)
+                {
+                    sb.Remove(sb.Length - 1, 1);
+                    Console.Write("\b \b"); // Brise poslednji karakter sa ekrana
+                }
+            } while (keyInfo.Key != ConsoleKey.Enter);
+
+            Console.WriteLine();
+            return sb.ToString();
+        }
+    }
+}

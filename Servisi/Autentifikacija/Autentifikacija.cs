@@ -1,7 +1,6 @@
 ﻿using Common.Modeli;
 using Common.Servisi;
 using Domain.Repozitorijum.KorisniciRepozitorijum;
-using System.Runtime.CompilerServices;
 
 namespace Servisi.Autentifikacija
 {
