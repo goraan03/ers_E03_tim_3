@@ -9,7 +9,5 @@ namespace Common.Modeli
         {
             Poeni = GeneratorPoena.GenerisiPoene();
         }
-
-
     }
 }

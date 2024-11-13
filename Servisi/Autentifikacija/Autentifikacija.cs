@@ -1,19 +1,19 @@
 ﻿using Common.Modeli;
 using Common.Servisi;
+using Domain.Repozitorijum.KorisniciRepozitorijum;
+using System.Runtime.CompilerServices;
 
 namespace Servisi.Autentifikacija
 {
     public class Autentifikacija : IAutentifikacija
     {
-        private static readonly List<Korisnik> ListaKorisnika;
+        private readonly KorisniciRepozitorijum _korisniciRepozitorijum;
+        private List<Korisnik> ListaKorisnika;
 
-        static Autentifikacija()
+        public Autentifikacija(KorisniciRepozitorijum korisniciRepozitorijum)
         {
-            ListaKorisnika = new List<Korisnik>
-            {
-                new Korisnik("goran03", "LozinkaGoran", "Goran Grcic"),
-                new Korisnik("u", "u", "Miroslav Dispiter")
-            };
+            this._korisniciRepozitorijum = korisniciRepozitorijum;
+            ListaKorisnika = _korisniciRepozitorijum.SpisakKorisnika();
         }
         public bool Prijava(string korisnickoIme, string lozinka, out Korisnik? prijavljen)
         {

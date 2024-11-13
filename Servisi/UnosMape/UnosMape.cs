@@ -1,21 +1,18 @@
 ﻿using Common.Enumeracije;
 using Common.Modeli;
 using Common.Servisi;
+using Domain.Repozitorijum.MapeRepozitorijum;
 
 namespace Servisi.UnosMape
 {
     public class UnosMape : IUnosMape
     {
-        private static readonly List<Mapa> ListaMapa;
-
-        static UnosMape()
+        private List<Mapa> ListaMapa;
+        private readonly MapeRepozitorijum _mapeRepozitorijum;
+        public UnosMape(MapeRepozitorijum mapeRepozitorijum)
         {
-            ListaMapa = new List<Mapa>
-            {
-                new Mapa("Cosmic Ruins", Tip_Mape.LETNJA, 10, "", "", 35),
-                new Mapa("Crash Site", Tip_Mape.ZIMSKA, 8, "", "", 45)
-            };
-
+            this._mapeRepozitorijum = mapeRepozitorijum;
+            ListaMapa = _mapeRepozitorijum.SpisakMapa();
         }
         public bool unosNaziva(string naziv, out Mapa? IzabranaMapa)
         {

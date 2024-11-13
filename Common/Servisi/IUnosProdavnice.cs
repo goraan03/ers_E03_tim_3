@@ -5,6 +5,5 @@ namespace Common.Servisi
     public interface IUnosProdavnice
     {
         bool unosProdavnice(int id, out Prodavnica? izabranaProdavnica);
-        int IzracunajUkupnuVrednost(Prodavnica prodavnica);
     }
 }

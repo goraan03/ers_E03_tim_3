@@ -1,48 +1,20 @@
 ﻿using Common.Modeli;
 using Common.Servisi;
+using Domain.Repozitorijum.ProdavniceRepozitorijum;
 
 namespace Servisi.UnosProdavnice
 {
     public class UnosProdavnice : IUnosProdavnice
     {
-        private static readonly List<Prodavnica> ListaProdavnica;
-        static UnosProdavnice()
+        private readonly ProdavniceRepozitorijum _prodavniceRepozitorijum;
+        public UnosProdavnice(ProdavniceRepozitorijum prodavniceRepozitorijum)
         {
-            ListaProdavnica = new List<Prodavnica>
-    {
-        new Prodavnica(1, new List<Oruzje>
-            {
-                new Oruzje("Mace", 100, 20, 5),
-                new Oruzje("Sword", 150, 30, 3)
-            },
-            new List<Napici>
-            {
-                new Napici("Health Potion", 50, 40, 10),
-                new Napici("Mana Potion", 40, 25, 8)
-            }),
-
-        new Prodavnica(2, new List<Oruzje>
-            {
-                new Oruzje("Bow", 120, 25, 7),
-                new Oruzje("Dagger", 80, 15, 10)
-            },
-            new List<Napici>
-            {
-                new Napici("Energy Drink", 30, 23, 5),
-                new Napici("Shield Potion", 60, 35, 4)
-            })
-    };
-
+            _prodavniceRepozitorijum = prodavniceRepozitorijum;
         }
         public bool unosProdavnice(int id, out Prodavnica? izabranaProdavnica)
         {
-            izabranaProdavnica = ListaProdavnica.FirstOrDefault(p => p.ID == id);
+            izabranaProdavnica = _prodavniceRepozitorijum.GetProdavnicaID(id);
             return izabranaProdavnica != null;
-        }
-
-        public int IzracunajUkupnuVrednost(Prodavnica prodavnica)
-        {
-            return prodavnica.IzracunajUkupnuVrednost();
         }
     }
 }

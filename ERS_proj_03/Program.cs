@@ -1,9 +1,17 @@
 ﻿using Common.Modeli;
 using Common.Servisi;
+using Domain.PomocneMetode.RacunanjeUkupneVrednosti;
+using Domain.Repozitorijum.HerojRepozitorijum;
+using Domain.Repozitorijum.KorisniciRepozitorijum;
+using Domain.Repozitorijum.MapeRepozitorijum;
+using Domain.Repozitorijum.ProdavniceRepozitorijum;
+using Domain.Servisi;
 using Servisi.Autentifikacija;
 using Servisi.DatotekaPrikaz;
 using Servisi.GenEntitet;
+using Servisi.IspisHeroja;
 using Servisi.Kupovina;
+using Servisi.KupovinaSvihIgracca;
 using Servisi.NapadNaEntitet;
 using Servisi.TabelarniPrikaz;
 using Servisi.UnosCrvenih;
@@ -23,6 +31,7 @@ namespace ERS_proj_03
                 //promenljive za autentifikaciju
                 string? korisnickoIme = "", lozinka = "";
                 Korisnik? prijavljen;
+                KorisniciRepozitorijum korisniciRepozitorijum = new KorisniciRepozitorijum();
 
                 //promenljive za unos entiteta
                 int brEntitet = 0;
@@ -34,15 +43,20 @@ namespace ERS_proj_03
                 Mapa? IzabranaMapa;
                 string plaviTim = "";
                 string crveniTim = "";
+                MapeRepozitorijum mapeRepozitorijum = new MapeRepozitorijum();
 
                 //promenljive za unos prodavnice
                 int idProdavnice;
                 Prodavnica? izabranaProdavnica;
+                var prodavniceRepozitorijum = new ProdavniceRepozitorijum();
 
                 //promenljiva za sabiranje ukupnih potrosenih novcica
                 int potroseno1 = 0;
                 int potroseno2 = 0;
                 int ukupnoPotroseno = 0;
+
+                //promenljive za kupovinu
+                var kupovinaSvihIgraca = new KupovinaSvihIgraca();
 
                 //promenljive za unos timova
                 int brPlaviTim;
@@ -52,6 +66,7 @@ namespace ERS_proj_03
                 List<Igrac> ListaPlavih = new List<Igrac>();
                 List<Igrac> ListaCrvenih = new List<Igrac>();
                 Igrac? izabraniIgrac;
+                HerojRepozitorijum herojRepozitorijum = new HerojRepozitorijum();
 
                 //promenljive za simulaciju bitke
                 int k = 0;
@@ -62,9 +77,9 @@ namespace ERS_proj_03
 
 
                 //servisi
-                IAutentifikacija autentifikacija = new Autentifikacija();
-                IUnosMape unosMape = new UnosMape();
-                IUnosProdavnice unosProdavnice = new UnosProdavnice();
+                IAutentifikacija autentifikacija = new Autentifikacija(korisniciRepozitorijum);
+                IUnosMape unosMape = new UnosMape(mapeRepozitorijum);
+                IUnosProdavnice unosProdavnice = new UnosProdavnice(prodavniceRepozitorijum);
                 IUnosCrvenih unosCrvenih = new UnosCrvenih();
                 IUnosPlavih unosPlavih = new UnosPlavih();
                 IGenEntitet genEntiteta = new GenEntitet();
@@ -73,9 +88,9 @@ namespace ERS_proj_03
                 IKupovina kupovinaArtikala = new Kupovina();
                 ITabelarniPrikaz tabelaStatistika = new TabelarniPrikaz();
                 IDatotekaPrikaz datotekaPrikaz = new DatotekaPrikaz();
+                IIspisHeroja ispisHeroja = new IspisHeroja();
 
                 //promenljive za ispis
-                int nesto = kupovinaArtikala.getTotal();
 
                 //autentifikacija
                 Console.WriteLine("================= PRIJAVA NALOGA ==================");
@@ -203,7 +218,7 @@ namespace ERS_proj_03
 
                 Console.WriteLine("\nIzabrali ste prodavnicu:");
                 Console.WriteLine("ID: " + izabranaProdavnica.ID);
-                Console.WriteLine("Vrednost: " + unosProdavnice.IzracunajUkupnuVrednost(izabranaProdavnica)); // Ukupna vrednost
+                Console.WriteLine("Vrednost: " + RacunanjeUkupneVrednosti.IzracunajUkupnuVrednost(izabranaProdavnica.Oruzje, izabranaProdavnica.Napicis)); // Ukupna vrednost
                 Console.WriteLine("Oružja:");
                 foreach (var oruzje in izabranaProdavnica.Oruzje)
                 {
@@ -213,7 +228,7 @@ namespace ERS_proj_03
                 Console.WriteLine("Napici:");
                 foreach (var napitak in izabranaProdavnica.Napicis)
                 {
-                    //Console.WriteLine($"- {napitak.Naziv}, Cena: {napitak.Cena}, Napad: {napitak.Napad}, Količina: {napitak.Kolicina}");
+                    Console.WriteLine($"- {napitak.Naziv}, Cena: {napitak.Cena}, Napad: {napitak.Napad}, Količina: {napitak.Kolicina}");
                 }
 
                 //unos naziva plavog i crvenog tima
@@ -259,7 +274,7 @@ namespace ERS_proj_03
 
                 //ispis svih dostupnih heroja
                 Console.WriteLine("\nDostupni heroji:\n");
-                unosCrvenih.ispisHeroja();
+                ispisHeroja.ispisHeroja(herojRepozitorijum.SpisakHeroja());
 
                 //unos plavog tima
                 Console.WriteLine("\nUnesite nazive igraca i heroje plavog tima:\n");
@@ -364,7 +379,7 @@ namespace ERS_proj_03
                 do
                 {
                     napadniEntitet.NapadniEntitet(ListaPlavih, ListaCrvenih, listaEntiteta);
-                    kupovinaArtikala.KupovinaProvera(ListaPlavih, ListaCrvenih, izabranaProdavnica, out potroseno1);
+                    kupovinaSvihIgraca.KupovinaSvih(ListaPlavih, ListaCrvenih, izabranaProdavnica, out potroseno1); // Kupovina za sve igrače
                     l++;
                 } while (l < brEntitet);
 
@@ -372,7 +387,7 @@ namespace ERS_proj_03
                 do
                 {
                     napadniIgraca.NapadniIgraca(ListaPlavih, ListaCrvenih);
-                    kupovinaArtikala.KupovinaProvera(ListaPlavih, ListaCrvenih, izabranaProdavnica, out potroseno2);
+                    kupovinaSvihIgraca.KupovinaSvih(ListaPlavih, ListaCrvenih, izabranaProdavnica, out potroseno2);
                     k++;
 
                     foreach (Igrac igr1 in ListaPlavih)
@@ -446,12 +461,12 @@ namespace ERS_proj_03
                 if (izbor == 1)
                 {
                     // Logika za ispis u tabelarnoj formi u konzoli
-                    tabelaStatistika.ispisTabele(ListaPlavih, ListaCrvenih, IzabranaMapa, kupovinaArtikala.getTotal());
+                    tabelaStatistika.ispisTabele(ListaPlavih, ListaCrvenih, IzabranaMapa, kupovinaSvihIgraca.getTotal());
                 }
                 else if (izbor == 2)
                 {
                     // Logika za ispis u tekstualnoj datoteci
-                    datotekaPrikaz.IspisFajl(ListaPlavih, ListaCrvenih, IzabranaMapa, kupovinaArtikala.getTotal());
+                    datotekaPrikaz.IspisFajl(ListaPlavih, ListaCrvenih, IzabranaMapa, kupovinaSvihIgraca.getTotal());
                     Console.WriteLine("Statistika je upisana u datoteku 'statistika.txt'.");
                 }
                 break;
