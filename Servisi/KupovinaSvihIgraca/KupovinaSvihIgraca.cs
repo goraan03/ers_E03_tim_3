@@ -1,6 +1,6 @@
 ﻿using Common.Modeli;
 using Domain.Servisi;
-using KupovinaService = Servisi.Kupovina.Kupovina; // Alias za klasu Kupovina
+using KupovinaService = Servisi.Kupovina.Kupovina;
 
 namespace Servisi.KupovinaSvihIgracca
 {

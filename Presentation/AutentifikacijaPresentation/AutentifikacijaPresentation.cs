@@ -16,7 +16,7 @@ namespace Presentation
         {
             string korisnickoIme, lozinka;
             Korisnik? prijavljen = null;
-
+            Console.WriteLine("================= PRIJAVA NALOGA ==================");
 
             while (true)
             {
@@ -31,6 +31,11 @@ namespace Presentation
                     Console.WriteLine("\nUspesna prijava!");
                     break;
                 }
+            }
+
+            if (prijavljen != null)
+            {
+                Console.WriteLine($"Dobrodošli, {prijavljen.ImePrezime}!");
             }
 
             return prijavljen;

@@ -32,7 +32,7 @@ namespace Presentation
                     Console.Write("Izaberite heroja: ");
                     nazivHeroja = Console.ReadLine() ?? "";
 
-                    // Koristimo odgovarajući interfejs za unos heroja
+                    
                     if (unosInterfejs is IUnosPlavih unosPlavih)
                     {
                         if (!unosPlavih.unosPlavih(naziv, nazivHeroja, out Igrac izabraniIgrac))

@@ -21,7 +21,6 @@ namespace Presentation
             Console.WriteLine("\n================ Unos prodavnice ==================\n");
             Console.Write("Unesite ID prodavnice: ");
 
-            // Petlja za unos i validaciju ID prodavnice
             while (!int.TryParse(Console.ReadLine(), out idProdavnice) ||
                    !_unosProdavniceServis.unosProdavnice(idProdavnice, out izabranaProdavnica))
             {
@@ -29,7 +28,6 @@ namespace Presentation
                 Console.Write("Unesite ID prodavnice: ");
             }
 
-            // Prikaz podataka o prodavnici
             Console.WriteLine("\nIzabrali ste prodavnicu:");
             Console.WriteLine("ID: " + izabranaProdavnica.ID);
             Console.WriteLine("Vrednost: " + RacunanjeUkupneVrednosti.IzracunajUkupnuVrednost(

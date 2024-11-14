@@ -1,17 +1,11 @@
 ﻿using Common.Modeli;
-using Domain.Servisi;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Repozitorijum.HerojRepozitorijum
 {
     public class HerojRepozitorijum
     {
         private static readonly List<Heroj> svi_heroji;
-        
+
         static HerojRepozitorijum()
         {
             svi_heroji = new List<Heroj>
@@ -28,7 +22,7 @@ namespace Domain.Repozitorijum.HerojRepozitorijum
                 new Heroj("Blitzcrank", 950, 90, 0)
             };
         }
-        
+
         public List<Heroj> SpisakHeroja()
         {
             return svi_heroji;
