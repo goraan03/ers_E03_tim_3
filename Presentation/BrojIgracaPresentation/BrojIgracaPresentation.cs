@@ -24,10 +24,6 @@ namespace Presentation
                         Console.WriteLine("\nPrevise igraca. Odaberite drugi broj.\n");
                         continue;
                     }
-
-                    // Dodeljujemo broj igrača u mapu
-                    izabranaMapa.MaxIgraca = brPlaviTim + brCrveniTim; // Možeš i ovako, ako želiš da dodeliš ukupno broj igrača.
-
                     break;
                 }
                 catch (Exception e)

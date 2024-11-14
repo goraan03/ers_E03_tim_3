@@ -48,7 +48,6 @@ namespace ERS_proj_03
                 var mapaPresentation = new MapaPresentation(new UnosMape(mapeRepozitorijum));
                 Mapa? IzabranaMapa = mapaPresentation.UnesiMapu();
                 
-
                 //provera broja entiteta na mapi i generisanje
                 if (brEntitet > IzabranaMapa.PomocniEntiteti)
                 {
@@ -64,18 +63,15 @@ namespace ERS_proj_03
                 izabranaProdavnica = prodavnicaPresentation.UnesiProdavnicu();
 
                 //unos naziva plavog i crvenog tima
-                
                 HerojRepozitorijum herojRepozitorijum = new HerojRepozitorijum();
                 var imenaTimovaPresentation = new ImenaTimovaPresentation();
                 imenaTimovaPresentation.UnesiTimove(out string PlaviTim, out string CrveniTim, IzabranaMapa);
 
-
                 //unos broja igraca u crveni i plavi tim
                 var brojIgracaPresentation = new BrojIgracaPresentation();
 
-                // Pozivanje metode za unos broja igrača
+                // Pozivanje metode za unos broja igraca
                 brojIgracaPresentation.UnesiBrojIgraca(out int brPlaviTim, out int brCrveniTim, IzabranaMapa);
-
 
                 //ispis svih dostupnih heroja
                 Console.WriteLine("\nDostupni heroji:\n");
@@ -111,8 +107,6 @@ namespace ERS_proj_03
 
                 //simulacija napada na igraca
                 var napadIgracaPresentation = new NapadIgracaPresentation(new NapadNaIgraca());
-
-                // Pozivanje metode IzvrsiNapadNaIgrace da obavi napad, eliminaciju i kupovinu
                 HashSet<string> eliminisaniPlavi = new HashSet<string>();
                 HashSet<string> eliminisaniCrveni = new HashSet<string>();
                 int ukupnoPotroseno = 0;

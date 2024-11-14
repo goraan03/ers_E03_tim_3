@@ -1,5 +1,4 @@
-﻿using System;
-using Common.Modeli;
+﻿using Common.Modeli;
 using Servisi.DatotekaPrikaz;
 using Servisi.TabelarniPrikaz;
 

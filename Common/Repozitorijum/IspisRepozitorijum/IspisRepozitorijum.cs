@@ -6,9 +6,7 @@ namespace Domain.Repozitorijum.IspisRepozitorijum
     {
         public void Ispis(List<Igrac> TimPlavi, List<Igrac> TimCrveni, Mapa m, int ukPotroseno, Action<string> ispis)
         {
-            // Ispis potrosenog novca
             ispis($"Ukupan potrosen novac: {ukPotroseno}");
-            // Ispis naziva mape
             ispis($"Mapa: {m.NazivMape}");
 
             // Ispis Plavog tima
@@ -29,7 +27,7 @@ namespace Domain.Repozitorijum.IspisRepozitorijum
             ispis(new string('=', 72));
 
             // Ispis Crvenog tima
-            ispis($"\t\t\t{m.CrveniTim}");
+            ispis($"\n\t\t\t{m.CrveniTim}");
             ispis(new string('=', 72));
             ispis(string.Format("{0,-10} || {1,-10} || {2,-5} || {3,-5} || {4,-5}", "NICK", "HERO", "HP", "ATT", "COINS"));
 

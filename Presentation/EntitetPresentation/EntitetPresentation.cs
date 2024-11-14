@@ -1,7 +1,5 @@
 ﻿using Common.Modeli;
 using Common.Servisi;
-using System;
-using System.Collections.Generic;
 
 namespace Presentation
 {
