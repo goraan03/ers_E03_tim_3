@@ -1,8 +1,9 @@
 ﻿using Common.Modeli;
+using Domain.RepozitorijumInterfejsi.IOruzjeRepozitorijum;
 
 namespace Domain.Repozitorijum.OruzjeRepozitorijum
 {
-    public class OruzjeRepozitorijum
+    public class OruzjeRepozitorijum : IOruzjeRepozitorijum
     {
         private static readonly List<Oruzje> svo_Oruzje;
 

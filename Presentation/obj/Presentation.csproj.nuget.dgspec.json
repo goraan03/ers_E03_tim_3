@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Presentation\\Presentation.csproj": {}
+    "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Presentation\\Presentation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Common\\Domain.csproj": {
+    "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Common\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Common\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Common\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Common\\Domain.csproj",
+        "projectPath": "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Common\\Domain.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Common\\obj\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -64,14 +64,14 @@
         }
       }
     },
-    "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Presentation\\Presentation.csproj": {
+    "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Presentation\\Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Presentation\\Presentation.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Presentation\\Presentation.csproj",
         "projectName": "Presentation",
-        "projectPath": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Presentation\\Presentation.csproj",
+        "projectPath": "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Presentation\\Presentation.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Presentation\\obj\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -93,11 +93,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Common\\Domain.csproj": {
-                "projectPath": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Common\\Domain.csproj"
+              "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Common\\Domain.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Common\\Domain.csproj"
               },
-              "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Servisi\\Servisi.csproj": {
-                "projectPath": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Servisi\\Servisi.csproj"
+              "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Servisi\\Servisi.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Servisi\\Servisi.csproj"
               }
             }
           }
@@ -131,14 +131,14 @@
         }
       }
     },
-    "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Servisi\\Servisi.csproj": {
+    "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Servisi\\Servisi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Servisi\\Servisi.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Servisi\\Servisi.csproj",
         "projectName": "Servisi",
-        "projectPath": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Servisi\\Servisi.csproj",
+        "projectPath": "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Servisi\\Servisi.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Servisi\\obj\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Servisi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -160,8 +160,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Common\\Domain.csproj": {
-                "projectPath": "C:\\Users\\pc\\Desktop\\OOT\\Projekat\\ers_E03_tim_3\\Common\\Domain.csproj"
+              "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Common\\Domain.csproj": {
+                "projectPath": "C:\\Users\\pc\\Desktop\\Faks\\OOT\\Projekat\\ers_E03_tim_3\\Common\\Domain.csproj"
               }
             }
           }

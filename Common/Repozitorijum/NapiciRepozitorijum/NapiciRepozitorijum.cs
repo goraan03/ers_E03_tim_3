@@ -1,8 +1,9 @@
 ﻿using Common.Modeli;
+using Domain.RepozitorijumInterfejsi.INapiciRepozitorijum;
 
 namespace Domain.Repozitorijum.NapiciRepozitorijum
 {
-    public class NapiciRepozitorijum
+    public class NapiciRepozitorijum : INapiciRepozitorijum
     {
         private static readonly List<Napici> svi_Napici;
 

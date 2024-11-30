@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Presentation
+﻿namespace Presentation
 {
     public class BrojEntitetaPresentation
     {

@@ -1,9 +1,10 @@
 ﻿using Common.Enumeracije;
 using Common.Modeli;
+using Domain.RepozitorijumInterfejsi.IMapeRepozitorijum;
 
 namespace Domain.Repozitorijum.MapeRepozitorijum
 {
-    public class MapeRepozitorijum
+    public class MapeRepozitorijum : IMapeRepozitorijum
     {
         private static readonly List<Mapa> ListaMapa;
         static MapeRepozitorijum()

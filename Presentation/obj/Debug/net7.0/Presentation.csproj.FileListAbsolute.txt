@@ -33,3 +33,8 @@ C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Presentation\obj\Debug\net7.0\Pres
 C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Presentation\obj\Debug\net7.0\refint\Presentation.dll
 C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Presentation\obj\Debug\net7.0\Presentation.pdb
 C:\Users\miros\Documents\GitHub\ers_E03_tim_3\Presentation\obj\Debug\net7.0\ref\Presentation.dll
+C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Presentation\obj\Debug\net7.0\Presentation.csproj.AssemblyReference.cache
+C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Presentation\obj\Debug\net7.0\Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Presentation\obj\Debug\net7.0\Presentation.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Presentation\obj\Debug\net7.0\Presentation.AssemblyInfo.cs
+C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Presentation\obj\Debug\net7.0\Presentation.csproj.CoreCompileInputs.cache

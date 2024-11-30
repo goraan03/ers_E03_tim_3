@@ -1,8 +1,9 @@
 ﻿using Common.Modeli;
+using Domain.RepozitorijumInterfejsi.IKorisniciRepozitorijum;
 
 namespace Domain.Repozitorijum.KorisniciRepozitorijum
 {
-    public class KorisniciRepozitorijum
+    public class KorisniciRepozitorijum : IKorisniciRepozitorijum
     {
         private static readonly List<Korisnik> ListaKorisnika;
         static KorisniciRepozitorijum()

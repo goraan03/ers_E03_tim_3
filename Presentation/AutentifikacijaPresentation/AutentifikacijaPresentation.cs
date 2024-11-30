@@ -1,13 +1,14 @@
 ﻿using Common.Modeli;
+using Common.Servisi;
 using Servisi.Autentifikacija;
 
 namespace Presentation
 {
     public class AutentifikacijaPresentation
     {
-        private readonly Autentifikacija _autentifikacija;
+        private readonly IAutentifikacija _autentifikacija;
 
-        public AutentifikacijaPresentation(Autentifikacija autentifikacija)
+        public AutentifikacijaPresentation(IAutentifikacija autentifikacija)
         {
             _autentifikacija = autentifikacija;
         }

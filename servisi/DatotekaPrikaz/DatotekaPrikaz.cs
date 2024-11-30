@@ -1,6 +1,5 @@
 ﻿using Common.Modeli;
 using Common.Servisi;
-using Domain.Repozitorijum.IspisRepozitorijum;
 
 namespace Servisi.DatotekaPrikaz
 {
@@ -8,7 +7,7 @@ namespace Servisi.DatotekaPrikaz
     {
         public void IspisFajl(List<Igrac> TimPlavi, List<Igrac> TimCrveni, Mapa m, int ukPotroseno)
         {
-            var statistikaIspis = new IspisRepozitorijum();
+            var statistikaIspis = new StatistikaPresentation();
 
             using StreamWriter sw = new StreamWriter("statistika.txt", append: false);
 

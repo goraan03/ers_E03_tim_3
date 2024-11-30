@@ -1,12 +1,13 @@
 ﻿using Common.Modeli;
+using Domain.Servisi;
 using Servisi.KupovinaSvihIgracca;
 
 namespace Presentation
 {
     public class KupovinaSvihIgracaPresentation
     {
-        private readonly KupovinaSvihIgraca _kupovinaSvihIgraca;
-        public KupovinaSvihIgracaPresentation(KupovinaSvihIgraca kupovinaSvihIgraca)
+        private readonly IKupovinaSvihIgraca _kupovinaSvihIgraca;
+        public KupovinaSvihIgracaPresentation(IKupovinaSvihIgraca kupovinaSvihIgraca)
         {
             _kupovinaSvihIgraca = kupovinaSvihIgraca;
         }

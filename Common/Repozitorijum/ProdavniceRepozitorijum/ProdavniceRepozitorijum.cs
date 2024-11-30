@@ -1,8 +1,9 @@
 ﻿using Common.Modeli;
+using Domain.RepozitorijumInterfejsi.IProdavniceRepozitorijum;
 
 namespace Domain.Repozitorijum.ProdavniceRepozitorijum
 {
-    public class ProdavniceRepozitorijum
+    public class ProdavniceRepozitorijum : IProdavniceRepozitorijum
     {
         private static readonly List<Prodavnica> sve_Prodavnice;
 

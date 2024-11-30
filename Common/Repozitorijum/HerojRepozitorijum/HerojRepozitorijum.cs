@@ -1,8 +1,9 @@
 ﻿using Common.Modeli;
+using Domain.RepozitorijumInterfejsi.IHerojRepozitorijum;
 
 namespace Domain.Repozitorijum.HerojRepozitorijum
 {
-    public class HerojRepozitorijum
+    public class HerojRepozitorijum : IHerojRepozitorijum
     {
         private static readonly List<Heroj> svi_heroji;
 

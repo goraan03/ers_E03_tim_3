@@ -1,15 +1,14 @@
 ﻿using Common.Modeli;
-using Servisi.DatotekaPrikaz;
-using Servisi.TabelarniPrikaz;
+using Common.Servisi;
 
 namespace Presentation
 {
     public class IzborStatistikaPresentation
     {
-        private readonly TabelarniPrikaz _tabelaStatistika;
-        private readonly DatotekaPrikaz _datotekaPrikaz;
+        private readonly ITabelarniPrikaz _tabelaStatistika;
+        private readonly IDatotekaPrikaz _datotekaPrikaz;
 
-        public IzborStatistikaPresentation(TabelarniPrikaz tabelaStatistika, DatotekaPrikaz datotekaPrikaz)
+        public IzborStatistikaPresentation(ITabelarniPrikaz tabelaStatistika, IDatotekaPrikaz datotekaPrikaz)
         {
             _tabelaStatistika = tabelaStatistika;
             _datotekaPrikaz = datotekaPrikaz;

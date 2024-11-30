@@ -28,9 +28,8 @@ namespace Presentation
                 {
                     if (igr1.heroj.ZivotniPoeni <= 0 && !eliminisaniPlavi.Contains(igr1.Naziv))
                     {
-                        eliminisaniPlavi.Add(igr1.Naziv);
                         igr1.heroj.ZivotniPoeni = 0;
-                        igr1.heroj.StanjeNovcica += 300;
+                        eliminisaniPlavi.Add(igr1.Naziv);
                         Console.WriteLine(igr1.Naziv + " je eliminisan.");
                     }
                 }
@@ -39,9 +38,8 @@ namespace Presentation
                 {
                     if (igr1.heroj.ZivotniPoeni <= 0 && !eliminisaniCrveni.Contains(igr1.Naziv))
                     {
-                        eliminisaniCrveni.Add(igr1.Naziv);
                         igr1.heroj.ZivotniPoeni = 0;
-                        igr1.heroj.StanjeNovcica += 300;
+                        eliminisaniCrveni.Add(igr1.Naziv);
                         Console.WriteLine(igr1.Naziv + " je eliminisan.");
                     }
                 }
@@ -49,7 +47,6 @@ namespace Presentation
                 var kupovinaSvihIgracaPresentation = new KupovinaSvihIgracaPresentation(new KupovinaSvihIgraca());
                 kupovinaSvihIgracaPresentation.KupovinaSvih(PlaviTim, CrveniTim, prodavnica, out int potroseno);
                 ukupnoPotroseno += potroseno;
-
                 k++;
             }
         }
