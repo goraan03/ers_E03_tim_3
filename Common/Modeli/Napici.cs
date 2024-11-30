@@ -2,8 +2,6 @@
 {
     public class Napici
     {
-        private int napad;
-
         public string Naziv { get; set; } = string.Empty;
         public int Cena { get; set; }
         public int Napad { get; set; }
