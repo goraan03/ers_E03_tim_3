@@ -1,23 +1,34 @@
 ﻿using Common.Modeli;
-using Common.Servisi;
 using Domain.Repozitorijum.HerojRepozitorijum;
 using Domain.Repozitorijum.KorisniciRepozitorijum;
 using Domain.Repozitorijum.MapeRepozitorijum;
 using Domain.Repozitorijum.ProdavniceRepozitorijum;
 using Domain.Servisi;
-using Presentation;
-using Servisi.Autentifikacija;
-using Servisi.DatotekaPrikaz;
-using Servisi.GenEntitet;
-using Servisi.IspisHeroja;
-using Servisi.KupovinaSvihIgracca;
-using Servisi.NapadNaEntitet;
-using Servisi.TabelarniPrikaz;
-using Servisi.UnosCrvenih;
-using Servisi.UnosMape;
-using Servisi.UnosPlavih;
-using Servisi.UnosProdavnice;
-using Servisi.ZlatniNovcic;
+using Presentation.EntitetFolderPresentation;
+using Presentation.AutentifikacijaFolderPresentation;
+using Presentation.BrojEntitetaFolderPresentation;
+using Presentation.BrojIgracaFolderPresentation;
+using Presentation.ImenaTimovaFolderPresentation;
+using Presentation.IzborStatistikaFolderPresentation;
+using Presentation.KupovinaSvihIgracaFolderPresentation;
+using Presentation.MapaFolderPresentation;
+using Presentation.NapadEntitetFolderPresentation;
+using Presentation.NapadIgracaFolderPresentation;
+using Presentation.ProdavnicaFolderPresentation;
+using Presentation.TrajanjeBitkeFolderPresentation;
+using Presentation.UnosTimFolderPresentation;
+using Servisi.AutentifikacijaFolder;
+using Servisi.DatotekaPrikazFolder;
+using Servisi.GenEntitetFolder;
+using Servisi.IspisHerojaFolder;
+using Servisi.KupovinaSvihIgracaFolder;
+using Servisi.NapadNaEntitetFolder;
+using Servisi.TabelarniPrikazFolder;
+using Servisi.UnosMapeFolder;
+using Servisi.UnosProdavniceFolder;
+using Servisi.NapadNaIgracaFolder;
+using Servisi.PripremaStatistikeFolder;
+using Servisi.UnosIgracaFolder;
 
 namespace ERS_proj_03
 {
@@ -28,13 +39,11 @@ namespace ERS_proj_03
             while (true)
             {
                 //servisi
-                IUnosCrvenih unosCrvenih = new UnosCrvenih();
-                IUnosPlavih unosPlavih = new UnosPlavih();
-                IIspisHeroja ispisHeroja = new IspisHeroja();
+                IIspisHeroja ispisHeroja = new IspisHerojaServis();
 
                 //autentifikacija
                 KorisniciRepozitorijum korisniciRepozitorijum = new KorisniciRepozitorijum();
-                var autentifikacija = new Autentifikacija(korisniciRepozitorijum);
+                var autentifikacija = new AutentifikacijaServis(korisniciRepozitorijum);
                 var autentifikacijaPresentation = new AutentifikacijaPresentation(autentifikacija);
                 Korisnik? prijavljen = autentifikacijaPresentation.Prijava();
 
@@ -45,21 +54,21 @@ namespace ERS_proj_03
 
                 //unos mape
                 MapeRepozitorijum mapeRepozitorijum = new MapeRepozitorijum();
-                var mapaPresentation = new MapaPresentation(new UnosMape(mapeRepozitorijum));
+                var mapaPresentation = new MapaPresentation(new UnosMapeServis(mapeRepozitorijum));
                 Mapa? IzabranaMapa = mapaPresentation.UnesiMapu();
                 
                 //provera broja entiteta na mapi i generisanje
                 if (brEntitet > IzabranaMapa.PomocniEntiteti)
                 {
                     brEntitet = IzabranaMapa.PomocniEntiteti;
-                    EntitetPresentation entitetPresentation = new EntitetPresentation(new GenEntitet());
+                    EntitetPresentation entitetPresentation = new EntitetPresentation(new GenEntitetServis());
                     listaEntiteta = entitetPresentation.UnesiEntitete(brEntitet);
                 }
 
                 //unos prodavnice
                 Prodavnica? izabranaProdavnica;
                 var prodavniceRepozitorijum = new ProdavniceRepozitorijum();
-                var prodavnicaPresentation = new ProdavnicaPresentation(new UnosProdavnice(new ProdavniceRepozitorijum()));
+                var prodavnicaPresentation = new ProdavnicaPresentation(new UnosProdavniceServis(new ProdavniceRepozitorijum()));
                 izabranaProdavnica = prodavnicaPresentation.UnesiProdavnicu();
 
                 //unos naziva plavog i crvenog tima
@@ -77,18 +86,19 @@ namespace ERS_proj_03
                 Console.WriteLine("\nDostupni heroji:\n");
                 ispisHeroja.ispisHeroja(herojRepozitorijum.SpisakHeroja());
 
-                //unos timova
+                // Inicijalizacija timova
                 List<Igrac> ListaPlavih = new List<Igrac>();
                 List<Igrac> ListaCrvenih = new List<Igrac>();
+                var unosIgracaServis = new UnosIgracaServis();
                 var unosTimPresentation = new UnosTimPresentation();
 
-                //unos plavog tima
+                // Unos plavog i crvenog tima
                 HashSet<string> naziviIgracaPlavi = new HashSet<string>();
-                unosTimPresentation.UnesiIgraceITim("plavi", brPlaviTim, naziviIgracaPlavi, ListaPlavih, unosPlavih);
-
-                //unos crvenog tima
                 HashSet<string> naziviIgracaCrveni = new HashSet<string>();
-                unosTimPresentation.UnesiIgraceITim("crveni", brCrveniTim, naziviIgracaCrveni, ListaCrvenih, unosCrvenih);
+
+                unosTimPresentation.UnesiIgraceITim("plavi", brPlaviTim, naziviIgracaPlavi, naziviIgracaCrveni, ListaPlavih, unosIgracaServis);
+                
+                unosTimPresentation.UnesiIgraceITim("crveni", brCrveniTim, naziviIgracaPlavi, naziviIgracaCrveni, ListaCrvenih, unosIgracaServis);
 
                 //trajanje bitke
                 var trajanjeBitkePresentation = new TrajanjeBitkePresentation();
@@ -96,8 +106,8 @@ namespace ERS_proj_03
 
                 //simulacija napada na Entitet
                 int l = 0;
-                var NapadEntitetPresentation = new NapadEntitetPresentation(new NapadNaEntitet());
-                var kupovinaSvihIgracaPresentation = new KupovinaSvihIgracaPresentation(new KupovinaSvihIgraca());
+                var NapadEntitetPresentation = new NapadEntitetPresentation(new NapadNaEntitetServis());
+                var kupovinaSvihIgracaPresentation = new KupovinaSvihIgracaPresentation(new KupovinaSvihIgracaServis());
                 do
                 {
                     NapadEntitetPresentation.NapadniEntitet(ListaPlavih, ListaCrvenih, listaEntiteta);
@@ -106,17 +116,20 @@ namespace ERS_proj_03
                 } while (l < brEntitet);
 
                 //simulacija napada na igraca
-                var napadIgracaPresentation = new NapadIgracaPresentation(new NapadNaIgraca());
+                var napadIgracaPresentation = new NapadIgracaPresentation(new NapadNaIgracaServis());
                 HashSet<string> eliminisaniPlavi = new HashSet<string>();
                 HashSet<string> eliminisaniCrveni = new HashSet<string>();
                 int ukupnoPotroseno = 0;
                 napadIgracaPresentation.IzvrsiNapadNaIgrace(ListaPlavih, ListaCrvenih, trajanjeBitke, izabranaProdavnica, out eliminisaniPlavi, out eliminisaniCrveni, out ukupnoPotroseno);
 
-                // izbor za prikaz statistike
-                var tabelaStatistika = new TabelarniPrikaz();
-                var datotekaPrikaz = new DatotekaPrikaz();
+                //ispis statistike
+                var pripremaStatistike = new PripremaStatistikeServis(null, null);
+                var tabelaStatistika = new TabelarniPrikazServis(pripremaStatistike);
+                var datotekaPrikaz = new DatotekaPrikazServis(pripremaStatistike);
+                pripremaStatistike = new PripremaStatistikeServis(datotekaPrikaz, tabelaStatistika);
                 var izborStatistikaPresentation = new IzborStatistikaPresentation(tabelaStatistika, datotekaPrikaz);
                 izborStatistikaPresentation.PrikaziStatistiku(ListaPlavih, ListaCrvenih, IzabranaMapa, ukupnoPotroseno);
+
                 break;
             }
         }

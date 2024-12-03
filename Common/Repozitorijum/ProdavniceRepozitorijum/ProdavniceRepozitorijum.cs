@@ -1,5 +1,4 @@
 ﻿using Common.Modeli;
-using Domain.RepozitorijumInterfejsi.IProdavniceRepozitorijum;
 
 namespace Domain.Repozitorijum.ProdavniceRepozitorijum
 {

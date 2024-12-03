@@ -34,3 +34,13 @@ C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Servisi\obj\Debug\net7.0\Ser
 C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Servisi\obj\Debug\net7.0\Servisi.AssemblyInfoInputs.cache
 C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Servisi\obj\Debug\net7.0\Servisi.AssemblyInfo.cs
 C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Servisi\obj\Debug\net7.0\Servisi.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Servisi\bin\Debug\net7.0\Servisi.deps.json
+C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Servisi\bin\Debug\net7.0\Servisi.dll
+C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Servisi\bin\Debug\net7.0\Servisi.pdb
+C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Servisi\bin\Debug\net7.0\Domain.dll
+C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Servisi\bin\Debug\net7.0\Domain.pdb
+C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Servisi\obj\Debug\net7.0\Servisi.csproj.CopyComplete
+C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Servisi\obj\Debug\net7.0\Servisi.dll
+C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Servisi\obj\Debug\net7.0\refint\Servisi.dll
+C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Servisi\obj\Debug\net7.0\Servisi.pdb
+C:\Users\pc\Desktop\Faks\OOT\Projekat\ers_E03_tim_3\Servisi\obj\Debug\net7.0\ref\Servisi.dll

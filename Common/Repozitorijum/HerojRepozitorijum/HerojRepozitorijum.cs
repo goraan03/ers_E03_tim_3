@@ -1,5 +1,4 @@
 ﻿using Common.Modeli;
-using Domain.RepozitorijumInterfejsi.IHerojRepozitorijum;
 
 namespace Domain.Repozitorijum.HerojRepozitorijum
 {

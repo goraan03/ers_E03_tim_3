@@ -1,5 +1,4 @@
 ﻿using Common.Modeli;
-using Domain.RepozitorijumInterfejsi.INapiciRepozitorijum;
 
 namespace Domain.Repozitorijum.NapiciRepozitorijum
 {

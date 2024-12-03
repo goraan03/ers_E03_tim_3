@@ -1,0 +1,65 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "ERS_proj_03/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Presentation": "1.0.0",
+          "Servisi": "1.0.0"
+        },
+        "runtime": {
+          "ERS_proj_03.dll": {}
+        }
+      },
+      "Domain/1.0.0": {
+        "runtime": {
+          "Domain.dll": {}
+        }
+      },
+      "Presentation/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Servisi": "1.0.0"
+        },
+        "runtime": {
+          "Presentation.dll": {}
+        }
+      },
+      "Servisi/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "runtime": {
+          "Servisi.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ERS_proj_03/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Servisi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

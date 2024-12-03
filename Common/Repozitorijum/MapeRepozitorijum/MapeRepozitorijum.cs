@@ -1,6 +1,5 @@
 ﻿using Common.Enumeracije;
 using Common.Modeli;
-using Domain.RepozitorijumInterfejsi.IMapeRepozitorijum;
 
 namespace Domain.Repozitorijum.MapeRepozitorijum
 {
