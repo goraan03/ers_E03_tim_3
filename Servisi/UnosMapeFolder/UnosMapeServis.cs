@@ -6,16 +6,12 @@ namespace Servisi.UnosMapeFolder
 {
     public class UnosMapeServis : IUnosMape
     {
-        private List<Mapa> ListaMapa;
-        private readonly MapeRepozitorijum _mapeRepozitorijum;
-        public UnosMapeServis(MapeRepozitorijum mapeRepozitorijum)
-        {
-            _mapeRepozitorijum = mapeRepozitorijum;
-            ListaMapa = _mapeRepozitorijum.SpisakMapa();
-        }
+        IMapeRepozitorijum _mapeRepozitorijum = new MapeRepozitorijum();
+        public UnosMapeServis()
+        {}
         public bool unosNaziva(string naziv, out Mapa? IzabranaMapa)
         {
-            Mapa? mapa = ListaMapa.FirstOrDefault(m => m.NazivMape.Equals(naziv));
+            Mapa? mapa = _mapeRepozitorijum.SpisakMapa().FirstOrDefault(m => m.NazivMape.Equals(naziv));
             if (mapa == null)
             {
                 Console.WriteLine("Nepostojeca mapa! Pokusajte ponovo.\n");

@@ -43,7 +43,7 @@ namespace ERS_proj_03
 
                 //autentifikacija
                 KorisniciRepozitorijum korisniciRepozitorijum = new KorisniciRepozitorijum();
-                var autentifikacija = new AutentifikacijaServis(korisniciRepozitorijum);
+                var autentifikacija = new AutentifikacijaServis();
                 var autentifikacijaPresentation = new AutentifikacijaPresentation(autentifikacija);
                 Korisnik? prijavljen = autentifikacijaPresentation.Prijava();
 
@@ -54,7 +54,7 @@ namespace ERS_proj_03
 
                 //unos mape
                 MapeRepozitorijum mapeRepozitorijum = new MapeRepozitorijum();
-                var mapaPresentation = new MapaPresentation(new UnosMapeServis(mapeRepozitorijum));
+                var mapaPresentation = new MapaPresentation(new UnosMapeServis());
                 Mapa? IzabranaMapa = mapaPresentation.UnesiMapu();
                 
                 //provera broja entiteta na mapi i generisanje
@@ -68,7 +68,7 @@ namespace ERS_proj_03
                 //unos prodavnice
                 Prodavnica? izabranaProdavnica;
                 var prodavniceRepozitorijum = new ProdavniceRepozitorijum();
-                var prodavnicaPresentation = new ProdavnicaPresentation(new UnosProdavniceServis(new ProdavniceRepozitorijum()));
+                var prodavnicaPresentation = new ProdavnicaPresentation(new UnosProdavniceServis());
                 izabranaProdavnica = prodavnicaPresentation.UnesiProdavnicu();
 
                 //unos naziva plavog i crvenog tima
@@ -89,7 +89,7 @@ namespace ERS_proj_03
                 // Inicijalizacija timova
                 List<Igrac> ListaPlavih = new List<Igrac>();
                 List<Igrac> ListaCrvenih = new List<Igrac>();
-                var unosIgracaServis = new UnosIgracaServis();
+                var unosIgracaServis = new UnosIgracaServis();  
                 var unosTimPresentation = new UnosTimPresentation();
 
                 // Unos plavog i crvenog tima

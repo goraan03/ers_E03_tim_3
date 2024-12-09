@@ -6,14 +6,11 @@ namespace Servisi.UnosProdavniceFolder
 {
     public class UnosProdavniceServis : IUnosProdavnice
     {
-        private readonly ProdavniceRepozitorijum _prodavniceRepozitorijum;
-        public UnosProdavniceServis(ProdavniceRepozitorijum prodavniceRepozitorijum)
-        {
-            _prodavniceRepozitorijum = prodavniceRepozitorijum;
-        }
+        IProdavniceRepozitorijum _prodavniceRepozitorijum = new ProdavniceRepozitorijum();
+        public UnosProdavniceServis(){}
         public bool unosProdavnice(int id, out Prodavnica? izabranaProdavnica)
         {
-            izabranaProdavnica = _prodavniceRepozitorijum.GetProdavnicaID(id);
+            izabranaProdavnica = _prodavniceRepozitorijum.SpisakProdavnica().FirstOrDefault(p => p.ID == id);
             return izabranaProdavnica != null;
         }
     }

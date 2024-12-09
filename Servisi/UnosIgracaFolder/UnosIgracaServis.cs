@@ -6,14 +6,10 @@ namespace Servisi.UnosIgracaFolder
 {
     public class UnosIgracaServis : IUnosIgraca
     {
-        private static readonly List<Heroj> ListaHeroja;
+        IHerojRepozitorijum _herojRepozitorijum = new HerojRepozitorijum();
         private readonly HashSet<string> ListaIzabranihHeroja = new HashSet<string>();
-        private static readonly HerojRepozitorijum Heroji = new HerojRepozitorijum();
 
-        static UnosIgracaServis()
-        {
-            ListaHeroja = Heroji.SpisakHeroja();
-        }
+        static UnosIgracaServis() {}
 
         public bool UnosIgraca(string nik, string naziv, out Igrac? IzabranIgrac)
         {
@@ -24,7 +20,7 @@ namespace Servisi.UnosIgracaFolder
                 return false;
             }
 
-            Heroj? heroj = ListaHeroja.FirstOrDefault(h => h.NazivHeroja.Equals(naziv));
+            Heroj? heroj = _herojRepozitorijum.SpisakHeroja().FirstOrDefault(h => h.NazivHeroja.Equals(naziv));
             if (heroj == null)
             {
                 Console.WriteLine($"Heroj '{naziv}' ne postoji! Pokušajte ponovo.\n");

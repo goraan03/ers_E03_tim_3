@@ -6,17 +6,12 @@ namespace Servisi.AutentifikacijaFolder
 {
     public class AutentifikacijaServis : IAutentifikacija
     {
-        private readonly KorisniciRepozitorijum _korisniciRepozitorijum;
-        private List<Korisnik> ListaKorisnika;
+        IKorisniciRepozitorijum _korisniciRepozitorijum = new KorisniciRepozitorijum();
 
-        public AutentifikacijaServis(KorisniciRepozitorijum korisniciRepozitorijum)
-        {
-            _korisniciRepozitorijum = korisniciRepozitorijum;
-            ListaKorisnika = _korisniciRepozitorijum.SpisakKorisnika();
-        }
+        public AutentifikacijaServis() {}
         public bool Prijava(string korisnickoIme, string lozinka, out Korisnik? prijavljen)
         {
-            Korisnik? korisnik = ListaKorisnika.FirstOrDefault(k => k.KorisnickoIme.Equals(korisnickoIme));
+            Korisnik? korisnik = _korisniciRepozitorijum.SpisakKorisnika().FirstOrDefault(k => k.KorisnickoIme.Equals(korisnickoIme));
             if (korisnik == null)
             {
                 Console.WriteLine("Nepostojece korisnicko ime!\n");
