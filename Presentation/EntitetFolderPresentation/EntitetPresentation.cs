@@ -18,7 +18,7 @@ namespace Presentation.EntitetFolderPresentation
 
             for (int i = 0; i < brojEntiteta; i++)
             {
-                if (_genEntitetServis.dodajEntitete(out Entitet? entitet))
+                if (_genEntitetServis.DodajEntitete(out Entitet? entitet))
                 {
                     listaEntiteta.Add(entitet!);
                 }

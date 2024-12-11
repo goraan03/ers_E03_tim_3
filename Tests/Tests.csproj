@@ -15,11 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Servisi\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Common\Domain.csproj" />
+    <ProjectReference Include="..\Servisi\Servisi.csproj" />
   </ItemGroup>
 
 </Project>

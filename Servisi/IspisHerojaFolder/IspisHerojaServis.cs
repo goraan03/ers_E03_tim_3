@@ -5,7 +5,7 @@ namespace Servisi.IspisHerojaFolder
 {
     public class IspisHerojaServis : IIspisHeroja
     {
-        public void ispisHeroja(List<Heroj> ListaHeroja)
+        public void IspisHeroja(List<Heroj> ListaHeroja)
         {
             int i = 1;
             foreach (Heroj h in ListaHeroja)

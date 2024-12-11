@@ -84,7 +84,7 @@ namespace ERS_proj_03
 
                 //ispis svih dostupnih heroja
                 Console.WriteLine("\nDostupni heroji:\n");
-                ispisHeroja.ispisHeroja(herojRepozitorijum.SpisakHeroja());
+                ispisHeroja.IspisHeroja(herojRepozitorijum.SpisakHeroja());
 
                 // Inicijalizacija timova
                 List<Igrac> ListaPlavih = new List<Igrac>();
