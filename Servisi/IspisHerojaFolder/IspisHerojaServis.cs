@@ -1,5 +1,6 @@
 ﻿using Common.Modeli;
 using Domain.Servisi;
+using System.Text;
 
 namespace Servisi.IspisHerojaFolder
 {
@@ -7,12 +8,15 @@ namespace Servisi.IspisHerojaFolder
     {
         public void IspisHeroja(List<Heroj> ListaHeroja)
         {
+            StringBuilder sb = new StringBuilder();
             int i = 1;
             foreach (Heroj h in ListaHeroja)
             {
-                Console.WriteLine("Heroj broj " + i + ": Naziv: " + h.NazivHeroja + ", Zivotni Poeni: " + h.ZivotniPoeni + ", Jacina Napada: " + h.JacinaNapada);
+                sb.AppendLine("Heroj broj " + i + ": Naziv: " + h.NazivHeroja + ", Zivotni Poeni: " + h.ZivotniPoeni + ", Jacina Napada: " + h.JacinaNapada);
                 i++;
             }
+
+            Console.Write(sb.ToString());
         }
     }
 }

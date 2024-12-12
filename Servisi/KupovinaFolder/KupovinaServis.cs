@@ -1,5 +1,6 @@
 ﻿using Common.Modeli;
 using Common.Servisi;
+using System.Text;
 
 namespace Servisi.KupovinaFolder
 {
@@ -8,6 +9,7 @@ namespace Servisi.KupovinaFolder
         public void ObaviKupovinu(Igrac igr, Prodavnica prod, out int ukupnaCena)
         {
             ukupnaCena = 0;
+            StringBuilder sb = new StringBuilder();
 
             foreach (Oruzje o in prod.Oruzje)
             {
@@ -17,7 +19,7 @@ namespace Servisi.KupovinaFolder
                     igr.heroj.StanjeNovcica -= o.Cena;
                     o.Kolicina--;
                     ukupnaCena += o.Cena;
-                    Console.WriteLine("Igrac " + igr.Naziv + " je kupio oruzje: " + o.Naziv + " za " + o.Cena);
+                    sb.AppendLine("Igrac " + igr.Naziv + " je kupio oruzje: " + o.Naziv + " za " + o.Cena);
                 }
             }
 
@@ -29,9 +31,10 @@ namespace Servisi.KupovinaFolder
                     igr.heroj.StanjeNovcica -= n.Cena;
                     n.Kolicina--;
                     ukupnaCena += n.Cena;
-                    Console.WriteLine("Igrac " + igr.Naziv + " je kupio napitak: " + n.Naziv + " za " + n.Cena);
+                    sb.AppendLine("Igrac " + igr.Naziv + " je kupio napitak: " + n.Naziv + " za " + n.Cena);
                 }
             }
+            Console.Write(sb.ToString());
         }
 
     }

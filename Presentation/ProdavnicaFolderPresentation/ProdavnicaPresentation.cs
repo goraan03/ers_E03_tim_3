@@ -22,7 +22,7 @@ namespace Presentation.ProdavnicaFolderPresentation
             Console.Write("Unesite ID prodavnice: ");
 
             while (!int.TryParse(Console.ReadLine(), out idProdavnice) ||
-                   !_unosProdavniceServis.unosProdavnice(idProdavnice, out izabranaProdavnica))
+                   !_unosProdavniceServis.UnosProdavnice(idProdavnice, out izabranaProdavnica))
             {
                 Console.WriteLine("Nepostojeca prodavnica! Pokusajte ponovo!\n");
                 Console.Write("Unesite ID prodavnice: ");

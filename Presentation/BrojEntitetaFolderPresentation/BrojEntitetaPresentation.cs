@@ -2,6 +2,7 @@
 {
     public class BrojEntitetaPresentation
     {
+        public BrojEntitetaPresentation() { }
         public int UnesiBrojEntiteta()
         {
             int brojEntiteta = 0;
