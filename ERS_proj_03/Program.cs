@@ -45,31 +45,30 @@ namespace ERS_proj_03
                 KorisniciRepozitorijum korisniciRepozitorijum = new KorisniciRepozitorijum();
                 var autentifikacija = new AutentifikacijaServis();
                 var autentifikacijaPresentation = new AutentifikacijaPresentation(autentifikacija);
-                Korisnik? prijavljen = autentifikacijaPresentation.Prijava();
+                Korisnik? prijavljen = autentifikacijaPresentation.Prijava();           // prijavljen korisnik
 
                 //unos entiteta
                 var brojEntitetaPresentation = new BrojEntitetaPresentation();
-                int brEntitet = brojEntitetaPresentation.UnesiBrojEntiteta();
+                int brEntitet = brojEntitetaPresentation.UnesiBrojEntiteta();           // broj entiteta
                 List<Entitet> listaEntiteta = new List<Entitet>();
 
                 //unos mape
                 MapeRepozitorijum mapeRepozitorijum = new MapeRepozitorijum();
                 var mapaPresentation = new MapaPresentation(new UnosMapeServis());
-                Mapa? IzabranaMapa = mapaPresentation.UnesiMapu();
+                Mapa? IzabranaMapa = mapaPresentation.UnesiMapu();                      // izabrana mapa
                 
                 //provera broja entiteta na mapi i generisanje
                 if (brEntitet > IzabranaMapa.PomocniEntiteti)
                 {
                     brEntitet = IzabranaMapa.PomocniEntiteti;
-                    EntitetPresentation entitetPresentation = new EntitetPresentation(new GenEntitetServis());
-                    listaEntiteta = entitetPresentation.UnesiEntitete(brEntitet);
+                    EntitetPresentation entitetPresentation = new EntitetPresentation(new GenEntitetServis());      
+                    listaEntiteta = entitetPresentation.UnesiEntitete(brEntitet);                                   // lista entiteta
                 }
 
                 //unos prodavnice
                 Prodavnica? izabranaProdavnica;
-                var prodavniceRepozitorijum = new ProdavniceRepozitorijum();
                 var prodavnicaPresentation = new ProdavnicaPresentation(new UnosProdavniceServis());
-                izabranaProdavnica = prodavnicaPresentation.UnesiProdavnicu();
+                izabranaProdavnica = prodavnicaPresentation.UnesiProdavnicu();                              // izabrana prodavnica
 
                 //unos naziva plavog i crvenog tima
                 HerojRepozitorijum herojRepozitorijum = new HerojRepozitorijum();
@@ -84,7 +83,7 @@ namespace ERS_proj_03
 
                 //ispis svih dostupnih heroja
                 Console.WriteLine("\nDostupni heroji:\n");
-                ispisHeroja.ispisHeroja(herojRepozitorijum.SpisakHeroja());
+                ispisHeroja.IspisHeroja(herojRepozitorijum.SpisakHeroja());
 
                 // Inicijalizacija timova
                 List<Igrac> ListaPlavih = new List<Igrac>();

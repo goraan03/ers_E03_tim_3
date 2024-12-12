@@ -7,7 +7,7 @@ namespace Servisi.GenEntitetFolder
     {
         public Entitet genEnt;
         public GenEntitetServis() { }
-        public bool dodajEntitete(out Entitet? ent)
+        public bool DodajEntitete(out Entitet? ent)
         {
             genEnt = new Entitet();
             ent = genEnt;

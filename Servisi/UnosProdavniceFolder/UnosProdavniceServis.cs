@@ -8,7 +8,7 @@ namespace Servisi.UnosProdavniceFolder
     {
         IProdavniceRepozitorijum _prodavniceRepozitorijum = new ProdavniceRepozitorijum();
         public UnosProdavniceServis(){}
-        public bool unosProdavnice(int id, out Prodavnica? izabranaProdavnica)
+        public bool UnosProdavnice(int id, out Prodavnica? izabranaProdavnica)
         {
             izabranaProdavnica = _prodavniceRepozitorijum.SpisakProdavnica().FirstOrDefault(p => p.ID == id);
             return izabranaProdavnica != null;

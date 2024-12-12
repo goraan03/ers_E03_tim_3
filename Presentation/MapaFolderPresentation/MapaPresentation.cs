@@ -23,7 +23,7 @@ namespace Presentation.MapaFolderPresentation
                 Console.Write("Unesite naziv mape: ");
                 string nazivMape = Console.ReadLine() ?? "";
 
-                if (_unosMapeServis.unosNaziva(nazivMape.Trim(), out izabranaMapa))
+                if (_unosMapeServis.UnosNaziva(nazivMape.Trim(), out izabranaMapa))
                 {
                     break;
                 }
