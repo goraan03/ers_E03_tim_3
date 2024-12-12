@@ -22,10 +22,10 @@ namespace Tests.Servisi.AutentifikacijaFolder
         }
 
         [Test]
-        [TestCase("goran03", "LozinkaGoran")]
-        public void PrijavaSaIspravnimPodacima_VracaTrue(string korisnickoIme, string lozinka)
+        [TestCase("goran03", "LozinkaGoran", "Goran Grcic")]
+        public void PrijavaSaIspravnimPodacima_VracaTrue(string korisnickoIme, string lozinka, string imePrezime)
         {
-            var korisnik = new Korisnik(korisnickoIme, lozinka, "Goran Grcic");
+            var korisnik = new Korisnik(korisnickoIme, lozinka, imePrezime);
             _korisniciRepozitorijumMock.Setup(x => x.SpisakKorisnika()).Returns(new List<Korisnik> { korisnik });
 
             var rezultat = _autentifikacijaServis.Prijava(korisnickoIme, lozinka, out var prijavljen);
@@ -34,11 +34,12 @@ namespace Tests.Servisi.AutentifikacijaFolder
             Assert.That(prijavljen, Is.Not.Null);
             Assert.That(prijavljen?.KorisnickoIme, Is.EqualTo(korisnickoIme));
             Assert.That(prijavljen?.Lozinka, Is.EqualTo(lozinka));
+            Assert.That(prijavljen?.ImePrezime, Is.EqualTo(imePrezime));
         }
 
         [Test]
-        [TestCase("nepostojeci", "Lozinka123")]
-        public void PrijavaSaNepostojecomKorisnickimImenom_VracaFalse(string korisnickoIme, string lozinka)
+        [TestCase("nepostojeci", "Lozinka123", "Nepostojeci Neko")]
+        public void PrijavaSaNepostojecomKorisnickimImenom_VracaFalse(string korisnickoIme, string lozinka, string imePrezime)
         {
             _korisniciRepozitorijumMock.Setup(x => x.SpisakKorisnika()).Returns(new List<Korisnik>());
 
@@ -49,10 +50,10 @@ namespace Tests.Servisi.AutentifikacijaFolder
         }
 
         [Test]
-        [TestCase("goran03", "PogresnaLozinka")]
-        public void PrijavaSaPogresnomLozinkom_VracaFalse(string korisnickoIme, string lozinka)
+        [TestCase("goran03", "PogresnaLozinka", "Goran Grcic")]
+        public void PrijavaSaPogresnomLozinkom_VracaFalse(string korisnickoIme, string lozinka, string imePrezime)
         {
-            var korisnik = new Korisnik("goran03", "LozinkaGoran", "Goran Grcic");
+            var korisnik = new Korisnik(korisnickoIme, lozinka, imePrezime);
             _korisniciRepozitorijumMock.Setup(x => x.SpisakKorisnika()).Returns(new List<Korisnik> { korisnik });
 
             var rezultat = _autentifikacijaServis.Prijava(korisnickoIme, lozinka, out var prijavljen);
