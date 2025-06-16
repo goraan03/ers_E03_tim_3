@@ -34,7 +34,7 @@ namespace Servisi.KupovinaFolder
                     sb.AppendLine("Igrac " + igr.Naziv + " je kupio napitak: " + n.Naziv + " za " + n.Cena);
                 }
             }
-            Console.Write(sb.ToString());
+            //Console.Write(sb.ToString());
         }
 
     }
