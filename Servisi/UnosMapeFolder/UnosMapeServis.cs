@@ -13,7 +13,7 @@ namespace Servisi.UnosMapeFolder
             Mapa? mapa = _mapeRepozitorijum.SpisakMapa().FirstOrDefault(m => m.NazivMape.Equals(naziv));
             if (mapa == null)
             {
-                Console.WriteLine("Nepostojeca mapa! Pokusajte ponovo.\n");
+                //Console.WriteLine("Nepostojeca mapa! Pokusajte ponovo.\n");
                 IzabranaMapa = null;
                 return false;
             }

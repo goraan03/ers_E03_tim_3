@@ -1,5 +1,4 @@
 ﻿using Common.Modeli;
-using Common.Servisi;
 using Domain.Repozitorijum.KorisniciRepozitorijum;
 using Moq;
 using NUnit.Framework;
