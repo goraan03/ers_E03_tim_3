@@ -2,7 +2,6 @@
 using Domain.Repozitorijum.HerojRepozitorijum;
 using Domain.Repozitorijum.KorisniciRepozitorijum;
 using Domain.Repozitorijum.MapeRepozitorijum;
-using Domain.Repozitorijum.ProdavniceRepozitorijum;
 using Domain.Servisi;
 using Presentation.EntitetFolderPresentation;
 using Presentation.AutentifikacijaFolderPresentation;
