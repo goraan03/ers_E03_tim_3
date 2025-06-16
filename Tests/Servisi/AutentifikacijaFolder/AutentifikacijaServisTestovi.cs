@@ -38,7 +38,7 @@ namespace Tests.Servisi.AutentifikacijaFolder
         }
 
         [Test]
-        [TestCase("nepostojeci", "Lozinka123", "Nepostojeci Neko")]
+        [TestCase("nepostojeci", "Lozinka123", "Neko Nepostojeci")]
         public void PrijavaSaNepostojecomKorisnickimImenom_VracaFalse(string korisnickoIme, string lozinka, string imePrezime)
         {
             _korisniciRepozitorijumMock.Setup(x => x.SpisakKorisnika()).Returns(new List<Korisnik>());
