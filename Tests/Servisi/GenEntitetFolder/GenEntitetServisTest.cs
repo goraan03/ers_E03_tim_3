@@ -5,7 +5,7 @@ using Servisi.GenEntitetFolder;
 namespace Tests.Servisi.GenEntitetFolder
 {
     [TestFixture]
-    public class GenEntitetServisTestovi
+    public class GenEntitetServisTest
     {
         private GenEntitetServis _genEntitetServis;
 

@@ -7,7 +7,7 @@ using Servisi.UnosIgracaFolder;
 namespace Tests.Servisi.UnosIgracaFolder
 {
     [TestFixture]
-    public class UnosIgracaServisTestovi
+    public class UnosIgracaServisTest
     {
         private Mock<IHerojRepozitorijum> _herojRepozitorijumMock;
         private UnosIgracaServis _unosIgracaServis;

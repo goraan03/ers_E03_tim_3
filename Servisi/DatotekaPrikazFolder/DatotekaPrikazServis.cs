@@ -10,7 +10,7 @@ namespace Servisi.DatotekaPrikazFolder
     {
         IPripremaStatistike _statistika;
 
-        public DatotekaPrikazServis(PripremaStatistikeServis statistika)
+        public DatotekaPrikazServis(IPripremaStatistike statistika)
         {
             _statistika = statistika;
         }

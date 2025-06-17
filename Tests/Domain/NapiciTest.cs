@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Tests.Domain
 {
     [TestFixture]
-    public class NapiciTestovi
+    public class NapiciTest
     {
         [Test]
         [TestCase("Health Potion", 50, 40, 10)]

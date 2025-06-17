@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Tests.Domain
 {
     [TestFixture]
-    public class OruzjeTestovi
+    public class OruzjeTest
     {
         [Test]
         [TestCase("Sword", 150, 30, 3)]

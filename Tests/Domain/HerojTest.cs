@@ -10,7 +10,7 @@ namespace Tests.Domain
 {
     [TestFixture]
 
-    public class HerojTestovi
+    public class HerojTest
     {
         [Test]
         [TestCase("Malphite", 1250, 120, 0)]

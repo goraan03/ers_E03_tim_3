@@ -5,7 +5,7 @@ using Servisi.UnosProdavniceFolder;
 namespace Tests.Servisi.UnosProdavniceFolder
 {
     [TestFixture]
-    public class UnosProdavniceServisTestovi
+    public class UnosProdavniceServisTest
     {
         private UnosProdavniceServis _servis;
 

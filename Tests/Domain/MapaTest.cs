@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Tests.Domain
 {
     [TestFixture]
-    public class MapaTestovi
+    public class MapaTest
     {
         [Test]
         [TestCase("Crash Site", Tip_Mape.ZIMSKA, 8, "Partizan", "Zvezda", 30)]

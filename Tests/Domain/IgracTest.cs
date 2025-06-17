@@ -9,7 +9,7 @@ using NUnit.Framework;
 namespace Tests.Domain
 {
     [TestFixture]
-    public class IgracTestovi
+    public class IgracTest
     {
         [Test]
         [TestCase("d1p0", "Malphite", 1250, 120, 0)]
