@@ -37,26 +37,26 @@ namespace ERS_proj_03
         {
             while (true)
             {
-                //servisi
+                // Servisi
                 IIspisHeroja ispisHeroja = new IspisHerojaServis();
 
-                //autentifikacija
+                // Autentifikacija
                 KorisniciRepozitorijum korisniciRepozitorijum = new KorisniciRepozitorijum();
                 var autentifikacija = new AutentifikacijaServis();
                 var autentifikacijaPresentation = new AutentifikacijaPresentation(autentifikacija);
-                Korisnik? prijavljen = autentifikacijaPresentation.Prijava();           // prijavljen korisnik
+                Korisnik? prijavljen = autentifikacijaPresentation.Prijava();           // Prijavljen korisnik
 
-                //unos entiteta
+                // Unos entiteta
                 var brojEntitetaPresentation = new BrojEntitetaPresentation();
-                int brEntitet = brojEntitetaPresentation.UnesiBrojEntiteta();           // broj entiteta
+                int brEntitet = brojEntitetaPresentation.UnesiBrojEntiteta();           // Broj entiteta
                 List<Entitet> listaEntiteta = new List<Entitet>();
 
-                //unos mape
+                // Unos mape
                 MapeRepozitorijum mapeRepozitorijum = new MapeRepozitorijum();
                 var mapaPresentation = new MapaPresentation(new UnosMapeServis());
-                Mapa? IzabranaMapa = mapaPresentation.UnesiMapu();                      // izabrana mapa
+                Mapa? IzabranaMapa = mapaPresentation.UnesiMapu();                      // Izabrana mapa
                 
-                //provera broja entiteta na mapi i generisanje
+                // Provera broja entiteta na mapi i generisanje
                 if (brEntitet > IzabranaMapa.PomocniEntiteti)
                 {
                     brEntitet = IzabranaMapa.PomocniEntiteti;
