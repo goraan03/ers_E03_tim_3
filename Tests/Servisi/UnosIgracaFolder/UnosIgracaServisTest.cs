@@ -10,7 +10,7 @@ namespace Tests.Servisi.UnosIgracaFolder
     public class UnosIgracaServisTest
     {
         private Mock<IHerojRepozitorijum> _herojRepozitorijumMock;
-        private UnosIgracaServis _unosIgracaServis;
+        private UnosIgracaServis _unosIgracaServis; //mock
 
         private List<Heroj> _herojiMockLista;
 
