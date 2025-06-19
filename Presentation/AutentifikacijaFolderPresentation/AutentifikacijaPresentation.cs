@@ -5,9 +5,9 @@ namespace Presentation.AutentifikacijaFolderPresentation
 {
     public class AutentifikacijaPresentation
     {
-        private readonly IAutentifikacija _autentifikacija;
+        private readonly IAutentifikacijaServis _autentifikacija;
 
-        public AutentifikacijaPresentation(IAutentifikacija autentifikacija)
+        public AutentifikacijaPresentation(IAutentifikacijaServis autentifikacija)
         {
             _autentifikacija = autentifikacija;
         }

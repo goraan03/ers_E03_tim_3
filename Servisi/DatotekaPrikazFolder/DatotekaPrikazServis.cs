@@ -6,11 +6,11 @@ using Servisi.PripremaStatistikeFolder;
 
 namespace Servisi.DatotekaPrikazFolder
 {
-    public class DatotekaPrikazServis : IDatotekaPrikaz
+    public class DatotekaPrikazServis : IDatotekaPrikazServis
     {
-        IPripremaStatistike _statistika;
+        IPripremaStatistikeServis _statistika;
 
-        public DatotekaPrikazServis(IPripremaStatistike statistika)
+        public DatotekaPrikazServis(IPripremaStatistikeServis statistika)
         {
             _statistika = statistika;
         }

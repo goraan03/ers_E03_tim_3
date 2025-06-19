@@ -5,9 +5,9 @@ namespace Presentation.MapaFolderPresentation
 {
     public class MapaPresentation
     {
-        private readonly IUnosMape _unosMapeServis;
+        private readonly IUnosMapeServis _unosMapeServis;
 
-        public MapaPresentation(IUnosMape unosMapeServis)
+        public MapaPresentation(IUnosMapeServis unosMapeServis)
         {
             _unosMapeServis = unosMapeServis;
         }

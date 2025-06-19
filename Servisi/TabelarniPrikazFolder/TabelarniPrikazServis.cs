@@ -5,11 +5,11 @@ using Domain.Servisi;
 
 namespace Servisi.TabelarniPrikazFolder
 {
-    public class TabelarniPrikazServis : ITabelarniPrikaz
+    public class TabelarniPrikazServis : ITabelarniPrikazServis
     {
-        private readonly IPripremaStatistike _statistika;
+        private readonly IPripremaStatistikeServis _statistika;
 
-        public TabelarniPrikazServis(IPripremaStatistike statistika)
+        public TabelarniPrikazServis(IPripremaStatistikeServis statistika)
         {
             _statistika = statistika;
         }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Servisi.KupovinaFolder
 {
-    public class KupovinaServis : IKupovina
+    public class KupovinaServis : IKupovinaServis
     {
         public void ObaviKupovinu(Igrac igr, Prodavnica prod, out int ukupnaCena)
         {

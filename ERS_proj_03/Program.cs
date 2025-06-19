@@ -38,7 +38,7 @@ namespace ERS_proj_03
             while (true)
             {
                 // Servisi
-                IIspisHeroja ispisHeroja = new IspisHerojaServis();
+                IIspisHerojaServis ispisHeroja = new IspisHerojaServis();
 
                 // Autentifikacija
                 KorisniciRepozitorijum korisniciRepozitorijum = new KorisniciRepozitorijum();

@@ -3,7 +3,7 @@ using Common.Servisi;
 
 namespace Servisi.NapadNaIgracaFolder
 {
-    public class NapadNaIgracaServis : INapadNaIgraca
+    public class NapadNaIgracaServis : INapadNaIgracaServis
     {
         public NapadNaIgracaServis() { }
 

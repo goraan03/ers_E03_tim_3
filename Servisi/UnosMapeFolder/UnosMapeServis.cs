@@ -4,7 +4,7 @@ using Domain.Repozitorijum.MapeRepozitorijum;
 
 namespace Servisi.UnosMapeFolder
 {
-    public class UnosMapeServis : IUnosMape
+    public class UnosMapeServis : IUnosMapeServis
     {
         IMapeRepozitorijum _mapeRepozitorijum = new MapeRepozitorijum();
         public UnosMapeServis() { }

@@ -3,7 +3,7 @@ using Common.Servisi;
 
 namespace Servisi.NapadNaEntitetFolder
 {
-    public class NapadNaEntitetServis : INapadNaEntitet
+    public class NapadNaEntitetServis : INapadNaEntitetServis
     {
 
         public void NapadniEntitet(List<Igrac> TimPlavi, List<Igrac> TimCrveni, List<Entitet> Ent)

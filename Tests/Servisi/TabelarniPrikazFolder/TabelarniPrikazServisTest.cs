@@ -29,7 +29,7 @@ namespace Tests.Servisi.TabelarniPrikazFolder
             var expectedOutput = new StringBuilder();
             expectedOutput.AppendLine("Test output iz mocka");
 
-            var mockPriprema = new Mock<IPripremaStatistike>();
+            var mockPriprema = new Mock<IPripremaStatistikeServis>();
             mockPriprema
                 .Setup(p => p.PripremaIspis(plaviTim, crveniTim, mapa, ukPotroseno))
                 .Returns(expectedOutput);

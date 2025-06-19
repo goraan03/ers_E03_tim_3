@@ -6,9 +6,9 @@ namespace Presentation.ProdavnicaFolderPresentation
 {
     public class ProdavnicaPresentation
     {
-        private readonly IUnosProdavnice _unosProdavniceServis;
+        private readonly IUnosProdavniceServis _unosProdavniceServis;
 
-        public ProdavnicaPresentation(IUnosProdavnice unosProdavniceServis)
+        public ProdavnicaPresentation(IUnosProdavniceServis unosProdavniceServis)
         {
             _unosProdavniceServis = unosProdavniceServis;
         }

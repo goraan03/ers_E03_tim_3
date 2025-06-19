@@ -4,7 +4,7 @@ using Domain.Repozitorijum.ProdavniceRepozitorijum;
 
 namespace Servisi.UnosProdavniceFolder
 {
-    public class UnosProdavniceServis : IUnosProdavnice
+    public class UnosProdavniceServis : IUnosProdavniceServis
     {
         IProdavniceRepozitorijum _prodavniceRepozitorijum = new ProdavniceRepozitorijum();
         public UnosProdavniceServis(){}

@@ -2,7 +2,7 @@
 
 namespace Common.Servisi
 {
-    public interface IUnosProdavnice
+    public interface IUnosProdavniceServis
     {
         bool UnosProdavnice(int id, out Prodavnica? izabranaProdavnica);
     }

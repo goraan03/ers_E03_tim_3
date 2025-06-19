@@ -4,7 +4,7 @@ using Domain.Repozitorijum.KorisniciRepozitorijum;
 
 namespace Servisi.AutentifikacijaFolder
 {
-    public class AutentifikacijaServis : IAutentifikacija
+    public class AutentifikacijaServis : IAutentifikacijaServis
     {
         IKorisniciRepozitorijum _korisniciRepozitorijum = new KorisniciRepozitorijum();
 

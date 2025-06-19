@@ -5,9 +5,9 @@ namespace Presentation.NapadEntitetFolderPresentation
 {
     public class NapadEntitetPresentation
     {
-        private readonly INapadNaEntitet _napadNaEntitet;
+        private readonly INapadNaEntitetServis _napadNaEntitet;
 
-        public NapadEntitetPresentation(INapadNaEntitet napadNaEntitet)
+        public NapadEntitetPresentation(INapadNaEntitetServis napadNaEntitet)
         {
             _napadNaEntitet = napadNaEntitet;
         }

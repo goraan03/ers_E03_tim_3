@@ -2,7 +2,7 @@
 
 namespace Common.Servisi
 {
-    public interface IDatotekaPrikaz
+    public interface IDatotekaPrikazServis
     {
         public void IspisFajl(List<Igrac> TimPlavi, List<Igrac> TimCrveni, Mapa m, int ukPotroseno);
     }

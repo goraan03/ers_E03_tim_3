@@ -6,8 +6,8 @@ namespace Presentation.KupovinaSvihIgracaFolderPresentation
 {
     public class KupovinaSvihIgracaPresentation
     {
-        private readonly IKupovinaSvihIgraca _kupovinaSvihIgraca;
-        public KupovinaSvihIgracaPresentation(IKupovinaSvihIgraca kupovinaSvihIgraca)
+        private readonly IKupovinaSvihIgracaServis _kupovinaSvihIgraca;
+        public KupovinaSvihIgracaPresentation(IKupovinaSvihIgracaServis kupovinaSvihIgraca)
         {
             _kupovinaSvihIgraca = kupovinaSvihIgraca;
         }

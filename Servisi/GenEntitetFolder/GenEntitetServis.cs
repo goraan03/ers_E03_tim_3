@@ -3,7 +3,7 @@ using Common.Servisi;
 
 namespace Servisi.GenEntitetFolder
 {
-    public class GenEntitetServis : IGenEntitet
+    public class GenEntitetServis : IGenEntitetServis
     {
         public Entitet genEnt;
         public GenEntitetServis() { }

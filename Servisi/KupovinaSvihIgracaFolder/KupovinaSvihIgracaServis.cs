@@ -4,7 +4,7 @@ using KupovinaService = Servisi.KupovinaFolder.KupovinaServis;
 
 namespace Servisi.KupovinaSvihIgracaFolder
 {
-    public class KupovinaSvihIgracaServis : IKupovinaSvihIgraca
+    public class KupovinaSvihIgracaServis : IKupovinaSvihIgracaServis
     {
         private int totalPotroseno = 0;
 

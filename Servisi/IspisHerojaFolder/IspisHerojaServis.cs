@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Servisi.IspisHerojaFolder
 {
-    public class IspisHerojaServis : IIspisHeroja
+    public class IspisHerojaServis : IIspisHerojaServis
     {
         public void IspisHeroja(List<Heroj> ListaHeroja)
         {

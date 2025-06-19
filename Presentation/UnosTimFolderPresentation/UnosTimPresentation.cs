@@ -5,7 +5,7 @@ namespace Presentation.UnosTimFolderPresentation
 {
     public class UnosTimPresentation
     {
-        public void UnesiIgraceITim(string timNaziv, int brojIgraca, HashSet<string> naziviIgracaPlavi, HashSet<string> naziviIgracaCrveni,  List<Igrac> listaTimova, IUnosIgraca unosIgracaServis)
+        public void UnesiIgraceITim(string timNaziv, int brojIgraca, HashSet<string> naziviIgracaPlavi, HashSet<string> naziviIgracaCrveni,  List<Igrac> listaTimova, IUnosIgracaServis unosIgracaServis)
         {
             Console.WriteLine($"\nUnesite nazive igrača i heroje za {timNaziv} tim:\n");
 

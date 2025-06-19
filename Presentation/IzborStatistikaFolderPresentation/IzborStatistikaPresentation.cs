@@ -5,10 +5,10 @@ namespace Presentation.IzborStatistikaFolderPresentation
 {
     public class IzborStatistikaPresentation
     {
-        private readonly ITabelarniPrikaz _tabelaStatistika;
-        private readonly IDatotekaPrikaz _datotekaPrikaz;
+        private readonly ITabelarniPrikazServis _tabelaStatistika;
+        private readonly IDatotekaPrikazServis _datotekaPrikaz;
 
-        public IzborStatistikaPresentation(ITabelarniPrikaz tabelaStatistika, IDatotekaPrikaz datotekaPrikaz)
+        public IzborStatistikaPresentation(ITabelarniPrikazServis tabelaStatistika, IDatotekaPrikazServis datotekaPrikaz)
         {
             _tabelaStatistika = tabelaStatistika;
             _datotekaPrikaz = datotekaPrikaz;

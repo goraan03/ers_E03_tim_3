@@ -21,7 +21,7 @@ namespace Tests.Servisi.DatotekaPrikazFolder
             var expectedOutput = new StringBuilder();
             expectedOutput.AppendLine("Test sadrzaj iz mocka");
 
-            var mockStatistika = new Mock<IPripremaStatistike>();
+            var mockStatistika = new Mock<IPripremaStatistikeServis>();
             mockStatistika
                 .Setup(p => p.PripremaIspis(plaviTim, crveniTim, mapa, ukPotroseno))
                 .Returns(expectedOutput);

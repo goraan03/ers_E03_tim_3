@@ -2,7 +2,7 @@
 
 namespace Common.Servisi
 {
-    public interface IGenEntitet
+    public interface IGenEntitetServis
     {
         public bool DodajEntitete(out Entitet? ent);
     }

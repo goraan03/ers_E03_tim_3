@@ -2,7 +2,7 @@
 
 namespace Common.Servisi
 {
-    public interface ITabelarniPrikaz
+    public interface ITabelarniPrikazServis
     {
         public void ispisTabele(List<Igrac> TimPlavi, List<Igrac> TimCrveni, Mapa m, int ukPotroseno);
     }

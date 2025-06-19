@@ -4,7 +4,7 @@ using Domain.Servisi;
 
 namespace Servisi.UnosIgracaFolder
 {
-    public class UnosIgracaServis : IUnosIgraca
+    public class UnosIgracaServis : IUnosIgracaServis
     {
         IHerojRepozitorijum _herojRepozitorijum = new HerojRepozitorijum();
         private readonly HashSet<string> ListaIzabranihHeroja = new HashSet<string>();
@@ -15,7 +15,7 @@ namespace Servisi.UnosIgracaFolder
         {
             if (ListaIzabranihHeroja.Contains(naziv))
             {
-                Console.WriteLine($"Heroj '{naziv}' je vec izabran. Pokusajte ponovo.\n");
+                //Console.WriteLine($"Heroj '{naziv}' je vec izabran. Pokusajte ponovo.\n");
                 IzabranIgrac = null;
                 return false;
             }
@@ -23,7 +23,7 @@ namespace Servisi.UnosIgracaFolder
             Heroj? heroj = _herojRepozitorijum.SpisakHeroja().FirstOrDefault(h => h.NazivHeroja.Equals(naziv));
             if (heroj == null)
             {
-                Console.WriteLine($"Heroj '{naziv}' ne postoji! Pokusajte ponovo.\n");
+                //Console.WriteLine($"Heroj '{naziv}' ne postoji! Pokusajte ponovo.\n");
                 IzabranIgrac = null;
                 return false;
             }

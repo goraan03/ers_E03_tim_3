@@ -7,9 +7,9 @@ namespace Presentation.NapadIgracaFolderPresentation
 {
     public class NapadIgracaPresentation
     {
-        private readonly INapadNaIgraca _napadNaIgraca;
+        private readonly INapadNaIgracaServis _napadNaIgraca;
 
-        public NapadIgracaPresentation(INapadNaIgraca napadNaIgraca)
+        public NapadIgracaPresentation(INapadNaIgracaServis napadNaIgraca)
         {
             _napadNaIgraca = napadNaIgraca;
         }

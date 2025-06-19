@@ -5,9 +5,9 @@ namespace Presentation.EntitetFolderPresentation
 {
     public class EntitetPresentation
     {
-        private readonly IGenEntitet _genEntitetServis;
+        private readonly IGenEntitetServis _genEntitetServis;
 
-        public EntitetPresentation(IGenEntitet genEntitetServis)
+        public EntitetPresentation(IGenEntitetServis genEntitetServis)
         {
             _genEntitetServis = genEntitetServis;
         }

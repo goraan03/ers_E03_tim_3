@@ -2,7 +2,7 @@
 
 namespace Domain.Servisi
 {
-    public interface IUnosIgraca
+    public interface IUnosIgracaServis
     {
         public bool UnosIgraca(string nik, string naziv, out Igrac? IzabranIgrac);
     }

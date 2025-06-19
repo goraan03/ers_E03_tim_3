@@ -10,15 +10,15 @@ namespace Tests.Servisi.PripremaStatistikeFolder
     [TestFixture]
     public class PripremaStatistikeServisTest
     {
-        private Mock<IDatotekaPrikaz> _mockDatoteka;
-        private Mock<ITabelarniPrikaz> _mockTabelarni;
+        private Mock<IDatotekaPrikazServis> _mockDatoteka;
+        private Mock<ITabelarniPrikazServis> _mockTabelarni;
         private PripremaStatistikeServis _servis;
 
         [SetUp]
         public void Setup()
         {
-            _mockDatoteka = new Mock<IDatotekaPrikaz>();
-            _mockTabelarni = new Mock<ITabelarniPrikaz>();
+            _mockDatoteka = new Mock<IDatotekaPrikazServis>();
+            _mockTabelarni = new Mock<ITabelarniPrikazServis>();
 
             _servis = new PripremaStatistikeServis(_mockDatoteka.Object, _mockTabelarni.Object);
         }

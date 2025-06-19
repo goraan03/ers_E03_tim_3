@@ -2,7 +2,7 @@
 
 namespace Common.Servisi
 {
-    public interface IUnosMape
+    public interface IUnosMapeServis
     {
         public bool UnosNaziva(string naziv, out Mapa? IzabranaMapa);
     }

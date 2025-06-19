@@ -2,7 +2,7 @@
 
 namespace Domain.Servisi
 {
-    public interface IIspisHeroja
+    public interface IIspisHerojaServis
     {
         public void IspisHeroja(List<Heroj> ListaHeroja);
     }
