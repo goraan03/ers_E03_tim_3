@@ -46,7 +46,7 @@ namespace Presentation.NapadIgracaFolderPresentation
                 }
 
                 var kupovinaSvihIgracaPresentation = new KupovinaSvihIgracaPresentation(new KupovinaSvihIgracaServis());
-                kupovinaSvihIgracaPresentation.KupovinaSvih(PlaviTim, CrveniTim, prodavnica, out int potroseno);
+                int potroseno = kupovinaSvihIgracaPresentation.KupovinaSvih(PlaviTim, CrveniTim, prodavnica);
                 ukupnoPotroseno += potroseno;
                 k++;
             }

@@ -1,5 +1,6 @@
 ﻿using Common.Modeli;
 using Domain.Repozitorijum.HerojRepozitorijum;
+using Domain.Rezultati;
 using Domain.Servisi;
 
 namespace Servisi.UnosIgracaFolder
@@ -7,30 +8,29 @@ namespace Servisi.UnosIgracaFolder
     public class UnosIgracaServis : IUnosIgracaServis
     {
         IHerojRepozitorijum _herojRepozitorijum = new HerojRepozitorijum();
-        private readonly HashSet<string> ListaIzabranihHeroja = new HashSet<string>();
+        private readonly HashSet<string> _listaIzabranihHeroja = new HashSet<string>();
 
-        static UnosIgracaServis() {}
-
-        public bool UnosIgraca(string nik, string naziv, out Igrac? IzabranIgrac)
+        public UnosIgracaServis(IHerojRepozitorijum herojRepozitorijum)
         {
-            if (ListaIzabranihHeroja.Contains(naziv))
+            _herojRepozitorijum = herojRepozitorijum;
+        }
+
+        public UnosIgracaRezultat UnosIgraca(string nik, string naziv)
+        {
+            if (_listaIzabranihHeroja.Contains(naziv))
             {
-                //Console.WriteLine($"Heroj '{naziv}' je vec izabran. Pokusajte ponovo.\n");
-                IzabranIgrac = null;
-                return false;
+                return UnosIgracaRezultat.Neuspesno($"Heroj '{naziv}' je vec izabran.");
             }
 
-            Heroj? heroj = _herojRepozitorijum.SpisakHeroja().FirstOrDefault(h => h.NazivHeroja.Equals(naziv));
+            var heroj = _herojRepozitorijum.SpisakHeroja().FirstOrDefault(h => h.NazivHeroja.Equals(naziv));
             if (heroj == null)
             {
-                //Console.WriteLine($"Heroj '{naziv}' ne postoji! Pokusajte ponovo.\n");
-                IzabranIgrac = null;
-                return false;
+                return UnosIgracaRezultat.Neuspesno($"Heroj '{naziv}' ne postoji.");
             }
 
-            ListaIzabranihHeroja.Add(naziv);
-            IzabranIgrac = new Igrac(nik, heroj);
-            return true;
+            _listaIzabranihHeroja.Add(naziv);
+            var igrac = new Igrac(nik, heroj);
+            return UnosIgracaRezultat.Uspesno(igrac);
         }
     }
 }

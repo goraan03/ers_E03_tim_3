@@ -1,9 +1,10 @@
 ﻿using Common.Modeli;
+using Domain.Rezultati;
 
 namespace Common.Servisi
 {
     public interface IKupovinaServis
     {
-        public void ObaviKupovinu(Igrac igr, Prodavnica prod, out int ukupnaCena);
+        public KupovinaRezultat ObaviKupovinu(Igrac igr, Prodavnica prod);
     }
 }

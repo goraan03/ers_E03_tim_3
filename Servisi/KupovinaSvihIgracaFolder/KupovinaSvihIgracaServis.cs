@@ -8,9 +8,9 @@ namespace Servisi.KupovinaSvihIgracaFolder
     {
         private int totalPotroseno = 0;
 
-        public void KupovinaSvih(List<Igrac> PlaviTim, List<Igrac> CrveniTim, Prodavnica prod, out int ukPotroseno)
+        public int KupovinaSvih(List<Igrac> PlaviTim, List<Igrac> CrveniTim, Prodavnica prod)
         {
-            ukPotroseno = 0;
+            int ukPotroseno = 0;
 
             var kupovinaService = new KupovinaService();
 
@@ -19,8 +19,8 @@ namespace Servisi.KupovinaSvihIgracaFolder
             {
                 if (igrac.heroj.StanjeNovcica >= 500)
                 {
-                    kupovinaService.ObaviKupovinu(igrac, prod, out int ukupnaCena);
-                    ukPotroseno += ukupnaCena;
+                    var rezultat = kupovinaService.ObaviKupovinu(igrac, prod);
+                    ukPotroseno += rezultat.UkupnaCena;
                 }
             }
 
@@ -29,12 +29,13 @@ namespace Servisi.KupovinaSvihIgracaFolder
             {
                 if (igrac.heroj.StanjeNovcica >= 500)
                 {
-                    kupovinaService.ObaviKupovinu(igrac, prod, out int ukupnaCena);
-                    ukPotroseno += ukupnaCena;
+                    var rezultat = kupovinaService.ObaviKupovinu(igrac, prod);
+                    ukPotroseno += rezultat.UkupnaCena;
                 }
             }
 
             totalPotroseno += ukPotroseno;
+            return ukPotroseno;
         }
 
         public int getTotal()

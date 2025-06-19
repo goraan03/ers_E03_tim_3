@@ -67,7 +67,7 @@ namespace ERS_proj_03
                 //unos prodavnice
                 Prodavnica? izabranaProdavnica;
                 var prodavnicaPresentation = new ProdavnicaPresentation(new UnosProdavniceServis());
-                izabranaProdavnica = prodavnicaPresentation.UnesiProdavnicu();                              // izabrana prodavnica
+                izabranaProdavnica = prodavnicaPresentation.UnesiProdavnicu();                              // Izabrana prodavnica
 
                 //unos naziva plavog i crvenog tima
                 HerojRepozitorijum herojRepozitorijum = new HerojRepozitorijum();
@@ -87,7 +87,7 @@ namespace ERS_proj_03
                 // Inicijalizacija timova
                 List<Igrac> ListaPlavih = new List<Igrac>();
                 List<Igrac> ListaCrvenih = new List<Igrac>();
-                var unosIgracaServis = new UnosIgracaServis();  
+                var unosIgracaServis = new UnosIgracaServis(herojRepozitorijum);
                 var unosTimPresentation = new UnosTimPresentation();
 
                 // Unos plavog i crvenog tima
@@ -109,7 +109,7 @@ namespace ERS_proj_03
                 do
                 {
                     NapadEntitetPresentation.NapadniEntitet(ListaPlavih, ListaCrvenih, listaEntiteta);
-                    kupovinaSvihIgracaPresentation.KupovinaSvih(ListaPlavih, ListaCrvenih, izabranaProdavnica, out int ukPotroseno);
+                    int ukPotroseno = kupovinaSvihIgracaPresentation.KupovinaSvih(ListaPlavih, ListaCrvenih, izabranaProdavnica);
                     l++;
                 } while (l < brEntitet);
 

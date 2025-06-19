@@ -4,7 +4,7 @@ namespace Domain.Servisi
 {
     public interface IKupovinaSvihIgracaServis
     {
-        void KupovinaSvih(List<Igrac> PlaviTim, List<Igrac> CrveniTim, Prodavnica prod, out int ukPotroseno);
+        public int KupovinaSvih(List<Igrac> PlaviTim, List<Igrac> CrveniTim, Prodavnica prod);
         public int getTotal();
     }
 }

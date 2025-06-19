@@ -1,6 +1,7 @@
 ﻿using Common.Modeli;
 using NUnit.Framework;
 using Servisi.KupovinaSvihIgracaFolder;
+using System.Collections.Generic;
 
 namespace Tests.Servisi.KupovinaSvihIgracaFolder
 {
@@ -30,7 +31,7 @@ namespace Tests.Servisi.KupovinaSvihIgracaFolder
             var plaviTim = new List<Igrac> { igrac1 };
             var crveniTim = new List<Igrac> { igrac2 };
 
-            _servis.KupovinaSvih(plaviTim, crveniTim, _prodavnica, out int ukPotroseno);
+            int ukPotroseno = _servis.KupovinaSvih(plaviTim, crveniTim, _prodavnica);
 
             Assert.That(ukPotroseno, Is.EqualTo(150));
             Assert.That(_servis.getTotal(), Is.EqualTo(150));
@@ -48,7 +49,7 @@ namespace Tests.Servisi.KupovinaSvihIgracaFolder
             var plaviTim = new List<Igrac> { igrac1 };
             var crveniTim = new List<Igrac> { igrac2 };
 
-            _servis.KupovinaSvih(plaviTim, crveniTim, _prodavnica, out int ukPotroseno);
+            int ukPotroseno = _servis.KupovinaSvih(plaviTim, crveniTim, _prodavnica);
 
             Assert.That(ukPotroseno, Is.EqualTo(0));
             Assert.That(_servis.getTotal(), Is.EqualTo(0));

@@ -32,12 +32,14 @@ namespace Presentation.UnosTimFolderPresentation
                     Console.Write("Izaberite heroja: ");
                     nazivHeroja = Console.ReadLine() ?? "";
 
-                    if (!unosIgracaServis.UnosIgraca(naziv, nazivHeroja, out Igrac? izabraniIgrac))
+                    var rezultat = unosIgracaServis.UnosIgraca(naziv, nazivHeroja);
+                    if (!rezultat.Uspeh)
                     {
+                        Console.WriteLine(rezultat.Poruka);
                         continue;
                     }
 
-                    listaTimova.Add(izabraniIgrac);
+                    listaTimova.Add(rezultat.Igrac!);
                     break;
                 }
             }

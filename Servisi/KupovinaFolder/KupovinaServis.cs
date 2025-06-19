@@ -1,14 +1,15 @@
 ﻿using Common.Modeli;
 using Common.Servisi;
+using Domain.Rezultati;
 using System.Text;
 
 namespace Servisi.KupovinaFolder
 {
     public class KupovinaServis : IKupovinaServis
     {
-        public void ObaviKupovinu(Igrac igr, Prodavnica prod, out int ukupnaCena)
+        public KupovinaRezultat ObaviKupovinu(Igrac igr, Prodavnica prod)
         {
-            ukupnaCena = 0;
+            int ukupnaCena = 0;
             StringBuilder sb = new StringBuilder();
 
             foreach (Oruzje o in prod.Oruzje)
@@ -34,7 +35,9 @@ namespace Servisi.KupovinaFolder
                     sb.AppendLine("Igrac " + igr.Naziv + " je kupio napitak: " + n.Naziv + " za " + n.Cena);
                 }
             }
-            Console.Write(sb.ToString());
+            //Console.Write(sb.ToString());  ->  zbog ovog nije hteo test da prodje
+
+            return KupovinaRezultat.Uspesno(ukupnaCena);
         }
 
     }

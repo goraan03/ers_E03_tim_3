@@ -1,9 +1,10 @@
 ﻿using Common.Modeli;
+using Domain.Rezultati;
 
 namespace Domain.Servisi
 {
     public interface IUnosIgracaServis
     {
-        public bool UnosIgraca(string nik, string naziv, out Igrac? IzabranIgrac);
+        public UnosIgracaRezultat UnosIgraca(string nik, string naziv);
     }
 }

@@ -1,91 +1,108 @@
-﻿using Common.Modeli;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Servisi.KupovinaFolder;
-using System;
+using Common.Modeli;
+using Domain.Rezultati;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 
 namespace Tests.Servisi.KupovinaFolder
 {
     [TestFixture]
     public class KupovinaServisTests
     {
-        private KupovinaServis _kupovinaServis;
-        private Igrac _igrac;
-        private Prodavnica _prodavnica;
-        private List<Oruzje> _oruzja;
-        private List<Napici> _napici;
+        private KupovinaServis servis;
 
         [SetUp]
         public void Setup()
         {
-            _kupovinaServis = new KupovinaServis();
-
-            var heroj = new Heroj("Ahri", 900, 100, 300);
-            _igrac = new Igrac("miroslav", heroj);
-
-            _oruzja = new List<Oruzje>
-            {
-                new Oruzje { Naziv = "Mac", Napad = 20, Cena = 50, Kolicina = 1 },
-                new Oruzje { Naziv = "Luk", Napad = 15, Cena = 30, Kolicina = 0 }
-            };
-
-            _napici = new List<Napici>
-            {
-                new Napici { Naziv = "Potion", Napad = 10, Cena = 20, Kolicina = 2 }
-            };
-
-            _prodavnica = new Prodavnica
-            {
-                Oruzje = _oruzja,
-                Napicis = _napici
-            };
+            servis = new KupovinaServis();
         }
 
         [Test]
-        public void ObaviKupovinu_RadiIspravnoSaIEnumerable()
+        public void ObaviKupovinu_KupujeOruzjeINapitke_IspravneVrednosti()
         {
-            _kupovinaServis.ObaviKupovinu(_igrac, _prodavnica, out int ukupnaCena);
-
-            Assert.That(ukupnaCena, Is.EqualTo(70));
-
-            Assert.That(_igrac.heroj.JacinaNapada, Is.EqualTo(100 + 20));
-            Assert.That(_igrac.heroj.ZivotniPoeni, Is.EqualTo(900 + 10));
-            Assert.That(_igrac.heroj.StanjeNovcica, Is.EqualTo(300 - 70));
-
-            Assert.That(_oruzja.First(o => o.Naziv == "Mac").Kolicina, Is.EqualTo(0));
-            Assert.That(_napici.First(n => n.Naziv == "Potion").Kolicina, Is.EqualTo(1));
-        }
-
-        [Test]
-        public void ObaviKupovinu_SaPraznimProdavnicama_VracaUkupnoNula()
-        {
-            _prodavnica = new Prodavnica
+            var heroj = new Heroj
             {
-                Oruzje = new List<Oruzje>(), 
-                Napicis = new List<Napici>()
+                JacinaNapada = 10,
+                ZivotniPoeni = 20,
+                StanjeNovcica = 100
             };
 
-            _kupovinaServis.ObaviKupovinu(_igrac, _prodavnica, out int ukupnaCena);
+            var igrac = new Igrac
+            {
+                Naziv = "Marko",
+                heroj = heroj
+            };
 
-            Assert.That(ukupnaCena, Is.EqualTo(0));
-            Assert.That(_igrac.heroj.JacinaNapada, Is.EqualTo(100));
-            Assert.That(_igrac.heroj.ZivotniPoeni, Is.EqualTo(900));
-            Assert.That(_igrac.heroj.StanjeNovcica, Is.EqualTo(300));
+            var oruzje = new List<Oruzje>
+            {
+                new Oruzje { Naziv = "Mac", Cena = 30, Napad = 5, Kolicina = 1 },
+                new Oruzje { Naziv = "Luk", Cena = 40, Napad = 7, Kolicina = 0 }
+            };
+
+            var napitci = new List<Napici>
+            {
+                new Napici { Naziv = "Zeleni napitak", Cena = 20, Napad = 10, Kolicina = 2 }
+            };
+
+            var prodavnica = new Prodavnica
+            {
+                Oruzje = oruzje,
+                Napicis = napitci
+            };
+
+            KupovinaRezultat rezultat = servis.ObaviKupovinu(igrac, prodavnica);
+
+            Assert.That(oruzje[0].Kolicina, Is.EqualTo(0));
+            Assert.That(oruzje[1].Kolicina, Is.EqualTo(0));
+
+            Assert.That(napitci[0].Kolicina, Is.EqualTo(1));
+
+            Assert.That(heroj.JacinaNapada, Is.EqualTo(10 + 5));
+            Assert.That(heroj.ZivotniPoeni, Is.EqualTo(20 + 10));
+
+            int ukupnaCena = 30 + 20;
+            Assert.That(heroj.StanjeNovcica, Is.EqualTo(100 - ukupnaCena));
+
+            Assert.That(rezultat.Uspeh, Is.True);
+            Assert.That(rezultat.UkupnaCena, Is.EqualTo(ukupnaCena));
         }
 
         [Test]
-        public void ObaviKupovinu_ConsoleOutputSadrziKupovine()
+        public void ObaviKupovinu_NemaDovoljnoKolicine_NistaNeMenja()
         {
-            using var sw = new StringWriter();
-            Console.SetOut(sw);
+            var heroj = new Heroj
+            {
+                JacinaNapada = 10,
+                ZivotniPoeni = 20,
+                StanjeNovcica = 100
+            };
 
-            _kupovinaServis.ObaviKupovinu(_igrac, _prodavnica, out _);
+            var igrac = new Igrac
+            {
+                Naziv = "Petar",
+                heroj = heroj
+            };
 
-            var output = sw.ToString();
-            Assert.That(output, Does.Contain("kupio oruzje: Mac"));
-            Assert.That(output, Does.Contain("kupio napitak: Potion"));
+            var prodavnica = new Prodavnica
+            {
+                Oruzje = new List<Oruzje>
+                {
+                    new Oruzje { Naziv = "Mac", Cena = 30, Napad = 5, Kolicina = 0 }
+                },
+                Napicis = new List<Napici>
+                {
+                    new Napici { Naziv = "Crveni napitak", Cena = 20, Napad = 10, Kolicina = 0 }
+                }
+            };
+
+            KupovinaRezultat rezultat = servis.ObaviKupovinu(igrac, prodavnica);
+
+            Assert.That(heroj.JacinaNapada, Is.EqualTo(10));
+            Assert.That(heroj.ZivotniPoeni, Is.EqualTo(20));
+            Assert.That(heroj.StanjeNovcica, Is.EqualTo(100));
+
+            Assert.That(rezultat.Uspeh, Is.True);
+            Assert.That(rezultat.UkupnaCena, Is.EqualTo(0));
         }
     }
 }
