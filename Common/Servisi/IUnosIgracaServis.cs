@@ -1,5 +1,4 @@
-﻿using Common.Modeli;
-using Domain.Rezultati;
+﻿using Domain.Rezultati;
 
 namespace Domain.Servisi
 {

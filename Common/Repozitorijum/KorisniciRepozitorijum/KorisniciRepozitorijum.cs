@@ -13,7 +13,7 @@ namespace Domain.Repozitorijum.KorisniciRepozitorijum
                 new Korisnik("miroslav03", "LozinkaMiroslav", "Miroslav Dispiter")
             };
         }
-        
+
         public List<Korisnik> SpisakKorisnika()
         {
             return ListaKorisnika;

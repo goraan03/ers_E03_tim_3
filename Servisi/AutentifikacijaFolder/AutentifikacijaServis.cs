@@ -8,7 +8,7 @@ namespace Servisi.AutentifikacijaFolder
     {
         IKorisniciRepozitorijum _korisniciRepozitorijum = new KorisniciRepozitorijum();
 
-        public AutentifikacijaServis() {}
+        public AutentifikacijaServis() { }
         public bool Prijava(string korisnickoIme, string lozinka, out Korisnik? prijavljen)
         {
             Korisnik? korisnik = _korisniciRepozitorijum.SpisakKorisnika().FirstOrDefault(k => k.KorisnickoIme.Equals(korisnickoIme));

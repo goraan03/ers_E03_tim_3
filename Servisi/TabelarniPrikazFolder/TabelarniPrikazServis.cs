@@ -1,7 +1,7 @@
 ﻿using Common.Modeli;
 using Common.Servisi;
-using System.Text;
 using Domain.Servisi;
+using System.Text;
 
 namespace Servisi.TabelarniPrikazFolder
 {

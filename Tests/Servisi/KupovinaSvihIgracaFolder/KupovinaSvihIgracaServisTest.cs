@@ -1,7 +1,6 @@
 ﻿using Common.Modeli;
 using NUnit.Framework;
 using Servisi.KupovinaSvihIgracaFolder;
-using System.Collections.Generic;
 
 namespace Tests.Servisi.KupovinaSvihIgracaFolder
 {

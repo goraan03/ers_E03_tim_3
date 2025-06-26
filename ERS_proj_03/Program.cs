@@ -3,10 +3,10 @@ using Domain.Repozitorijum.HerojRepozitorijum;
 using Domain.Repozitorijum.KorisniciRepozitorijum;
 using Domain.Repozitorijum.MapeRepozitorijum;
 using Domain.Servisi;
-using Presentation.EntitetFolderPresentation;
 using Presentation.AutentifikacijaFolderPresentation;
 using Presentation.BrojEntitetaFolderPresentation;
 using Presentation.BrojIgracaFolderPresentation;
+using Presentation.EntitetFolderPresentation;
 using Presentation.ImenaTimovaFolderPresentation;
 using Presentation.IzborStatistikaFolderPresentation;
 using Presentation.KupovinaSvihIgracaFolderPresentation;
@@ -22,12 +22,12 @@ using Servisi.GenEntitetFolder;
 using Servisi.IspisHerojaFolder;
 using Servisi.KupovinaSvihIgracaFolder;
 using Servisi.NapadNaEntitetFolder;
-using Servisi.TabelarniPrikazFolder;
-using Servisi.UnosMapeFolder;
-using Servisi.UnosProdavniceFolder;
 using Servisi.NapadNaIgracaFolder;
 using Servisi.PripremaStatistikeFolder;
+using Servisi.TabelarniPrikazFolder;
 using Servisi.UnosIgracaFolder;
+using Servisi.UnosMapeFolder;
+using Servisi.UnosProdavniceFolder;
 
 namespace ERS_proj_03
 {
@@ -55,12 +55,12 @@ namespace ERS_proj_03
                 MapeRepozitorijum mapeRepozitorijum = new MapeRepozitorijum();
                 var mapaPresentation = new MapaPresentation(new UnosMapeServis());
                 Mapa? IzabranaMapa = mapaPresentation.UnesiMapu();                      // Izabrana mapa
-                
+
                 // Provera broja entiteta na mapi i generisanje
                 if (brEntitet > IzabranaMapa.PomocniEntiteti)
                 {
                     brEntitet = IzabranaMapa.PomocniEntiteti;
-                    EntitetPresentation entitetPresentation = new EntitetPresentation(new GenEntitetServis());      
+                    EntitetPresentation entitetPresentation = new EntitetPresentation(new GenEntitetServis());
                     listaEntiteta = entitetPresentation.UnesiEntitete(brEntitet);                                   // lista entiteta
                 }
 
@@ -95,7 +95,7 @@ namespace ERS_proj_03
                 HashSet<string> naziviIgracaCrveni = new HashSet<string>();
 
                 unosTimPresentation.UnesiIgraceITim("plavi", brPlaviTim, naziviIgracaPlavi, naziviIgracaCrveni, ListaPlavih, unosIgracaServis);
-                
+
                 unosTimPresentation.UnesiIgraceITim("crveni", brCrveniTim, naziviIgracaPlavi, naziviIgracaCrveni, ListaCrvenih, unosIgracaServis);
 
                 //trajanje bitke

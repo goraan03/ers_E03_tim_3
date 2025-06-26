@@ -3,7 +3,6 @@ using Domain.Repozitorijum.HerojRepozitorijum;
 using Moq;
 using NUnit.Framework;
 using Servisi.UnosIgracaFolder;
-using System.Collections.Generic;
 
 namespace Tests.Servisi.UnosIgracaFolder
 {
@@ -11,7 +10,7 @@ namespace Tests.Servisi.UnosIgracaFolder
     public class UnosIgracaServisTest
     {
         private Mock<IHerojRepozitorijum> _herojRepozitorijumMock;
-        private UnosIgracaServis _unosIgracaServis; // dodati mock u ovde
+        private UnosIgracaServis _unosIgracaServis;
 
         private List<Heroj> _herojiMockLista;
 

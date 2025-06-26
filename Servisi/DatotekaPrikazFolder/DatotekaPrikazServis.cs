@@ -1,8 +1,7 @@
 ﻿using Common.Modeli;
 using Common.Servisi;
-using System.Text;
 using Domain.Servisi;
-using Servisi.PripremaStatistikeFolder;
+using System.Text;
 
 namespace Servisi.DatotekaPrikazFolder
 {

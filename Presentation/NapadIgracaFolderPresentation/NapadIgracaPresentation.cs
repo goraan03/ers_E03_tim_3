@@ -1,7 +1,7 @@
 ﻿using Common.Modeli;
 using Common.Servisi;
-using Servisi.KupovinaSvihIgracaFolder;
 using Presentation.KupovinaSvihIgracaFolderPresentation;
+using Servisi.KupovinaSvihIgracaFolder;
 
 namespace Presentation.NapadIgracaFolderPresentation
 {

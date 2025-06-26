@@ -1,8 +1,7 @@
-﻿using NUnit.Framework;
-using Servisi.KupovinaFolder;
-using Common.Modeli;
+﻿using Common.Modeli;
 using Domain.Rezultati;
-using System.Collections.Generic;
+using NUnit.Framework;
+using Servisi.KupovinaFolder;
 
 namespace Tests.Servisi.KupovinaFolder
 {

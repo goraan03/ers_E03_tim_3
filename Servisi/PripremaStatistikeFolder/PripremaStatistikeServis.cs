@@ -1,7 +1,7 @@
-﻿using System.Text;
-using Common.Modeli;
+﻿using Common.Modeli;
 using Common.Servisi;
 using Domain.Servisi;
+using System.Text;
 
 namespace Servisi.PripremaStatistikeFolder
 {

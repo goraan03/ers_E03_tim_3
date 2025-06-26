@@ -1,6 +1,5 @@
 ﻿using Common.Modeli;
 using Domain.Servisi;
-using Servisi.KupovinaSvihIgracaFolder;
 
 namespace Presentation.KupovinaSvihIgracaFolderPresentation
 {

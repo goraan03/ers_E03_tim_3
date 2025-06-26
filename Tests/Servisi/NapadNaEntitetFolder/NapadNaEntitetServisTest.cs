@@ -1,7 +1,6 @@
 ﻿using Common.Modeli;
 using NUnit.Framework;
 using Servisi.NapadNaEntitetFolder;
-using System.Collections.Generic;
 
 namespace Tests.Servisi.NapadNaEntitetFolder
 {
